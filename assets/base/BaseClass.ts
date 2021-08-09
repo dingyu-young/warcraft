@@ -1,5 +1,5 @@
 
-export var ChromeLogColorDict = {
+var ChromeLogColorDict = {
     //黑色背景,蓝绿文本(收包)
     "b-gb1": 'background: #255; color: #ff80ff',
     "b-gb": 'background: #255; color: #00ffff',
@@ -15,7 +15,7 @@ export class BaseClass {
     }
 
     //获取包装后的log文本
-    GetLogFormatList(argList) {
+    GetLogFormatList(argList, color?: string) {
         var len = argList.length;
         var logText = argList[0];
         //第一个不是文本格式
@@ -23,25 +23,15 @@ export class BaseClass {
             return argList
         }
         var colorType = argList[len - 1];
-        if (typeof (colorType) == "string") {
+        if (color) {
             var color = ChromeLogColorDict[colorType];
             //如果是谷歌浏览器,包装颜色
-            if (color) {
-                if (cc.sys.browserType == "chrome") {
-                    //如果末尾有携带颜色配置
-                    //如果存在颜色,替换最后一个参数为颜色值
-                    //删除末尾的颜色标示
-                    argList.pop();
+            if (color && cc.sys.browserType == "chrome") {
+                //文本开头添加颜色标示%c
+                logText = "%c" + logText;
 
-                    //文本开头添加颜色标示%c
-                    logText = "%c" + logText;
-
-                    //在文本后面插入一个颜色值
-                    argList.splice(1, 0, color);
-                } else {
-                    //删除末尾的颜色标示
-                    argList.pop();
-                }
+                //在文本后面插入一个颜色值
+                argList.splice(1, 0, color);
             }
         }
 
@@ -67,5 +57,25 @@ export class BaseClass {
         argList = this.GetLogFormatList(argList);
         cc.error.apply(null, argList)
     }
+
+    //蓝色文本
+    BuleLog(...argList: any[]) {
+        argList = this.GetLogFormatList(argList,"b-gb");
+        cc.log.apply(null, argList)
+    }
+
+    //绿色文本
+    GreenLog(...argList: any[]) {
+        argList = this.GetLogFormatList(argList,"b-g");
+        cc.log.apply(null, argList)
+    }
+
+    //紫色文本
+    PinkLog(...argList: any[]) {
+        argList = this.GetLogFormatList(argList,"b-gb1");
+        cc.log.apply(null, argList)
+    }
+
+
 
 }
