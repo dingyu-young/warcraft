@@ -7,8 +7,8 @@
 
 import {EventManager} from "../base/manager/EventManager";
 import {GameData} from "../base/game/GameData";
-import Game = cc.Game;
 import {UILogin} from "./login/UILogin";
+import {TableManager} from "../base/manager/TableManager";
 
 const {ccclass, property} = cc._decorator;
 
@@ -36,10 +36,13 @@ export default class app extends cc.Component {
         EventManager.ins().regEvent("test1",this.show,this);
         GameData.uiRoot = this.uiRoot;
         GameData.uiScene = this.uiScene;
+        TableManager.Init()
     }
 
     start () {
-        // UILogin.ins().show();
+        if(!this.nd_tool.active){
+            UILogin.ins().show();
+        }
 
     }
 
