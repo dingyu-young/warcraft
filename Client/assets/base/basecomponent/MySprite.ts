@@ -21,10 +21,8 @@ export class MySprite extends cc.Component{
 
     @property({
         tooltip:"图片名称",
-        type:[String]
+        type:[cc.String]
     })
-    private names:string[] = [null,null];
-
-
+    private names:string[] = ["",""];
 
 }
