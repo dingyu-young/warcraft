@@ -3,6 +3,7 @@ import {RQ_Login, RQ_Register, RS_Login} from "../../base/Socket/MsgData";
 import {NetTool} from "../../base/net/NetTool";
 import {WebNet} from "../../base/net/WebNet";
 import {UILoginPrefab} from "../export/UILoginPrefab";
+import {SpringPoolsConfig} from "../../base/table/TableConfig";
 
 
 export class UILogin extends AbsUI<UILoginPrefab> {
@@ -12,6 +13,7 @@ export class UILogin extends AbsUI<UILoginPrefab> {
     }
 
     async login() {
+
         let req = new RQ_Login();
         req.password = this.ui.edit_pwd.string;
         req.userName = this.ui.edit_name.string;
@@ -51,6 +53,8 @@ export class UILogin extends AbsUI<UILoginPrefab> {
 
     protected OnClick(btnName: string, btnNode: cc.Node) {
         if(btnName == "btn_connect"){
+            cc.log(SpringPoolsConfig.getConfig(1))
+            SpringPoolsConfig.getConfig("1")
             NetTool.Connect();
         }else if(btnName == "btn_login"){
             this.login();

@@ -9,6 +9,7 @@ import {EventManager} from "../base/manager/EventManager";
 import {GameData} from "../base/game/GameData";
 import {UILogin} from "./login/UILogin";
 import {TableManager} from "../base/manager/TableManager";
+import {SpringPoolsConfig, TableTool} from "../base/table/TableConfig";
 
 const {ccclass, property} = cc._decorator;
 
@@ -31,18 +32,21 @@ export default class app extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+    async onLoad () {
         app._instance = this;
         EventManager.ins().regEvent("test1",this.show,this);
         GameData.uiRoot = this.uiRoot;
         GameData.uiScene = this.uiScene;
         TableManager.Init()
+        await TableTool.initTable();
+        cc.log(SpringPoolsConfig.getConfig(1))
     }
 
     start () {
         if(!this.nd_tool.active){
             UILogin.ins().show();
         }
+
 
     }
 

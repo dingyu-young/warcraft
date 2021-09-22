@@ -1,0 +1,107 @@
+import {LoadManager} from "../manager/LoadManager";
+
+enum EnumTableType {
+    json = 1,
+    txt = 2
+}
+var tableType = EnumTableType.json;
+
+export class TableTool {
+    static tableInfo: { [key: string]: any } = {}
+
+    public static RegirsterTable(obj): void {
+        TableTool.tableInfo[obj.mName] = obj;
+    }
+
+    public static async initTable() {
+        let path = "table/";
+        if (tableType == EnumTableType.json) {
+            for (let i = 0; i < xlsxList.length; i++) {
+                let xlsxName = xlsxList[i];
+                let data = await LoadManager.ins().loadRes(path + xlsxName, cc.JsonAsset)
+                if (!data) {
+                    cc.error("不存在配置表:", xlsxName)
+                    continue
+                }
+                this.initJson(data.json);
+            }
+        } else if (tableType == EnumTableType.txt) {
+            for (let i = 0; i < xlsxList.length; i++) {
+                let xlsxName = xlsxList[i];
+                let data = await LoadManager.ins().loadRes(path + xlsxName, cc.TextAsset)
+                if (!data) {
+                    cc.error("不存在配置表:", xlsxName)
+                    continue
+                }
+                this.initTxt(data.text);
+            }
+        }
+    }
+
+    //解析json
+    public static initJson(json) {
+        for (let key in json) {
+            let obj = TableTool.tableInfo[key];
+            if (!obj) {
+                cc.error("不存在表的类结构:", key)
+                continue
+            }
+            TableTool.tableInfo[key].init(json[key])
+        }
+    }
+
+    //解析文本txt
+    public static initTxt(text: string) {
+        let textList = text.split("##");
+        for (let i = 1; i < textList.length; i++) {//这里为一张表
+            let list = textList[i].split("\r\n");
+            let className = list[0];
+            let keys = list[1].split("\t");
+            let table = {};
+            for (let j = 3; j < list.length; j++) {//解析表数据
+                if(!list[j]){
+                    continue;
+                }
+                let values = list[j].split('\t');
+                let id = values[0];
+                table[id] = {};
+                for (let l = 0; l < keys.length; l++) {
+                    if(!keys[l]){
+                        continue;
+                    }
+                    let value: any = values[l];
+                    let [key, type] = keys[l].split(":");
+                    if (type == "Int" || type == "Float") {
+                        value = value ? Number(value) : 0;
+                    } else if (type == "Bool") {
+                        value = value ? !!parseInt(value) : false;
+                    } else if (type == "Array") {
+                        value = value ? JSON.parse(value) : null;
+                    } else if (type == "String"){
+                        value = value;
+                    } else {
+                        value = value ? JSON.parse(value) : null;
+                    }
+                    table[id][key] = value;
+                }
+            }
+
+            let obj = TableTool.tableInfo[className];
+            if (!obj) {
+                cc.error("不存在表的类结构:", className)
+                continue
+            }else {
+                TableTool.tableInfo[className].init(table)
+            }
+        }
+    }
+}
+
+class BaseTable {
+    public static mName: string = "";
+    public static table: { [key: string]: any } = {}
+
+    public static init(data) {
+        this.table = data
+    }
+}
