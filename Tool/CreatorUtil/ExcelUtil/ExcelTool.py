@@ -1,6 +1,7 @@
 # coding=UTF-8
-from ExcelUtil.IOTool import writeToFile, getJsonStr, readTemplate, getEnglish
-from ExcelUtil.qtui.window import Ui_MainWindow
+from Util.ioUitl import *
+from Util.cLog import Log
+from UI.window import Ui_MainWindow
 import xlrd
 import os.path
 import json
@@ -32,7 +33,7 @@ class TableInfo:
         if col >= len(self.keyList):
             return
         key = self.keyList[col]
-        type = self.typeList[col]
+        type = self.typeList[col].capitalize()
         if type == "String":
             value = str(value)
         elif type == "Int":
@@ -49,7 +50,7 @@ class TableInfo:
 
     # 获取类型
     def getType(self, index):
-        type = self.typeList[index]
+        type = self.typeList[index].capitalize()
         if type == "String":
             return "string"
         elif type == "Int":
@@ -61,7 +62,7 @@ class TableInfo:
         elif type == "Bool":
             return "boolean"
         else:
-            return type
+            return self.typeList[index]
 
     # 获取json格式
     def getJson(self):
@@ -134,22 +135,29 @@ class ExcelTool:
     # 处理点击事件
     def onClick(self):
         this = self
+        Log.log("开始导出配置表,请勿执行其他操作!!")
+        this.xlxsList = []
         this.rootPath = this.ui.edit_excel.toPlainText()  # 表格路径
         this.filePath = this.ui.edit_path.toPlainText()  # 生成文件路径
         this.codePath = this.ui.edit_codepath.toPlainText()  # 代码生成路径
-        type = this.ui.edit_type.toPlainText()  # 生成类型
+        type = this.ui.comboBox.currentIndex()  # 生成类型
         codeType = "ts"
-
         configList = this.loadConfigList("ConfigList", "ConfigList")  # 主配置文件
         allConfig = this.loadAllConfig(configList)  # 生成所有的配置列表 [TableInfo]
 
-        if type.startswith("1"):
-            this.fileType = "json"
-            this.exportToJson(allConfig, type)
-        elif type.startswith("2"):
-            this.fileType = "txt"
-            this.exportToText(allConfig, type)
-        this.exportCode(allConfig, codeType)
+        try:
+            if type < 3:
+                this.fileType = "json"
+                this.exportToJson(allConfig, type)
+            elif type >= 3:
+                this.fileType = "txt"
+                this.exportToText(allConfig, type)
+            this.exportCode(allConfig, codeType)
+        except BaseException as e:
+            Log.logError("生成表格时错误", e)
+        else:
+            Log.logSuccess("导出配置表成功")
+
         return
 
     # 加载所有配置表
@@ -170,11 +178,11 @@ class ExcelTool:
                 tableInfo.print()
                 data.append(tableInfo)
             except ValueError as err:
-                print(xlsxName, "读取分页", sheetName, "出错")
+                Log.logError(xlsxName, "读取分页", sheetName, "出错")
                 print(err)
                 pass
             except TypeError as err:
-                print(xlsxName, "分页:", sheetName, "Json解析出错")
+                Log.logError(xlsxName, "分页:", sheetName, "Json解析出错")
                 print(err)
         return data
 
@@ -182,12 +190,12 @@ class ExcelTool:
     def loadConfigList(self, xlslname: str, sheetName: str):
         path = r"" + self.rootPath + "\\" + xlslname + ".xlsx"
         if not os.path.isfile(path):  # 检测文件是否存在
-            print("不存在主配置表", xlslname)
+            Log.logError("不存在主配置表", xlslname)
             return
 
         wb = xlrd.open_workbook(path)  # 打开Excel文件
         if sheetName not in wb._sheet_names:  # 检测sheet分页是否存在
-            print("主配置表", xlslname, "不存在分页:", sheetName)
+            Log.logError("主配置表", xlslname, "不存在分页:", sheetName)
             return
 
         sheet = wb.sheet_by_name(sheetName)  # 通过excel表格名称(rank)获取工作表
@@ -216,12 +224,12 @@ class ExcelTool:
     def loadExcel(self, xlslName: str, sheetName: str):
         path = r"" + self.rootPath + "\\" + xlslName + ".xlsx"
         if not os.path.isfile(path):  # 检测文件是否存在
-            print("不存在配置表", xlslName)
+            Log.logError("不存在配置表", xlslName)
             return
 
         wb = xlrd.open_workbook(path)  # 打开Excel文件
         if sheetName not in wb._sheet_names:  # 检测sheet分页是否存在
-            print("配置表", xlslName, "不存在分页:", sheetName)
+            Log.logError("配置表", xlslName, "不存在分页:", sheetName)
             return
 
         sheet = wb.sheet_by_name(sheetName)  # 通过excel表格名称(rank)获取工作表
@@ -245,7 +253,10 @@ class ExcelTool:
                 cellType = sheet.cell(row, col).ctype
                 if cellType == 2 and value % 1 == 0.0:  # 是整数
                     value = int(value)
-                tableInfo.setValue(data, value, col)
+                try:
+                    tableInfo.setValue(data, value, col)
+                except BaseException as e:
+                    Log.logError("Json解析失败或属性字段错误:", xlslName, sheetName)
         return tableInfo
 
     #  导出json
@@ -254,20 +265,20 @@ class ExcelTool:
         for value in data:
             jsonVal = value.getJson()
             if jsonVal != None:
-                if type == "11":  # 所有都放在一个json中
+                if type == 0:  # 所有都放在一个json中
                     jsonObj[value.className] = jsonVal[value.className]
-                elif type == "10":  # 每一个sheet单独一个josn
+                elif type == 2:  # 每一个sheet单独一个josn
                     self.xlxsList.append(value.className)
                     writeToFile(getJsonStr(jsonVal), self.filePath, value.className, "json")
-                elif type == "12":  # 同一个文件内的表放在一个json中
+                elif type == 1:  # 同一个文件内的表放在一个json中
                     if value.xlxsName not in jsonObj:
                         jsonObj[value.xlxsName] = {}
                     jsonObj[value.xlxsName][value.className] = jsonVal[value.className]
 
-        if type == "11":
+        if type == 0:
             self.xlxsList = ["allconfig"]
             writeToFile(getJsonStr(jsonObj), self.filePath, "allconfig", "json")
-        elif type == "12":
+        elif type == 1:
             for xlxs in jsonObj:
                 fileName = getEnglish(xlxs)
                 self.xlxsList.append(fileName)
@@ -276,7 +287,7 @@ class ExcelTool:
 
     #  导出文本格式
     def exportToText(self, data: [], type):
-        if type == "20":
+        if type == 5:
             for value in data:
                 if value.exportType == 1:
                     continue
@@ -286,7 +297,7 @@ class ExcelTool:
                 writeToFile(text, self.filePath, value.className, "txt")
             return
 
-        if type == "21":
+        if type == 3:
             text = ""
             for value in data:
                 if value.exportType == 1:
@@ -297,7 +308,7 @@ class ExcelTool:
             writeToFile(text, self.filePath, "allconfig", "txt")
             return
 
-        if type == "22":
+        if type == 4:
             dict = {}
             for value in data:
                 if value.exportType == 1:
@@ -320,7 +331,9 @@ class ExcelTool:
     # 导出代码
     def exportCode(self, data, type):
         if type == "ts":
-            text = "var xlsxList = " + json.dumps(self.xlxsList) + ";\n"
+            text = "enum EnumTableType {\n\tjson = 1,\n\ttxt = 2,\n}\n"
+            text += "var xlsxList = " + json.dumps(self.xlxsList) + ";\n"
+            text += "var tableType = EnumTableType.%s;\n\n" % (self.fileType)
             text += readTemplate("ts.txt")
             for val in data:
                 text += val.getTsCode()

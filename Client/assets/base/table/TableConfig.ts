@@ -1,11 +1,13 @@
+enum EnumTableType {
+	json = 1,
+	txt = 2,
+}
 var xlsxList = ["qichexinxi", "SpringOutingConfig"];
+var tableType = EnumTableType.json;
+
 import {LoadManager} from "../manager/LoadManager";
 
-enum EnumTableType {
-    json = 1,
-    txt = 2
-}
-var tableType = EnumTableType.json;
+
 
 export class TableTool {
     static tableInfo: { [key: string]: any } = {}
