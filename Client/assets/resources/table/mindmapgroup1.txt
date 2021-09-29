@@ -1,3 +1,0 @@
-GroupId:INT	ID:INT
-分组id	mindmap ID
-0	1

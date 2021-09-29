@@ -2,8 +2,9 @@ import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 import {MindBox} from "./MindBox";
 import {MindLine} from "./MindLine";
-import {ComTool} from "../../ComTool";
-import {TableMindMap, TableManager, TableMindMapGroup} from "../../manager/TableManager";
+import {MindManager} from "./MindManager";
+import List from "../../../script/list/List";
+import {MindMapTool} from "./MindMapTool";
 
 export enum ColorEnum {
     BlueColor1 = 0,
@@ -38,26 +39,48 @@ export class MindMap extends cc.Component {
     view_content: cc.Node = null;
 
     @property(cc.Label)
-    lb_tip: cc.Label = null
+    lb_tip: cc.Label = null;
+
+    @property(cc.Node)
+    view: cc.Node = null;
+
+    @property(cc.Node)
+    introduce:cc.Node = null;
+
+    listView: List;
 
     color: cc.Color[] = [cc.color(127, 171, 203), cc.color(0, 150, 255),
         cc.color(164, 52, 52), cc.color(255, 0, 0)]
 
 
-    sceneNodeList: cc.Node[] = [];
-    currentId: number = 0;
+    sceneNode: cc.Node = null;
+    currentId: number = -1;
+
+    sceneNodeDict: { [key: string]: cc.Node } = {};
 
     chooseBox: MindBox = null;
 
     rootBoxList: MindBox[] = [];
     allBoxlist: MindBox[] = [];
 
+    mgr: MindManager = MindManager.ins();
+    tool: MindMapTool = new MindMapTool(this);
+
+    mindBoxIdList = [];
+
+    getBoxId() {
+        let id = this.mindBoxIdList[this.currentId] | this.currentId * 1000;
+        id += 1;
+        this.mindBoxIdList[this.currentId] = id;
+        return id
+    }
+
     get currentScene() {
-        return this.sceneNodeList[this.currentId];
+        return this.sceneNodeDict[this.currentId];
     }
 
     protected onLoad(): void {
-        this.sceneNodeList.push(this.node.getChildByName("scene"));
+        this.sceneNode = this.node.getChildByName("scene");
         this.node.on(cc.Node.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
         this.node.on(cc.Node.EventType.TOUCH_START, this.onTouch, this);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onMove, this);
@@ -66,14 +89,20 @@ export class MindMap extends cc.Component {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
         this.prefabLine.active = this.prefabBox.active = this.edit.node.active = false;
         this.autoLabel.node.opacity = 0;
-        this.btn_scene.on("click", this.changScene.bind(this, 0), this);
-        this.InitBoxMap();
         this.edit.node.zIndex = 99;
         this.lb_tip.node.zIndex = 99;
+        this.mgr.ui = this;
+        this.listView = this.view.getComponent(List);
+        this.listView.SetItemUpdateFunc(this.UpdateItem.bind(this));
+        this.listView.node.zIndex = 99;
+        this.listView.node.active = false;
+        this.introduce.zIndex = 99;
+        this.introduce.active = false;
     }
 
 
     protected start(): void {
+        this.tool.init();
     }
 
     //添加父节点
@@ -81,6 +110,9 @@ export class MindMap extends cc.Component {
         let newBox = new MindBox(this, null);
         if (!this.rootBoxList[this.currentId]) {
             this.rootBoxList[this.currentId] = newBox;
+            this.tool.groupMap[this.currentId].ID = newBox.id;
+        } else {
+            this.mgr.addBox(newBox);
         }
     }
 
@@ -91,6 +123,7 @@ export class MindMap extends cc.Component {
             let newBox = new MindBox(this, this.chooseBox);
             let newline = new MindLine(this, this.chooseBox, newBox);
             this.chooseBox.addLine(newline);
+            this.mgr.addBox(newBox);
         }
     }
 
@@ -98,40 +131,61 @@ export class MindMap extends cc.Component {
         let newLine = new MindLine(this, null, null);
     }
 
-    //创建新场景
-    onAddNewScene() {
-        let node = new cc.Node("scene" + this.sceneNodeList.length + 1);
-        node.addChild(new cc.Node("lines"));
-
-        node.setParent(this.node);
-        this.sceneNodeList.push(node);
-        this.changScene(this.sceneNodeList.length - 1 );
-        let btn = cc.instantiate(this.btn_scene);
-        btn.setParent(this.view_content);
-        btn.targetOff(this);
-        btn.on("click", this.changScene.bind(this, this.currentId))
-        btn.getComponentInChildren(cc.Label).string = "场景" + (this.sceneNodeList.length);
-        this.chooseBox = null;
-        this.moveLine = null;
+    OnOpenScene() {
+        this.listView.node.active = !this.listView.node.active;
+        if (this.listView.node.active) {
+            this.listView.numItems = this.tool.groupList.length;
+        }
     }
 
-    getSceneBtnLable(index:number):cc.Label{
+    UpdateItem(item: cc.Node, list_id: number) {
+        let id = this.tool.groupList[list_id];
+        let data = this.tool.getGroupInfo(id);
+        item.getChildByName("name").getComponent(cc.Label).string = data.Name;
+        let toggle = item.getChildByName("toggle").getComponent(cc.Toggle);
+        let edit = item.getChildByName("edit");
+        toggle.isChecked = data.isChoose;
+        toggle.node.targetOff(this);
+        item.targetOff(this);
+        edit.on("click",()=>{
+            this.view.active = false;
+            this.loadScene(id);
+        },this)
+        toggle.node.on("click", () => {
+            this.tool.groupMap[id].isChoose = toggle.isChecked;
+        }, this)
+    }
+
+    //创建新场景
+    onAddNewScene(event, id = null) {
+        let isNew = false;
+        if (!id) {
+            id = this.tool.groupList.length;
+            isNew = true;
+        }
+        let node = new cc.Node("scene" + id);
+        node.addChild(new cc.Node("lines"));
+        node.setParent(this.node);
+        this.sceneNodeDict[id] = node;
+        this.btn_scene.getComponentInChildren(cc.Label).string = "场景" + id;
+        this.chooseBox = null;
+        this.moveLine = null;
+        if (isNew) {
+            if (this.currentScene)
+                this.currentScene.active = false;
+            this.currentId = id;
+            let newbox = new MindBox(this, null);
+            this.rootBoxList[id] = newbox;
+            newbox.groupId = id;
+            newbox.resetId();
+            this.tool.addScene(id, newbox.id);
+        }
+    }
+
+    getSceneBtnLable(index: number): cc.Label {
         return this.view_content.children[index].getComponentInChildren(cc.Label);
     }
 
-    changScene(index: number) {
-        if(this.isCtrl){
-            this.edit.node.active = true;
-            this.editBox = null;
-            this.edit["scene"] = this.getSceneBtnLable(index);
-            return;
-        }
-        for (let i = 0; i < this.sceneNodeList.length; i++) {
-            this.sceneNodeList[i].active = false;
-        }
-        this.sceneNodeList[index].active = true;
-        this.currentId = index;
-    }
 
     //鼠标滚轮
     onMouseWheel(event) {
@@ -151,7 +205,7 @@ export class MindMap extends cc.Component {
 
     //移动
     onMove(event) {
-        if (this.isTouch) {
+        if (this.isTouch && this.currentScene) {
             let delta = event.getDelta();
             this.currentScene.x += delta.x;
             this.currentScene.y += delta.y;
@@ -169,13 +223,16 @@ export class MindMap extends cc.Component {
 
     //输入结束
     onHideEdit() {
+        this.view.active = false;
+        this.introduce.active = false;
         if (this.editBox) {
             this.edit.string && this.editBox.resetWidthHeight(this.getStringWidthHeight(this.edit.string));
             this.editBox.setVale(this.edit.string);
             this.edit.string = "";
-        }else if(this.edit["scene"]){
-            let scene:cc.Label = this.edit["scene"];
+        } else if (this.edit["scene"]) {
+            let scene: cc.Label = this.edit["scene"];
             scene.string = this.edit.string;
+            this.tool.groupMap[this.currentId].Name = this.edit.string;
             this.edit.string = "";
             this.edit["scene"] = null;
         }
@@ -184,6 +241,17 @@ export class MindMap extends cc.Component {
         this.isTouch = false;
     }
 
+    onEditScene() {
+        if (this.isCtrl) {
+            this.edit["scene"] = this.btn_scene.getComponentInChildren(cc.Label);
+            this.edit.node.active = true;
+            this.edit.string = this.btn_scene.getComponentInChildren(cc.Label).string;
+        }
+    }
+
+    onShowIntroduce(){
+        this.introduce.active = !this.introduce.active;
+    }
     //场景放大
     onBig() {
         this.currentScene.scale += 0.1;
@@ -212,27 +280,35 @@ export class MindMap extends cc.Component {
         if (!this.lineBox) {
             this.lineBox = box;
         } else if (box != this.lineBox) {
-            if (this.lineBox.checkLoop(box)) {
-                cc.error("出现循环!!!!!!!!!!!!!!!!");
-                this.showTip("出现循环!!!!!!!!!!!!!!!!");
-                return;
+            let line = this.boxLineBox(this.lineBox, box);
+            if (line) {
+                this.mgr.addLine(line);
             }
-            let line = new MindLine(this, this.lineBox, box);
-            this.lineBox.addLine(line);
-            line.resetPos();
-            this.lineBox.addChild(box, false);
             this.lineBox = null;
         }
     }
 
-    showTip(tip:string) {
+    boxLineBox(box1: MindBox, box2: MindBox) {
+        if (box1.checkLoop(box2)) {
+            cc.error("出现循环!!!!!!!!!!!!!!!!");
+            this.showTip("出现循环!!!!!!!!!!!!!!!!");
+            return null;
+        }
+        let line = new MindLine(this, box1, box2);
+        box1.addLine(line);
+        line.resetPos();
+        box1.addChild(box2, false);
+        return line
+    }
+
+    showTip(tip: string) {
         this.lb_tip.string = tip;
         this.lb_tip.node.active = true;
         this.lb_tip.node.opacity = 255;
-        this.lb_tip.node.setPosition(0,0);
+        this.lb_tip.node.setPosition(0, 0);
         cc.tween(this.lb_tip.node)
-            .to(0.5,{position:cc.v3(0,100,0)})
-            .to(0.5,{opacity:0})
+            .to(0.5, {position: cc.v3(0, 100, 0)})
+            .to(0.5, {opacity: 0})
             .start();
     }
 
@@ -241,7 +317,6 @@ export class MindMap extends cc.Component {
     isDelete: boolean = false;//删除状态
     isAlt: boolean = false;//连线状态
     onKeyDown(event) {
-        this.isCtrl = false;
         this.isDelete = false;
         switch (event.keyCode) {
             case cc.macro.KEY.ctrl:
@@ -252,12 +327,20 @@ export class MindMap extends cc.Component {
                 break;
             case cc.macro.KEY.alt:
                 this.isAlt = true;
+            case cc.macro.KEY.z:
+                if (this.isCtrl) {
+                    this.mgr.preStep();
+                }
+                break;
+            case cc.macro.KEY.s:
+                if (this.isCtrl) {
+                    this.onSave();
+                }
                 break;
         }
     }
 
     onKeyUp(event) {
-        this.isCtrl = false;
         this.isDelete = false;
         this.isAlt = false;
         switch (event.keyCode) {
@@ -275,6 +358,9 @@ export class MindMap extends cc.Component {
                 break;
             case cc.macro.KEY.alt:
                 this.lineBox = null;
+                break;
+            case cc.macro.KEY.ctrl:
+                this.isCtrl = false;
                 break;
         }
     }
@@ -309,188 +395,100 @@ export class MindMap extends cc.Component {
         }
     }
 
-
     //线条移动
     moveLine: MindLine = null;
 
     //存储和读取
     //保存
     onSave() {
-        let text1 = this.getMindMapFile();
-        ComTool.SetLocalItem("mindmap", text1);
-        let text2 = this.getMindGroupFile();
-        ComTool.SetLocalItem("mindmapgroup", text2);
-        let posmap = {};
-        for (let i = 0; i < this.allBoxlist.length; i++) {
-            let box = this.allBoxlist[i];
-            posmap[box.id] = [box.node.x << 0, box.node.y << 0];
-        }
-        ComTool.SetLocalItem("mindmappos", posmap);
-
-        cc.log("保存成功")
+        this.tool.saveScene()
     }
 
     onDownload() {
-        let text1 = this.getMindMapFile();
-        ComTool.saveForBrowser(text1, "mindmap", ".txt");
-        let text2 = this.getMindGroupFile();
-        ComTool.saveForBrowser(text2, "mindmapgroup", ".txt");
-        let posmap = {};
-        for (let i = 0; i < this.allBoxlist.length; i++) {
-            let box = this.allBoxlist[i];
-            posmap[box.id] = [box.node.x << 0, box.node.y << 0];
-        }
-        ComTool.saveForBrowser(JSON.stringify(posmap), "mindmappos", ".txt");
-
-        cc.log("下载成功")
-
+        this.tool.download()
     }
 
-    getMindMapFile() {
-        let idList = [];
-        let text = "ID:INT\tGroupId:INT\tChildIDList:ARRAYDATA\tEventID:INT\tIsSubSocre:BOOL\tText:STRING\r\n";
-        text += "id\t分组id\t下一组id\t触发事件类型id\t是否扣分\t对话内容\r\n";
-        this.allBoxlist.sort((a,b)=>{
-            return a.groupId - b.groupId;
-        })
-        for (let i = 0; i < this.allBoxlist.length; i++) {
-            let box = this.allBoxlist[i];
-            if (!box || (box.parents.length == 0 && box.children.length == 0)) {
-                continue;
-            }
-            if (idList.indexOf(box.id) > -1) {
-                continue;
-            }
-            idList.push(box.id);
-            let nextIdlist = [];
-            for (let j = 0; j < box.children.length; j++) {
-                nextIdlist.push(box.children[j].id);
-            }
-            let isSubsocre = box.isSubSocre ? 1 : 0;
-            let [content, event] = box.value.split(";");
-            let eventid = event ? parseInt(event) : 0;
-            text += `${box.id}\t${JSON.stringify(box.groupId)}\t${JSON.stringify(nextIdlist)}\t${eventid}\t${isSubsocre}\t${content}\r\n`;
-        }
-        return text;
-    }
 
-    getMindGroupFile() {
-        //下载组表
-        let text2 = "GroupId:INT\tID:INT\tName:STRING\r\n";
-        text2 += "分组id\tmindmap ID\t分组名称\r\n";
-        for (let i = 0; i < this.rootBoxList.length; i++) {
-            if (!this.rootBoxList[i]) {
-                cc.error("不存在组:", this.rootBoxList);
-                continue;
-            }
-            let name = "场景" + i;
-            let label = this.getSceneBtnLable(i);
-            if(label){
-                name = label.string;
-            }
-
-            text2 += `${i}\t${this.rootBoxList[i].id}\t${name}\r\n`;
+    loadScene(groupId) {
+        if (Number(groupId) == this.currentId) {
+            return;
         }
-        return text2;
-    }
-
-    async InitBoxMap() {
-        // TableManager.Init();
-        await ComTool.Await(1);
-        if (!TableMindMapGroup.table || !TableMindMap.table) {
-            if (!ComTool.GetLocalItem("mindmap", "")) {
-                return;
-            } else {//读取浏览器缓存
-                let mindmap = ComTool.GetLocalItem("mindmap", "");
-                let mindGroup = ComTool.GetLocalItem("mindmapgroup", "");
-                TableManager.LoadTable(mindmap, "mindmap")
-                TableManager.LoadTable(mindGroup, "mindmapgroup");
-                TableMindMap.Init(TableManager.tables["mindmap"]);
-                TableMindMapGroup.Init(TableManager.tables["mindmapgroup"]);
-            }
+        this.mgr.changeScene();
+        if (this.currentId >= 0) {
+            this.sceneNodeDict[this.currentId].active = false;
+            this.tool.saveScene();
         }
-        let maxId = 0;
+        let scene = this.sceneNodeDict[groupId];
+        this.currentId = Number(groupId);
+        let groupInfo = this.tool.getGroupInfo(groupId);
+        if (scene) {
+            scene.active = true;
+            this.btn_scene.getComponentInChildren(cc.Label).string = groupInfo.Name;
+            return;
+        }
+        this.onAddNewScene(null, groupId);
+        this.btn_scene.getComponentInChildren(cc.Label).string = groupInfo.Name;
+
         let boxmap = {};
-        let posmap = ComTool.GetLocalItem("mindmappos", {});
-        if (!posmap) {
-            posmap = {};
+        let id = groupInfo.ID;
+        let config = this.tool.getStoryInfo(id);
+        let box = new MindBox(this, null);
+        box.id = config.ID;
+        this.mindBoxIdList[this.currentId] = box.id;
+
+        box.groupId = config.GroupId;
+        box.isSubSocre = config.IsSubSocre;
+        box.setVale(config.Text);
+        let children = config.ChildIdList;
+        this.rootBoxList[this.currentId] = box;
+        box.resetWidthHeight(this.getStringWidthHeight(config.Text));
+        let pos = config.PosX ? true : false;
+        if (pos) {
+            box.node.setPosition(config.PosX, config.PosY);
         }
-        let fun = (box: MindBox, children: number[]) => {
-            if (children.length > 0) {
-                for (let i = 0; i < children.length; i++) {
-                    let config = TableMindMap.GetConfig(children[i]);
-                    let newbox: MindBox;
-                    if (boxmap[config.ID]) {
-                        newbox = boxmap[config.ID];
-                    } else {
-                        newbox = new MindBox(this, null)
-                    }
-                    newbox.id = config.ID;
-                    newbox.groupId = config.GroupId;
-                    newbox.isSubSocre = config.IsSubSocre;
-                    let text = config.Text;
-                    if (config.EventID) {
-                        text += (";" + config.EventID);
-                    }
-                    newbox.setVale(text);
-                    let pos = posmap[config.ID];
-                    if (pos) {
-                        newbox.node.setPosition(pos[0], pos[1]);
-                    }
+        boxmap[config.ID] = box;
+        this.createSceneBox(box, children, boxmap);
+        box.setColor(this.color[ColorEnum.BlueColor1]);
 
-                    if (box.children.indexOf(newbox) == -1) {
-                        let line = new MindLine(this, box, newbox);
-                        box.addLine(line);
-                        box.addChild(newbox, !pos);
-                    }
-                    let newChildren = config.ChildIDList;
-                    if (config.ID > maxId) {
-                        maxId = config.ID;
-                    }
-                    newbox.intId(maxId);
-                    boxmap[config.ID] = newbox;
-                    newbox.resetWidthHeight(this.getStringWidthHeight(text));
+    }
 
-                    fun(newbox, newChildren);
+    createSceneBox(box: MindBox, children: number[], boxmap) {
+        if (children.length > 0) {
+            for (let i = 0; i < children.length; i++) {
+                let config = this.tool.getStoryInfo(children[i]);
+                let newbox: MindBox;
+                if (boxmap[config.ID]) {
+                    newbox = boxmap[config.ID];
+                } else {
+                    newbox = new MindBox(this, null)
                 }
-            }
-            box.resetLine();
-        }
-        for (let key in TableMindMapGroup.table) {
-            let groupconfig = TableMindMapGroup.GetConfig(key);
-            let config = TableMindMap.GetConfig(groupconfig.ID);
-            if (!config || config.GroupId != groupconfig.GroupId) {
-                cc.error("发现组id不一致,请查明原因", groupconfig, config);
-                continue;
-            }
-            if (!this.sceneNodeList[groupconfig.GroupId]) {
-                this.onAddNewScene();
-            }
-            let label = this.getSceneBtnLable(groupconfig.GroupId);
-            if(label){
-                label.string = groupconfig.Name || "场景" + (groupconfig.GroupId +1);
-            }
-            let box = new MindBox(this, null);
-            box.id = config.ID;
-            box.groupId = config.GroupId;
-            box.isSubSocre = config.IsSubSocre;
-            box.setVale(config.Text);
-            let children = config.ChildIDList;
-            if (config.ID > maxId) {
-                maxId = config.ID;
-            }
-            this.rootBoxList[this.currentId] = box;
-            boxmap[config.ID] = box;
-            box.resetWidthHeight(this.getStringWidthHeight(config.Text));
-            let pos = posmap[config.ID];
-            if (pos) {
-                box.node.setPosition(pos[0], pos[1]);
-            }
-            fun(box, children);
-            box.setColor(this.color[ColorEnum.BlueColor1]);
-            await ComTool.Await(0.1);
-        }
-        boxmap = null;
+                newbox.id = config.ID;
+                if(newbox.id > this.mindBoxIdList[this.currentId]){
+                    this.mindBoxIdList[this.currentId] = newbox.id;
+                }
+                newbox.groupId = config.GroupId;
+                newbox.isSubSocre = config.IsSubSocre;
+                let text = config.Text;
+                if (config.EventID) {
+                    text += (";" + config.EventID);
+                }
+                newbox.setVale(text);
+                let pos = config.PosX ? true : false;
+                if (pos) {
+                    newbox.node.setPosition(config.PosX, config.PosY);
+                }
+                if (box.children.indexOf(newbox) == -1) {
+                    let line = new MindLine(this, box, newbox);
+                    box.addLine(line);
+                    box.addChild(newbox, !pos);
+                }
+                let newChildren = config.ChildIdList;
+                boxmap[config.ID] = newbox;
+                newbox.resetWidthHeight(this.getStringWidthHeight(text));
 
+                this.createSceneBox(newbox, newChildren, boxmap);
+            }
+        }
+        box.resetLine();
     }
 }

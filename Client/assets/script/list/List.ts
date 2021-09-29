@@ -1752,7 +1752,7 @@ export default class List extends cc.Component {
                     this._renderCallBack.call(this,item,listId % this._actualNumItems)
                 }
             }
-            
+
         }
     }
 

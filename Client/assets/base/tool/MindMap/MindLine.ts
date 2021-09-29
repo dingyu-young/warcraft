@@ -60,9 +60,12 @@ export class MindLine {
         }
         this.changColor();
         if(this.cpt.isDelete){
+            this.cpt.mgr.deleteLine(this);
             this.deletSelf();
         }
-        this.cpt.moveLine = null;
+        if(this.cpt && this.cpt.moveLine){
+            this.cpt.moveLine = null;
+        }
     }
 
     //重新定位位置

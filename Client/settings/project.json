@@ -2,7 +2,7 @@
   "migrate-history": [
     "cloud-function"
   ],
-  "last-module-event-record-time": 1627976690300,
+  "last-module-event-record-time": 1632484582486,
   "group-list": [
     "default",
     ""
@@ -20,18 +20,14 @@
     "AudioSource",
     "Collider",
     "Dynamic Atlas",
-    "Graphics",
     "Geom Utils",
     "Intersection",
-    "Label Effect",
-    "Mask",
     "Mesh",
     "MotionStreak",
     "Native Socket",
     "Physics",
     "PageViewIndicator",
     "ParticleSystem",
-    "ScrollView",
     "StudioComponent",
     "TiledMap",
     "VideoPlayer",

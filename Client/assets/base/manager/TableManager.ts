@@ -69,10 +69,12 @@ export class TableManager {
 export class TableMindMap {
     ID: number;
     GroupId:number;
-    ChildIDList:number[];
+    ChildIdList:number[];
     EventID:number;
     IsSubSocre:boolean;
     Text:string;
+    PosX:number;
+    PosY:number;
 
     private static _table: { [key: string]: TableMindMap } = null;
 
@@ -93,6 +95,7 @@ export class TableMindMapGroup {
     GroupId:number;
     ID: number;
     Name:string;
+    isChoose:boolean
 
     private static _table: { [key: string]: TableMindMapGroup } = null;
 

@@ -1,4 +1,0 @@
-##SpringOutingConfig
-ID:Int	PROGRESS:Int	ONE:Int	TEN:Int	DIAMOND:Array	
-配置id	春游进度值	单次抽奖消耗油桶数	10次抽奖消耗油桶数	购买学雷锋所需钻石	
-1	20	50	500	[50, 100, 150, 200]	

@@ -20,18 +20,19 @@ export class MindBox {
 
     isSubSocre: boolean = false;
 
-    intId(id: number) {
-        if (id > mindBoxID) {
-            mindBoxID = id;
-        }
+
+
+    resetId(){
+        mindBoxID = 1;
+        this.id = this.groupId * 1000 + mindBoxID;
     }
 
     constructor(cpt: MindMap, parent: MindBox) {
         this.cpt = cpt;
         this.node = cc.instantiate(cpt.prefabBox);
         this.node.active = true;
-        this.id = ++mindBoxID;
         this.groupId = cpt.currentId;
+        this.id = this.cpt.getBoxId();
         this.lb_value = this.node.getChildByName("label").getComponent(cc.Label);
         if (!parent) {
             this.parents = [];
@@ -42,7 +43,6 @@ export class MindBox {
             this.node.setParent(cpt.currentScene);
             parent.addChild(this);
         }
-        cpt.allBoxlist.push(this);
         this.node.targetOff(this);
         this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchuStart, this);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchuMove, this);
@@ -96,10 +96,9 @@ export class MindBox {
     }
 
     deletSelf() {
-        let index = this.cpt.allBoxlist.indexOf(this);
-        if (index > -1) {
-            this.cpt.allBoxlist.splice(index, 1);
-        }
+
+        this.cpt.tool.deleteBox(this);
+
         for (let i = 0; i < this.lines.length;) {
             this.lines[i].deletSelf();
         }
@@ -115,10 +114,6 @@ export class MindBox {
         this.lines = [];
         this.node.active = false;
         this.node = null;
-        this.cpt = null;
-        this.id = null;
-        this.value = null;
-        this.lb_value = null;
         this.isMove = false;
         this.isClick = false;
     }
@@ -225,6 +220,11 @@ export class MindBox {
         }
 
         if (this.cpt.isDelete) {
+            if(this.cpt.rootBoxList[this.cpt.currentId] == this){
+                this.cpt.showTip("不能删除根节点");
+                return
+            }
+            this.cpt.mgr.deleteBox(this);
             this.deletSelf();
             return;
         }
@@ -270,6 +270,7 @@ export class MindBox {
                     this.cpt.moveLine = null;
                     return;
                 }
+                this.cpt.mgr.moveLine(line);
                 this.addLine(line);
                 if (line.child) {
                     this.addChild(line.child, false);
@@ -288,6 +289,7 @@ export class MindBox {
                     this.cpt.moveLine = null;
                     return;
                 }
+                this.cpt.mgr.moveLine(line);
                 if (line.child) {
                     line.parent.deletChild(line.child);
                 }
