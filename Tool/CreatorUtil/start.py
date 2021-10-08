@@ -1,38 +1,50 @@
 
-from PyQt5.QtWidgets import QApplication
-from PyQt5 import QtCore, QtWidgets
-
 import sys
-
+import tkinter
 from ExcelUtil.ExcelTool import ExcelTool
-from UI.window import Ui_MainWindow
+from PSDTool.PsdTool import PSDTool
+from UI.TkGui import TkGui
 from Util.cLog import Log
 from Util.toolConfig import *
 
 
 def initUI(ui):
     loadConfig()
-    _translate = QtCore.QCoreApplication.translate
-    ui.comboBox.addItem("Json:只导出一份")
-    ui.comboBox.addItem("Json:一张xlsx导出一份")
-    ui.comboBox.addItem("Json:每个类一份")
-    ui.comboBox.addItem("Txt:只导出一份")
-    ui.comboBox.addItem("Txt:一张xlsx导出一份")
-    ui.comboBox.addItem("Txt:每个类一份")
-    ui.edit_excel.setPlainText(_translate("MainWindow", getConfig("表格Excel路径")))
-    ui.edit_path.setPlainText(_translate("MainWindow", getConfig("导出文件路径")))
-    ui.comboBox.setCurrentIndex((int)(getConfig("生成格式")))
-    # ui.edit_type.setPlainText(_translate("MainWindow", getConfig("生成格式")))
-    ui.edit_codepath.setPlainText(_translate("MainWindow", getConfig("代码生成路径")))
+    ui.edit_excel_path.insert(tkinter.END,getConfig("表格Excel路径"))
+    ui.edit_excel_export_path.insert(tkinter.END,getConfig("导出文件路径"))
+    ui.edit_excel_code_path.insert(tkinter.END,getConfig("代码生成路径"))
+    ui.edit_psd_path.insert(tkinter.END, getConfig("PSD路径"))
+
+
+def cmdRun(argv):
+    rootPath = "" if argv[1] == None else argv[1]
+    filePath = "" if argv[2] == None else argv[2]
+    codePath = "" if argv[3] == None else argv[3]
+    type = 1 if argv[4] == None else (int)(argv[4])
+    Log.ui = None
+    tool = ExcelTool(None)
+
+    tool.rootPath = rootPath
+    tool.filePath = filePath
+    tool.codePath = codePath
+    print(rootPath, filePath, codePath, type)
+    tool.startExport(type)
+
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    mainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(mainWindow)
-    initUI(ui)
-    mainWindow.show()
-    Log.ui = ui
-    excelTool = ExcelTool(ui)
-    Log.log("欢迎使用")
-    app.exec_()
+
+    if len(sys.argv) > 1:
+        cmdRun(sys.argv)
+    else:
+        gui = tkinter.Tk()  # 实例化出一个父窗口
+        window = TkGui(gui)
+        # 设置根窗口默认属性
+        window.init_window()
+
+        Log.ui = window
+        excelTool = ExcelTool()
+        psdTool = PSDTool()
+        window.setTool(excelTool, psdTool)
+        initUI(window)
+        Log.log("欢迎使用")
+        gui.mainloop()  # 父窗口进入事件循环，可以理解为保持窗口运行，否则界面不展示

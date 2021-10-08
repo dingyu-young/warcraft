@@ -1,4 +1,5 @@
 表格Excel路径=F:\MyWork\Config
-导出文件路径=F:\MyWork\warcraft\Client\assets\resources\table
-代码生成路径=F:\MyWork\warcraft\Client\assets\base\table
+导出文件路径=F:\MyWork\Config\table
+代码生成路径=F:\MyWork\Config\code
 生成格式=1
+PSD路径=F:\MyWork\Config\psd\

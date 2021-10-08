@@ -1,7 +1,6 @@
 # coding=UTF-8
 from Util.ioUitl import *
 from Util.cLog import Log
-from UI.window import Ui_MainWindow
 import xlrd
 import os.path
 import json
@@ -20,26 +19,30 @@ class TableInfo:
         self.sheetName = ""  # sheet名称
 
     # 设置键和类型
-    def setKeyAndType(self, data):
-        for value in data:
+    def setTypeList(self, list):
+        for value in list:
             if value == '':
-                continue
-            list = value.split(":")
-            self.keyList.append(list[0])
-            self.typeList.append(list[1])
+                return
+            self.typeList.append(value)
+
+    def setKeyList(self, list):
+        for key in list:
+            if key == "":
+                return
+            self.keyList.append(key)
 
     # 设置值
     def setValue(self, data, value, col):
         if col >= len(self.keyList):
             return
         key = self.keyList[col]
-        type = self.typeList[col].capitalize()
+        type = self.typeList[col].capitalize()  # 转成首字母大写
         if type == "String":
             value = str(value)
         elif type == "Int":
             value = int(value)
         elif type == "Array":
-            value = json.loads(value)
+            value = self.decodeArray(value)
         elif type == "Float":
             value = float(value)
         elif type == "Bool":
@@ -47,6 +50,26 @@ class TableInfo:
         data[key] = value
         if col == len(self.keyList) - 1:
             self.valueList.append(data)
+
+    # 解析数组类型
+    def decodeArray(self, text):
+        text1 = text.split("||")
+        array = []
+        if len(text1) > 1:  # 二维数组
+            for t in text1:
+                arr = t.split("|")
+                for i in range(len(arr)):
+                    if arr[i].isdigit():
+                        arr[i] = int(arr[i])
+                array.append(arr)
+        else:  # 一维数组
+            arr = text.split("|")
+            for i in range(len(arr)):
+                if arr[i].isdigit():
+                    arr[i] = int(arr[i])
+            array = arr
+
+        return array
 
     # 获取类型
     def getType(self, index):
@@ -98,7 +121,8 @@ class TableInfo:
             txt += "\nexport enum %s {\n" % (self.className)
             for i in range(len(self.valueList)):
                 value = self.valueList[i]
-                txt += "\t%s = %d, \t//%s\n" % (value["Enum"], value["Value"], value["Des"])
+                txt += "\t%s = %d, \t//%s\n" % (value[self.keyList[0]],
+                                                value[self.keyList[1]], value[self.keyList[2]])
             txt += '}\n\n'
         else:
             txt = "\n@TableTool.RegirsterTable\n"
@@ -121,26 +145,25 @@ class TableInfo:
 
 
 class ExcelTool:
-    ui: Ui_MainWindow  # 界面
     rootPath: str = ""  # excel文件根目录
     filePath: str = ""  # 生成文件路径
     codePath: str = ""  # 代码生成路径
     xlxsList = []  # 生成文件名列表
     fileType = ""  # 生成类型
 
-    def __init__(self, ui: Ui_MainWindow):
-        self.ui = ui
-        ui.btn_excel.clicked.connect(self.onClick)
-
     # 处理点击事件
-    def onClick(self):
+    def onClick(self, rootPath, filePath, codePath, type):
         this = self
         Log.log("开始导出配置表,请勿执行其他操作!!")
         this.xlxsList = []
-        this.rootPath = this.ui.edit_excel.toPlainText()  # 表格路径
-        this.filePath = this.ui.edit_path.toPlainText()  # 生成文件路径
-        this.codePath = this.ui.edit_codepath.toPlainText()  # 代码生成路径
-        type = this.ui.comboBox.currentIndex()  # 生成类型
+        this.rootPath = rootPath  # 表格路径
+        this.filePath = filePath  # 生成文件路径
+        this.codePath = codePath  # 代码生成路径
+        this.startExport(type)
+
+    def startExport(self, type):
+        this = self
+
         codeType = "ts"
         configList = this.loadConfigList("ConfigList", "ConfigList")  # 主配置文件
         allConfig = this.loadAllConfig(configList)  # 生成所有的配置列表 [TableInfo]
@@ -154,11 +177,9 @@ class ExcelTool:
                 this.exportToText(allConfig, type)
             this.exportCode(allConfig, codeType)
         except BaseException as e:
-            Log.logError("生成表格时错误", e)
+            Log.logError("生成表格时错误")
         else:
             Log.logSuccess("导出配置表成功")
-
-        return
 
     # 加载所有配置表
     def loadAllConfig(self, configList: []):
@@ -203,21 +224,20 @@ class ExcelTool:
         keyList = []
 
         for row in range(sheet.nrows):  # 循环读取表格内容
-            if row == 1:
+            if row == 0 or row == 2:  # 第一行是字段类型 可不读
                 continue
             cells = sheet.row_values(row)  # 读取一行数据  内容[id:int,xlsl:string]
+            if row == 1:
+                keyList = cells  # 第2行是字段名
+                continue
             data = {}
             for col in range(len(cells)):
                 value = cells[col]
-                if row == 0:
-                    keyList.append(value.split(":")[0])
-                else:
-                    cellType = sheet.cell(row, col).ctype
-                    if value != '' and cellType == 2 and value % 1 == 0.0:  # 是整数
-                        value = int(value)
-                    data[keyList[col]] = value
-            if row != 0:
-                dataList.append(data)  # 把每次循环读取的数据插入到list
+                cellType = sheet.cell(row, col).ctype
+                if value != '' and cellType == 2 and value % 1 == 0.0:  # 是整数
+                    value = int(value)
+                data[keyList[col]] = value
+            dataList.append(data)  # 把每次循环读取的数据插入到list
         return dataList
 
     #  加载主配置里的所有表格
@@ -237,14 +257,15 @@ class ExcelTool:
         tableInfo = TableInfo()
         for row in range(sheet.nrows):  # 循环读取表格内容
             cells = sheet.row_values(row)  # 读取一行数据  内容[id:int,xlsl:string]
-
-            if row == 1:
+            if row == 0:  # 第1行是字段类型
+                tableInfo.setTypeList(cells)
+                continue
+            if row == 1:  # 第2行是字段名
+                tableInfo.setKeyList(cells)
+                continue
+            if row == 2:  # 第3行是字段描述
                 tableInfo.desList = cells
                 continue
-            if row == 0:
-                tableInfo.setKeyAndType(cells)
-                continue
-
             data = {}
             for col in range(len(cells)):
                 if col > len(tableInfo.keyList):
@@ -331,10 +352,13 @@ class ExcelTool:
     # 导出代码
     def exportCode(self, data, type):
         if type == "ts":
-            text = "enum EnumTableType {\n\tjson = 1,\n\ttxt = 2,\n}\n"
-            text += "var xlsxList = " + json.dumps(self.xlxsList) + ";\n"
-            text += "var tableType = EnumTableType.%s;\n\n" % (self.fileType)
-            text += readTemplate("ts.txt")
+            text = ""
+            # text = "enum EnumTableType {\n\tjson = 1,\n\ttxt = 2,\n}\n"
+            # text += "var xlsxList = " + json.dumps(self.xlxsList) + ";\n"
+            # text += "var tableType = EnumTableType.%s;\n\n" % (self.fileType)
+            # text += readTemplate("ts.txt")
+            temp = readTemplate("ts.txt") % (self.fileType, json.dumps(self.xlxsList))
+            text += temp
             for val in data:
                 text += val.getTsCode()
             writeToFile(text, self.codePath, "TableConfig", "ts")

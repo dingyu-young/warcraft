@@ -9,11 +9,16 @@ from Util.cLog import Log
 
 def writeToFile(data, filePath, fileName, type):
     if not os.path.exists(r'' + filePath):
-        Log.logSuccess("生成文件目录:",filePath)
+        Log.log("创建文件目录:",filePath)
         os.makedirs(r'' + filePath)
     path = r'' + filePath + "\\" + fileName + "." + type
     with open(path, 'w', encoding='utf-8', errors='ignore') as f:
         f.write(data)
+
+def createDir(path):
+    if not os.path.exists(r'' + path):
+        Log.log("创建文件目录:",path)
+        os.makedirs(r'' + path)
 
 # 获取json字符串
 def getJsonStr(jsonObj):
