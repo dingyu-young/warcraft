@@ -73,6 +73,7 @@ export class TableMindMap {
     EventID:number;
     IsSubSocre:boolean;
     Text:string;
+    Sound:string;
     PosX:number;
     PosY:number;
 
@@ -92,10 +93,11 @@ export class TableMindMap {
 }
 //剧情组表表
 export class TableMindMapGroup {
-    GroupId:number;
-    ID: number;
-    Name:string;
-    isChoose:boolean
+    GroupId:number;//剧情组id
+    ID: number;//剧情对话id
+    Name:string;//剧情名称
+    isChoose:boolean;//是否可以使用
+    RewardId:number//奖励id
 
     private static _table: { [key: string]: TableMindMapGroup } = null;
 

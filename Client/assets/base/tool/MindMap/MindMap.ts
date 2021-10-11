@@ -141,12 +141,15 @@ export class MindMap extends cc.Component {
     UpdateItem(item: cc.Node, list_id: number) {
         let id = this.tool.groupList[list_id];
         let data = this.tool.getGroupInfo(id);
-        item.getChildByName("name").getComponent(cc.Label).string = data.Name;
+        item.getChildByName("name").getComponent(cc.Label).string = (list_id + 1) + ":  " + data.Name;
         let toggle = item.getChildByName("toggle").getComponent(cc.Toggle);
         let edit = item.getChildByName("edit");
+        let reward = item.getChildByName("reward").getComponent(cc.EditBox);
+        reward.string = data.RewardId ? data.RewardId + "" : '';
         toggle.isChecked = data.isChoose;
         toggle.node.targetOff(this);
-        item.targetOff(this);
+        edit.targetOff(this);
+        reward.node.targetOff(this);
         edit.on("click",()=>{
             this.view.active = false;
             this.loadScene(id);
@@ -154,6 +157,10 @@ export class MindMap extends cc.Component {
         toggle.node.on("click", () => {
             this.tool.groupMap[id].isChoose = toggle.isChecked;
         }, this)
+        reward.node.on("editing-did-ended",()=>{
+            cc.log("111")
+            this.tool.groupMap[id].RewardId = reward.string;
+        },this)
     }
 
     //创建新场景
@@ -353,7 +360,7 @@ export class MindMap extends cc.Component {
             case cc.macro.KEY.l://新的线条
                 this.onAddLine();
                 break;
-            case cc.macro.KEY.r://新的线条
+            case cc.macro.KEY.r://事件扣分
                 this.boxChangeState();
                 break;
             case cc.macro.KEY.alt:
@@ -402,6 +409,7 @@ export class MindMap extends cc.Component {
     //保存
     onSave() {
         this.tool.saveScene()
+        this.showTip("保存成功")
     }
 
     onDownload() {

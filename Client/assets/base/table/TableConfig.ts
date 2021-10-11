@@ -5,9 +5,19 @@ enum EnumTableType {
 var xlsxList = ["qichexinxi", "SpringOutingConfig"];
 var tableType = EnumTableType.json;
 
-import {LoadManager} from "../manager/LoadManager";
 
-
+async function loadRes(path: string, type: typeof cc.Asset):Promise<any> {
+    return new Promise((resolve: Function, reject: Function) => {
+        cc.log("加载资源:" + path);
+        cc.resources.load(path, type, (err, res) => {
+            if (err) {
+                cc.error(err);
+                reject(err);
+            }
+            resolve(res);
+        })
+    })
+}
 
 export class TableTool {
     static tableInfo: { [key: string]: any } = {}
@@ -21,7 +31,7 @@ export class TableTool {
         if (tableType == EnumTableType.json) {
             for (let i = 0; i < xlsxList.length; i++) {
                 let xlsxName = xlsxList[i];
-                let data = await LoadManager.ins().loadRes(path + xlsxName, cc.JsonAsset)
+                let data = await loadRes(path + xlsxName, cc.JsonAsset)
                 if (!data) {
                     cc.error("不存在配置表:", xlsxName)
                     continue
@@ -31,7 +41,7 @@ export class TableTool {
         } else if (tableType == EnumTableType.txt) {
             for (let i = 0; i < xlsxList.length; i++) {
                 let xlsxName = xlsxList[i];
-                let data = await LoadManager.ins().loadRes(path + xlsxName, cc.TextAsset)
+                let data = await loadRes(path + xlsxName, cc.TextAsset)
                 if (!data) {
                     cc.error("不存在配置表:", xlsxName)
                     continue

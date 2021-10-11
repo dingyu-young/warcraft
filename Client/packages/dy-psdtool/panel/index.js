@@ -66,22 +66,3 @@ Editor.Panel.extend({
     },
 });
 
-
-//
-// function saveConfig(prefabPath,codePath) {
-//     const configPath = Editor.url('packages://path.json');
-//     if (!Fs.existsSync(configPath)) Fs.mkdirSync(configPath);
-//     var config = {
-//         prefabPath:prefabPath,
-//         codePath:codePath
-//     }
-//     Fs.writeFileSync(configPath,JSON.stringify(config));
-//     Editor.log("配置路径保存成功",config);
-// }
-//
-// function loadConfig() {
-//     const configPath = Editor.url('packages://path.json');
-//     if (!Fs.existsSync(configPath)) Fs.mkdirSync(configPath);
-//     var config = Fs.readFileSync(configFilePath, 'utf8')
-//     return JSON.parse(config);
-// }

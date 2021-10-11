@@ -1,3389 +1,3407 @@
 {
-  "story": {
-    "1": {
-      "ID": 1,
-      "GroupId": 0,
-      "ChildIdList": [
-        2
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "2": {
-      "ID": 2,
-      "GroupId": 0,
-      "ChildIdList": [
-        3
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|在听么？",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "3": {
-      "ID": 3,
-      "GroupId": 0,
-      "ChildIdList": [
-        4
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是911，有什么可以帮到你的？",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "4": {
-      "ID": 4,
-      "GroupId": 0,
-      "ChildIdList": [
-        5,
-        634
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我的天啊，我被人抢劫了。",
-      "PosX": 0,
-      "PosY": -160
-    },
-    "5": {
-      "ID": 5,
-      "GroupId": 0,
-      "ChildIdList": [
-        7
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，你被袭击了吗?这是入室盗窃吗?",
-      "PosX": 0,
-      "PosY": -351
-    },
-    "6": {
-      "ID": 6,
-      "GroupId": 0,
-      "ChildIdList": [
-        24
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这件事是在哪里发生的?",
-      "PosX": -702,
-      "PosY": -1942
-    },
-    "7": {
-      "ID": 7,
-      "GroupId": 0,
-      "ChildIdList": [
-        6,
-        8,
-        9
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|不，只是个无耻的抢劫犯!交易的规则是这样的：“我扔下斧子，他扔下金币”。但那个混蛋拿了斧子就跑了，金币还没给我呢!",
-      "PosX": -5,
-      "PosY": -557
-    },
-    "8": {
-      "ID": 8,
-      "GroupId": 0,
-      "ChildIdList": [
-        10
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|所以，他应该用…金币来支付？",
-      "PosX": -276,
-      "PosY": -734
-    },
-    "9": {
-      "ID": 9,
-      "GroupId": 0,
-      "ChildIdList": [
-        36
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生。虚拟世界中发生的事件不是紧急情况。",
-      "PosX": -16,
-      "PosY": -747
-    },
-    "10": {
-      "ID": 10,
-      "GroupId": 0,
-      "ChildIdList": [
-        11,
-        12
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，金子这是这里的货币。我们已经商定以6000枚金币的价格进行交易。",
-      "PosX": -271,
-      "PosY": -934
-    },
-    "11": {
-      "ID": 11,
-      "GroupId": 0,
-      "ChildIdList": [
-        13
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我有点懵，不太能理解你的意思。",
-      "PosX": -39,
-      "PosY": -1132
-    },
-    "12": {
-      "ID": 12,
-      "GroupId": 0,
-      "ChildIdList": [
-        52
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|什么东西被抢了？",
-      "PosX": -360,
-      "PosY": -1160
-    },
-    "13": {
-      "ID": 13,
-      "GroupId": 0,
-      "ChildIdList": [
-        9,
-        14
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|游戏中的交易就是这样进行的，但他欺骗了我，偷走了我的斧头！",
-      "PosX": -54,
-      "PosY": -1558
-    },
-    "14": {
-      "ID": 14,
-      "GroupId": 0,
-      "ChildIdList": [
-        15
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你知道是谁干的吗？",
-      "PosX": -360,
-      "PosY": -1560
-    },
-    "15": {
-      "ID": 15,
-      "GroupId": 0,
-      "ChildIdList": [
-        16,
-        6,
-        9
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|他的昵称是 NiceOrk1337，是迷雾刺客公会的一员。",
-      "PosX": -360,
-      "PosY": -1939
-    },
-    "16": {
-      "ID": 16,
-      "GroupId": 0,
-      "ChildIdList": [
-        17
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我需要知道你的真实地址。",
-      "PosX": -48,
-      "PosY": -1945
-    },
-    "17": {
-      "ID": 17,
-      "GroupId": 0,
-      "ChildIdList": [
-        40
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|这里是#龙山南路117号#",
-      "PosX": -46,
-      "PosY": -1315
-    },
-    "24": {
-      "ID": 24,
-      "GroupId": 0,
-      "ChildIdList": [
-        16
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|在常青林的铁匠铺附近。",
-      "PosX": -27,
-      "PosY": -906
-    },
-    "36": {
-      "ID": 36,
-      "GroupId": 0,
-      "ChildIdList": [
-        38,
-        39,
-        40,
-        16
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|但这是抢劫！",
-      "PosX": -54,
-      "PosY": -1747
-    },
-    "38": {
-      "ID": 38,
-      "GroupId": 0,
-      "ChildIdList": [
-        42
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你老实说，如果我派警察过去会对你有帮助吗?",
-      "PosX": 280,
-      "PosY": -1930
-    },
-    "39": {
-      "ID": 39,
-      "GroupId": 0,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|回到现实吧，伙计。911只处理现实中的紧急情况。",
-      "PosX": -351,
-      "PosY": -2166
-    },
-    "40": {
-      "ID": 40,
-      "GroupId": 0,
-      "ChildIdList": [
-        41
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好吧，我派警察去找你。",
-      "PosX": 599,
-      "PosY": -1942
-    },
-    "41": {
-      "ID": 41,
-      "GroupId": 0,
-      "ChildIdList": [],
-      "EventID": 5,
-      "IsSubSocre": 0,
-      "Text": "1|你最好快点！",
-      "PosX": 590,
-      "PosY": -2235
-    },
-    "42": {
-      "ID": 42,
-      "GroupId": 0,
-      "ChildIdList": [
-        16,
-        50,
-        40
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|额……是不一定有帮助，但就是不爽",
-      "PosX": -84,
-      "PosY": -2153
-    },
-    "50": {
-      "ID": 50,
-      "GroupId": 0,
-      "ChildIdList": [
-        51
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|恕我无能为力，先生。",
-      "PosX": -84,
-      "PosY": -2347
-    },
-    "51": {
-      "ID": 51,
-      "GroupId": 0,
-      "ChildIdList": [],
-      "EventID": 5,
-      "IsSubSocre": 1,
-      "Text": "1|呃……天哪。 好吧，我会找到他，然后亲手杀了他。",
-      "PosX": -74,
-      "PosY": -2553
-    },
-    "52": {
-      "ID": 52,
-      "GroupId": 0,
-      "ChildIdList": [
-        54
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我的斧头!我为了它付出了许多心血!",
-      "PosX": -360,
-      "PosY": -1360
-    },
-    "54": {
-      "ID": 54,
-      "GroupId": 0,
-      "ChildIdList": [
-        55
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|对不起，我真的听不懂。",
-      "PosX": -360,
-      "PosY": -1560
-    },
-    "55": {
-      "ID": 55,
-      "GroupId": 0,
-      "ChildIdList": [
-        13
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嘿，很简单的。",
-      "PosX": -357,
-      "PosY": -1736
-    },
-    "634": {
-      "ID": 634,
-      "GroupId": 0,
-      "ChildIdList": [
-        7
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你有受伤吗？",
-      "PosX": -288,
-      "PosY": -336
-    },
-    "1061": {
-      "ID": 1061,
-      "GroupId": 1,
-      "ChildIdList": [
-        1062
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "1062": {
-      "ID": 1062,
-      "GroupId": 1,
-      "ChildIdList": [
-        1064
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是112，有什么可以帮您的？",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "1064": {
-      "ID": 1064,
-      "GroupId": 1,
-      "ChildIdList": [
-        1065,
-        1148,
-        1149,
-        1150
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|小心。小心，不要…你好？我从一所武术学校打来电话，我认为我的一个学生扭伤了膝盖，我们需要一辆救护车。",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "1065": {
-      "ID": 1065,
-      "GroupId": 1,
-      "ChildIdList": [
-        1071
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他现在感觉怎么样？",
-      "PosX": 275,
-      "PosY": -151
-    },
-    "1071": {
-      "ID": 1071,
-      "GroupId": 1,
-      "ChildIdList": [
-        1074
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯，他看上去不是很开心",
-      "PosX": 283,
-      "PosY": -349
-    },
-    "1074": {
-      "ID": 1074,
-      "GroupId": 1,
-      "ChildIdList": [
-        1076
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我的意思是，那名学员的身体感觉怎么样？",
-      "PosX": 311,
-      "PosY": -540
-    },
-    "1076": {
-      "ID": 1076,
-      "GroupId": 1,
-      "ChildIdList": [
-        1078,
-        1156
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|好吧，看他现在很痛苦，但应该不会危及生命。",
-      "PosX": 0,
-      "PosY": -732
-    },
-    "1078": {
-      "ID": 1078,
-      "GroupId": 1,
-      "ChildIdList": [
-        1080
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他现在有意识吗？",
-      "PosX": 0,
-      "PosY": -960
-    },
-    "1080": {
-      "ID": 1080,
-      "GroupId": 1,
-      "ChildIdList": [
-        1081,
-        1159,
-        1160
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，他现在有意识。",
-      "PosX": 0,
-      "PosY": -1160
-    },
-    "1081": {
-      "ID": 1081,
-      "GroupId": 1,
-      "ChildIdList": [
-        1088
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他能自己站起来吗？",
-      "PosX": -9,
-      "PosY": -1349
-    },
-    "1088": {
-      "ID": 1088,
-      "GroupId": 1,
-      "ChildIdList": [
-        1092
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我认为不行，但他还没试过。",
-      "PosX": 330,
-      "PosY": -1532
-    },
-    "1092": {
-      "ID": 1092,
-      "GroupId": 1,
-      "ChildIdList": [
-        1098
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|告诉他试着站起来。",
-      "PosX": 26,
-      "PosY": -2157
-    },
-    "1098": {
-      "ID": 1098,
-      "GroupId": 1,
-      "ChildIdList": [
-        1101,
-        1177,
-        1179
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|为什么？他看上去很痛苦…",
-      "PosX": 616,
-      "PosY": -1960
-    },
-    "1101": {
-      "ID": 1101,
-      "GroupId": 1,
-      "ChildIdList": [
-        1103
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我们需要检查膝盖的状态是否稳定。",
-      "PosX": -360,
-      "PosY": -2560
-    },
-    "1103": {
-      "ID": 1103,
-      "GroupId": 1,
-      "ChildIdList": [
-        1179
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯，好吧，我们试试……听着，你必须站起来，把他扶起来。哦！ 抱住他！抱住...抱住他..！等下，坐下，坐下...我们没法这样做...你还有其他办法吗？",
-      "PosX": 21,
-      "PosY": -2524
-    },
-    "1148": {
-      "ID": 1148,
-      "GroupId": 1,
-      "ChildIdList": [
-        1151
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这是什么时候发生的事？",
-      "PosX": 3,
-      "PosY": -155
-    },
-    "1149": {
-      "ID": 1149,
-      "GroupId": 1,
-      "ChildIdList": [
-        1153
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|教练在场吗？",
-      "PosX": 566,
-      "PosY": -157
-    },
-    "1150": {
-      "ID": 1150,
-      "GroupId": 1,
-      "ChildIdList": [
-        1152
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|具体发生了什么事？",
-      "PosX": -296,
-      "PosY": -151
-    },
-    "1151": {
-      "ID": 1151,
-      "GroupId": 1,
-      "ChildIdList": [
-        1156
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|差不多20分钟前。",
-      "PosX": 5,
-      "PosY": -362
-    },
-    "1152": {
-      "ID": 1152,
-      "GroupId": 1,
-      "ChildIdList": [
-        1154,
-        1156
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我们是#黎明小学#旁的武术学校…我们在练习投掷的时候，一个学生突然跪在了地上。他说他感觉膝盖上有条裂缝…情况就是这样。",
-      "PosX": -302,
-      "PosY": -347
-    },
-    "1153": {
-      "ID": 1153,
-      "GroupId": 1,
-      "ChildIdList": [
-        1156
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，我当时在场",
-      "PosX": 561,
-      "PosY": -338
-    },
-    "1154": {
-      "ID": 1154,
-      "GroupId": 1,
-      "ChildIdList": [
-        1155
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你确定这只是意外吗？他没有被其他人袭击？",
-      "PosX": 11,
-      "PosY": -534
-    },
-    "1155": {
-      "ID": 1155,
-      "GroupId": 1,
-      "ChildIdList": [
-        1156
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|他没有被人攻击。他总是训练很刻苦，仅此而已。",
-      "PosX": -304,
-      "PosY": -749
-    },
-    "1156": {
-      "ID": 1156,
-      "GroupId": 1,
-      "ChildIdList": [
-        1158
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我需要你描述一下具体的受伤情况。",
-      "PosX": -309,
-      "PosY": -549
-    },
-    "1158": {
-      "ID": 1158,
-      "GroupId": 1,
-      "ChildIdList": [
-        1081,
-        1167,
-        1159
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|膝盖看起来肿得很厉害…像个球一样…你现在能派辆救护车来吗？",
-      "PosX": -310,
-      "PosY": -1000
-    },
-    "1159": {
-      "ID": 1159,
-      "GroupId": 1,
-      "ChildIdList": [
-        1162
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|听起来像是撞到东西的正常反应，过几天就好了。",
-      "PosX": 326,
-      "PosY": -1336
-    },
-    "1160": {
-      "ID": 1160,
-      "GroupId": 1,
-      "ChildIdList": [
-        1161
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你能看到瘀伤吗？",
-      "PosX": 572,
-      "PosY": -1336
-    },
-    "1161": {
-      "ID": 1161,
-      "GroupId": 1,
-      "ChildIdList": [
-        1163
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|不，什么都没有。",
-      "PosX": 578,
-      "PosY": -1523
-    },
-    "1162": {
-      "ID": 1162,
-      "GroupId": 1,
-      "ChildIdList": [
-        1163
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你是认真的？ 我们什么都不用做吗？",
-      "PosX": -11,
-      "PosY": -1549
-    },
-    "1163": {
-      "ID": 1163,
-      "GroupId": 1,
-      "ChildIdList": [
-        1164
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，这个情况并不是很紧急。 你应该开车送他去医院。",
-      "PosX": 325,
-      "PosY": -1740
-    },
-    "1164": {
-      "ID": 1164,
-      "GroupId": 1,
-      "ChildIdList": [
-        1165
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|…你确定这是个好主意吗？他现在应该不能上车吧…",
-      "PosX": 323,
-      "PosY": -1945
-    },
-    "1165": {
-      "ID": 1165,
-      "GroupId": 1,
-      "ChildIdList": [
-        1175
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|是的，开车送他去医院。 我们不能为一点小伤去派救护车。",
-      "PosX": 673,
-      "PosY": -2198
-    },
-    "1167": {
-      "ID": 1167,
-      "GroupId": 1,
-      "ChildIdList": [
-        1168
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好的，我会派一辆救护车到你的位置。",
-      "PosX": -313,
-      "PosY": -1349
-    },
-    "1168": {
-      "ID": 1168,
-      "GroupId": 1,
-      "ChildIdList": [
-        1170,
-        1179,
-        1174
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|谢谢…但是我们不应该在等待的时候做点什么吗？",
-      "PosX": -360,
-      "PosY": -1560
-    },
-    "1169": {
-      "ID": 1169,
-      "GroupId": 1,
-      "ChildIdList": [],
-      "EventID": 4,
-      "IsSubSocre": 1,
-      "Text": "0|我们需要让膝盖动起来，这很重要。",
-      "PosX": 40,
-      "PosY": -2322
-    },
-    "1170": {
-      "ID": 1170,
-      "GroupId": 1,
-      "ChildIdList": [
-        1172,
-        1180
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|让他抬起腿，让血液向下流动…你可以用让他坐在椅子上试试。",
-      "PosX": -18,
-      "PosY": -1745
-    },
-    "1172": {
-      "ID": 1172,
-      "GroupId": 1,
-      "ChildIdList": [
-        1173,
-        1174,
-        1092
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你说怎么做？",
-      "PosX": 6,
-      "PosY": -1949
-    },
-    "1173": {
-      "ID": 1173,
-      "GroupId": 1,
-      "ChildIdList": [
-        1176
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他应该试着弯曲膝盖，慢慢把它伸开……",
-      "PosX": -236,
-      "PosY": -2162
-    },
-    "1174": {
-      "ID": 1174,
-      "GroupId": 1,
-      "ChildIdList": [
-        1185
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|其实，你只需要等待救护车就行。",
-      "PosX": -507,
-      "PosY": -2164
-    },
-    "1175": {
-      "ID": 1175,
-      "GroupId": 1,
-      "ChildIdList": [],
-      "EventID": 4,
-      "IsSubSocre": 1,
-      "Text": "1|真是难以置信",
-      "PosX": 745,
-      "PosY": -2718
-    },
-    "1176": {
-      "ID": 1176,
-      "GroupId": 1,
-      "ChildIdList": [
-        1101
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯...这听起来不太妙。你确定它不会让它变得更糟吗？",
-      "PosX": -360,
-      "PosY": -2360
-    },
-    "1177": {
-      "ID": 1177,
-      "GroupId": 1,
-      "ChildIdList": [
-        1178
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我们需要这样做以改善血液的流动，相信我，我们是专业的。",
-      "PosX": 317,
-      "PosY": -2160
-    },
-    "1178": {
-      "ID": 1178,
-      "GroupId": 1,
-      "ChildIdList": [
-        1179
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|...好的。听着，他们说你应该试着弯曲它，好吗？不，不，不，不，不，不，停下来。他没办法那样做。",
-      "PosX": 308,
-      "PosY": -2396
-    },
-    "1179": {
-      "ID": 1179,
-      "GroupId": 1,
-      "ChildIdList": [
-        1183
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|如果你有冰块的话就用冰块冷敷下吧…也可以用冷饮试试。",
-      "PosX": 447,
-      "PosY": -2920
-    },
-    "1180": {
-      "ID": 1180,
-      "GroupId": 1,
-      "ChildIdList": [
-        1169,
-        1182,
-        1179
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|好的，一把椅子...好吧，我们坐在上面...把你的腿抬起来。",
-      "PosX": -337,
-      "PosY": -1960
-    },
-    "1182": {
-      "ID": 1182,
-      "GroupId": 1,
-      "ChildIdList": [
-        1186
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|救护车马上就到。",
-      "PosX": -796,
-      "PosY": -2162
-    },
-    "1183": {
-      "ID": 1183,
-      "GroupId": 1,
-      "ChildIdList": [
-        1184
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|好的，我想我们可以找到一些冰块...还有别的吗？",
-      "PosX": 23,
-      "PosY": -2757
-    },
-    "1184": {
-      "ID": 1184,
-      "GroupId": 1,
-      "ChildIdList": [
-        1185
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|没什么，剩下的只需要等待救护车了。",
-      "PosX": 32,
-      "PosY": -2962
-    },
-    "1185": {
-      "ID": 1185,
-      "GroupId": 1,
-      "ChildIdList": [],
-      "EventID": 4,
-      "IsSubSocre": 0,
-      "Text": "1|好的，谢谢！我们会在这等救护车的。",
-      "PosX": -643,
-      "PosY": -1750
-    },
-    "1186": {
-      "ID": 1186,
-      "GroupId": 1,
-      "ChildIdList": [],
-      "EventID": 4,
-      "IsSubSocre": 0,
-      "Text": "1|好的谢谢你。",
-      "PosX": -720,
-      "PosY": -2360
-    },
-    "2104": {
-      "ID": 2104,
-      "GroupId": 2,
-      "ChildIdList": [
-        2105
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|呃…太热了。",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "2105": {
-      "ID": 2105,
-      "GroupId": 2,
-      "ChildIdList": [
-        2106
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是911，有什么能帮你的？",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "2106": {
-      "ID": 2106,
-      "GroupId": 2,
-      "ChildIdList": [
-        2107,
-        2108
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好？ 啊，你好。 我有个问题，我点了一个披萨，可是它太辣了……",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "2107": {
-      "ID": 2107,
-      "GroupId": 2,
-      "ChildIdList": [
-        2123
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你没有打错电话么？",
-      "PosX": -4,
-      "PosY": -166
-    },
-    "2108": {
-      "ID": 2108,
-      "GroupId": 2,
-      "ChildIdList": [
-        2109
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|对不起，我没有听懂，能再说一遍么？",
-      "PosX": -265,
-      "PosY": -162
-    },
-    "2109": {
-      "ID": 2109,
-      "GroupId": 2,
-      "ChildIdList": [
-        2110,
-        2111,
-        2112
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我订的披萨太辣了，辣到我一片都吃不下。",
-      "PosX": -269,
-      "PosY": -349
-    },
-    "2110": {
-      "ID": 2110,
-      "GroupId": 2,
-      "ChildIdList": [
-        2137
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|警察不管这些事，你可以给商家打电话投诉他们。",
-      "PosX": -275,
-      "PosY": -549
-    },
-    "2111": {
-      "ID": 2111,
-      "GroupId": 2,
-      "ChildIdList": [
-        2113
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，你是否有危险，但你却因为房间里有人而不敢说?",
-      "PosX": -588,
-      "PosY": -545
-    },
-    "2112": {
-      "ID": 2112,
-      "GroupId": 2,
-      "ChildIdList": [
-        2428
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|没事的话，请不要占用紧急线路。",
-      "PosX": 405,
-      "PosY": -534
-    },
-    "2113": {
-      "ID": 2113,
-      "GroupId": 2,
-      "ChildIdList": [
-        2114,
-        2116,
-        2112
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|什么？ 不！ 我只想让商家退款！",
-      "PosX": -279,
-      "PosY": -774
-    },
-    "2114": {
-      "ID": 2114,
-      "GroupId": 2,
-      "ChildIdList": [
-        2117
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你是在开玩笑么？",
-      "PosX": 18,
-      "PosY": -551
-    },
-    "2116": {
-      "ID": 2116,
-      "GroupId": 2,
-      "ChildIdList": [
-        2121
-      ],
-      "EventID": 6,
-      "IsSubSocre": 0,
-      "Text": "0|伙计，不要浪费我的时间！",
-      "PosX": -278,
-      "PosY": -962
-    },
-    "2117": {
-      "ID": 2117,
-      "GroupId": 2,
-      "ChildIdList": [
-        2110,
-        2118
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|哟，我听起来像是在开玩笑吗？ 有关披萨的事绝对不是开玩笑！",
-      "PosX": 10,
-      "PosY": -978
-    },
-    "2118": {
-      "ID": 2118,
-      "GroupId": 2,
-      "ChildIdList": [
-        2119
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你嗑药嗨了吗?",
-      "PosX": -271,
-      "PosY": -1336
-    },
-    "2119": {
-      "ID": 2119,
-      "GroupId": 2,
-      "ChildIdList": [
-        2120,
-        2112,
-        2116
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗨个风筝啊，我只想要商家给我退款，但这太难了老兄。",
-      "PosX": -360,
-      "PosY": -1887
-    },
-    "2120": {
-      "ID": 2120,
-      "GroupId": 2,
-      "ChildIdList": [
-        2121
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，不好意思，这种事不在我们的管辖范围内",
-      "PosX": -108,
-      "PosY": -2191
-    },
-    "2121": {
-      "ID": 2121,
-      "GroupId": 2,
-      "ChildIdList": [],
-      "EventID": 6,
-      "IsSubSocre": 0,
-      "Text": "1|如果是你的披萨，你会有什么感想？我很失望，伙计，愿你的披萨永远不会太辣，生活永远和谐。再见！",
-      "PosX": -49,
-      "PosY": -1893
-    },
-    "2123": {
-      "ID": 2123,
-      "GroupId": 2,
-      "ChildIdList": [
-        2111,
-        2114
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|该死的，我当然没打错！",
-      "PosX": 0,
-      "PosY": -360
-    },
-    "2137": {
-      "ID": 2137,
-      "GroupId": 2,
-      "ChildIdList": [
-        2112,
-        2116,
-        2120,
-        2118
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我试过了，但是他们叫我滚开。这太没素质了！能找个警官来帮我吗？",
-      "PosX": -273,
-      "PosY": -1528
-    },
-    "2428": {
-      "ID": 2428,
-      "GroupId": 2,
-      "ChildIdList": [
-        2120
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我只是想要商家给我退款好吗！你们帮忙处理下不行吗？",
-      "PosX": 189,
-      "PosY": -1928
-    },
-    "3236": {
-      "ID": 3236,
-      "GroupId": 3,
-      "ChildIdList": [
-        3237
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|先生，你在吗？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "3237": {
-      "ID": 3237,
-      "GroupId": 3,
-      "ChildIdList": [
-        3238
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你好，112，你有什么急事吗？",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "3238": {
-      "ID": 3238,
-      "GroupId": 3,
-      "ChildIdList": [
-        3239,
-        3551
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好，我确实有紧急情况",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "3239": {
-      "ID": 3239,
-      "GroupId": 3,
-      "ChildIdList": [
-        3242
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我需要怎么帮你呢？先生",
-      "PosX": 14,
-      "PosY": -157
-    },
-    "3240": {
-      "ID": 3240,
-      "GroupId": 3,
-      "ChildIdList": [
-        3241
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好吧，我知道了，这就是你拨打这个电话的原因对吗？",
-      "PosX": -387,
-      "PosY": -1351
-    },
-    "3241": {
-      "ID": 3241,
-      "GroupId": 3,
-      "ChildIdList": [
-        3245
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，没错，这就是为什么，嗯...",
-      "PosX": -360,
-      "PosY": -1560
-    },
-    "3242": {
-      "ID": 3242,
-      "GroupId": 3,
-      "ChildIdList": [
-        3243
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯...这是个意外，请帮我派救护车",
-      "PosX": 18,
-      "PosY": -360
-    },
-    "3243": {
-      "ID": 3243,
-      "GroupId": 3,
-      "ChildIdList": [
-        3244
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|什么样的意外？",
-      "PosX": 21,
-      "PosY": -560
-    },
-    "3244": {
-      "ID": 3244,
-      "GroupId": 3,
-      "ChildIdList": [
-        3246,
-        3247,
-        3552
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯...灯泡，我和我的伴侣，呃，我们玩灯泡，呃...我们实验",
-      "PosX": 19,
-      "PosY": -760
-    },
-    "3245": {
-      "ID": 3245,
-      "GroupId": 3,
-      "ChildIdList": [
-        3264
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好的，我会派救护车过去",
-      "PosX": -360,
-      "PosY": -1760
-    },
-    "3246": {
-      "ID": 3246,
-      "GroupId": 3,
-      "ChildIdList": [
-        3248
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你被电击了吗？",
-      "PosX": 29,
-      "PosY": -957
-    },
-    "3247": {
-      "ID": 3247,
-      "GroupId": 3,
-      "ChildIdList": [
-        3265
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|玩灯泡？在...性交的时候吗？",
-      "PosX": -352,
-      "PosY": -947
-    },
-    "3248": {
-      "ID": 3248,
-      "GroupId": 3,
-      "ChildIdList": [
-        3249,
-        3250,
-        3247,
-        3240
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|不，呃...就是...就像...呃...就是...把灯泡拿来当情趣用品了",
-      "PosX": 28,
-      "PosY": -1147
-    },
-    "3249": {
-      "ID": 3249,
-      "GroupId": 3,
-      "ChildIdList": [
-        3252,
-        3265
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|它断裂了吗？你受伤了吗？",
-      "PosX": 381,
-      "PosY": -1351
-    },
-    "3250": {
-      "ID": 3250,
-      "GroupId": 3,
-      "ChildIdList": [
-        3275
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，你在哪？",
-      "PosX": 29,
-      "PosY": -1353
-    },
-    "3252": {
-      "ID": 3252,
-      "GroupId": 3,
-      "ChildIdList": [
-        3253,
-        3250,
-        3245
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|人没有受伤但我的自尊心受到了伤害",
-      "PosX": 68,
-      "PosY": -1557
-    },
-    "3253": {
-      "ID": 3253,
-      "GroupId": 3,
-      "ChildIdList": [
-        3254
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你有小汽车吗？",
-      "PosX": -360,
-      "PosY": -2160
-    },
-    "3254": {
-      "ID": 3254,
-      "GroupId": 3,
-      "ChildIdList": [
-        3257,
-        3258
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，我有一辆车",
-      "PosX": 66,
-      "PosY": -1953
-    },
-    "3257": {
-      "ID": 3257,
-      "GroupId": 3,
-      "ChildIdList": [
-        3259
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|开车去医院",
-      "PosX": 123,
-      "PosY": -2155
-    },
-    "3258": {
-      "ID": 3258,
-      "GroupId": 3,
-      "ChildIdList": [
-        3260
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你可以请人开车送你吗？",
-      "PosX": -94,
-      "PosY": -2157
-    },
-    "3259": {
-      "ID": 3259,
-      "GroupId": 3,
-      "ChildIdList": [
-        3258,
-        3250,
-        3269,
-        3271
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|呃...我不能完全，嗯...呃...坐。驾驶需要坐着会不舒服",
-      "PosX": 383,
-      "PosY": -2441
-    },
-    "3260": {
-      "ID": 3260,
-      "GroupId": 3,
-      "ChildIdList": [
-        3250,
-        3269,
-        3271
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯...我可以，但是安全吗？我真的不想在没有任何医疗监督的情况下去医院",
-      "PosX": 34,
-      "PosY": -2493
-    },
-    "3264": {
-      "ID": 3264,
-      "GroupId": 3,
-      "ChildIdList": [
-        3250
-      ],
-      "EventID": 7,
-      "IsSubSocre": 0,
-      "Text": "1|天啊，太感谢了，麻烦快点，谢谢",
-      "PosX": 393,
-      "PosY": -1981
-    },
-    "3265": {
-      "ID": 3265,
-      "GroupId": 3,
-      "ChildIdList": [
-        3266,
-        3250,
-        3267
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|哦，天哪，是的...它在那里。它被卡住了。我需要帮助。",
-      "PosX": 359,
-      "PosY": -1566
-    },
-    "3266": {
-      "ID": 3266,
-      "GroupId": 3,
-      "ChildIdList": [
-        3268
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你可以自己吃辣，它会帮你解决的，相信我",
-      "PosX": 63,
-      "PosY": -1766
-    },
-    "3267": {
-      "ID": 3267,
-      "GroupId": 3,
-      "ChildIdList": [
-        3268
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|取一些油出来，让人帮你把灯泡拿出来",
-      "PosX": 356,
-      "PosY": -1779
-    },
-    "3268": {
-      "ID": 3268,
-      "GroupId": 3,
-      "ChildIdList": [
-        3250,
-        3253,
-        3269
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|什么？我不能等那么长的时间，如果它断裂了怎么办？我需要帮助！",
-      "PosX": -275,
-      "PosY": -1955
-    },
-    "3269": {
-      "ID": 3269,
-      "GroupId": 3,
-      "ChildIdList": [
-        3270
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你会没事的，只要听从我的指示",
-      "PosX": 388,
-      "PosY": -2160
-    },
-    "3270": {
-      "ID": 3270,
-      "GroupId": 3,
-      "ChildIdList": [
-        3250,
-        3271,
-        3272
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|拜托了，再一次请求你派个专业的人",
-      "PosX": -233,
-      "PosY": -2741
-    },
-    "3271": {
-      "ID": 3271,
-      "GroupId": 3,
-      "ChildIdList": [],
-      "EventID": 7,
-      "IsSubSocre": 0,
-      "Text": "0|我马上派救护车过去，你尽量不要乱动",
-      "PosX": 442,
-      "PosY": -2777
-    },
-    "3272": {
-      "ID": 3272,
-      "GroupId": 3,
-      "ChildIdList": [
-        3273
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|没那么严重，只是个灯泡而已",
-      "PosX": -230,
-      "PosY": -2999
-    },
-    "3273": {
-      "ID": 3273,
-      "GroupId": 3,
-      "ChildIdList": [],
-      "EventID": 7,
-      "IsSubSocre": 1,
-      "Text": "1|呃...好吧，如果你非要这说，但这对我来说没有任何帮助",
-      "PosX": -236,
-      "PosY": -3231
-    },
-    "3275": {
-      "ID": 3275,
-      "GroupId": 3,
-      "ChildIdList": [
-        3271
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我在#禾祥西路7号#，我真的需要帮助!",
-      "PosX": 57,
-      "PosY": -2844
-    },
-    "3551": {
-      "ID": 3551,
-      "GroupId": 3,
-      "ChildIdList": [
-        3242
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|发生什么事了吗？",
-      "PosX": -252,
-      "PosY": -149
-    },
-    "3552": {
-      "ID": 3552,
-      "GroupId": 3,
-      "ChildIdList": [
-        3248
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|玩灯泡？然后呢？",
-      "PosX": 369,
-      "PosY": -938
-    },
-    "4276": {
-      "ID": 4276,
-      "GroupId": 4,
-      "ChildIdList": [
-        4277
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好，112吗？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "4277": {
-      "ID": 4277,
-      "GroupId": 4,
-      "ChildIdList": [
-        4278
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你好，112，先生有什么紧急情况吗",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "4278": {
-      "ID": 4278,
-      "GroupId": 4,
-      "ChildIdList": [
-        4279,
-        4280,
-        4281
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|这里发生了一场事故",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "4279": {
-      "ID": 4279,
-      "GroupId": 4,
-      "ChildIdList": [
-        4282
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|在哪发生的？",
-      "PosX": 0,
-      "PosY": -160
-    },
-    "4280": {
-      "ID": 4280,
-      "GroupId": 4,
-      "ChildIdList": [
-        4302
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|是谁的责任?",
-      "PosX": -357,
-      "PosY": -125
-    },
-    "4281": {
-      "ID": 4281,
-      "GroupId": 4,
-      "ChildIdList": [
-        4303
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|出什么事了吗？",
-      "PosX": 406,
-      "PosY": -181
-    },
-    "4282": {
-      "ID": 4282,
-      "GroupId": 4,
-      "ChildIdList": [
-        4283
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|在#湖滨东路9号#",
-      "PosX": 0,
-      "PosY": -360
-    },
-    "4283": {
-      "ID": 4283,
-      "GroupId": 4,
-      "ChildIdList": [
-        4284
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|有人受伤吗？",
-      "PosX": -333,
-      "PosY": -551
-    },
-    "4284": {
-      "ID": 4284,
-      "GroupId": 4,
-      "ChildIdList": [
-        4285,
-        4286,
-        4287
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|没有人受伤，但是我的车被划伤了，对方已经不在这里了",
-      "PosX": 32,
-      "PosY": -612
-    },
-    "4285": {
-      "ID": 4285,
-      "GroupId": 4,
-      "ChildIdList": [
-        4288
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他逃跑了吗？",
-      "PosX": 49,
-      "PosY": -960
-    },
-    "4286": {
-      "ID": 4286,
-      "GroupId": 4,
-      "ChildIdList": [
-        4304
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这是怎么发生的",
-      "PosX": 365,
-      "PosY": -560
-    },
-    "4287": {
-      "ID": 4287,
-      "GroupId": 4,
-      "ChildIdList": [
-        4312
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|慢慢开走了吗？",
-      "PosX": 369,
-      "PosY": -932
-    },
-    "4288": {
-      "ID": 4288,
-      "GroupId": 4,
-      "ChildIdList": [
-        4289,
-        4290,
-        4297
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|车里没有人在，所以我，甚至不知道这算不算逃跑",
-      "PosX": 38,
-      "PosY": -1153
-    },
-    "4289": {
-      "ID": 4289,
-      "GroupId": 4,
-      "ChildIdList": [
-        4292
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你这是在开玩笑吗？",
-      "PosX": -241,
-      "PosY": -1334
-    },
-    "4290": {
-      "ID": 4290,
-      "GroupId": 4,
-      "ChildIdList": [
-        4342
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你喝醉了吗？",
-      "PosX": 386,
-      "PosY": -1377
-    },
-    "4292": {
-      "ID": 4292,
-      "GroupId": 4,
-      "ChildIdList": [
-        4293,
-        4294,
-        4295
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我知道这很荒谬，但我认为这是一辆自动驾驶汽车",
-      "PosX": 392,
-      "PosY": -1562
-    },
-    "4293": {
-      "ID": 4293,
-      "GroupId": 4,
-      "ChildIdList": [
-        4296
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你好好在回想一下",
-      "PosX": 345,
-      "PosY": -1791
-    },
-    "4294": {
-      "ID": 4294,
-      "GroupId": 4,
-      "ChildIdList": [
-        4318
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|那你想让我做什么",
-      "PosX": 377,
-      "PosY": -2177
-    },
-    "4295": {
-      "ID": 4295,
-      "GroupId": 4,
-      "ChildIdList": [
-        4314
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你觉得你有安全驾驶吗？",
-      "PosX": -628,
-      "PosY": -1717
-    },
-    "4296": {
-      "ID": 4296,
-      "GroupId": 4,
-      "ChildIdList": [
-        4297,
-        4298
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我不知道该怎么办了。我从来没处理过这种事故...",
-      "PosX": 104,
-      "PosY": -1957
-    },
-    "4297": {
-      "ID": 4297,
-      "GroupId": 4,
-      "ChildIdList": [
-        4299
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好的，我马上派人去，你在出事的地方等着",
-      "PosX": 19,
-      "PosY": -1336
-    },
-    "4298": {
-      "ID": 4298,
-      "GroupId": 4,
-      "ChildIdList": [
-        4300
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|深呼吸，先生，如果你是安全的就没有必要恐慌",
-      "PosX": -276,
-      "PosY": -2151
-    },
-    "4299": {
-      "ID": 4299,
-      "GroupId": 4,
-      "ChildIdList": [],
-      "EventID": 16,
-      "IsSubSocre": 0,
-      "Text": "1|好的，麻烦你了，再见！",
-      "PosX": 322,
-      "PosY": -2385
-    },
-    "4300": {
-      "ID": 4300,
-      "GroupId": 4,
-      "ChildIdList": [
-        4301,
-        4294,
-        4295
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|放松个屁，记住我的话，机器人要崛起了",
-      "PosX": -241,
-      "PosY": -2368
-    },
-    "4301": {
-      "ID": 4301,
-      "GroupId": 4,
-      "ChildIdList": [
-        4313
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|机器人崛起吗？先生",
-      "PosX": -237,
-      "PosY": -2572
-    },
-    "4302": {
-      "ID": 4302,
-      "GroupId": 4,
-      "ChildIdList": [
-        4283
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我的车被撞了，但是另外一辆车里没有人",
-      "PosX": -337,
-      "PosY": -364
-    },
-    "4303": {
-      "ID": 4303,
-      "GroupId": 4,
-      "ChildIdList": [
-        4286
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我的车被撞了",
-      "PosX": 410,
-      "PosY": -357
-    },
-    "4304": {
-      "ID": 4304,
-      "GroupId": 4,
-      "ChildIdList": [
-        4305
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我车子直行，对方左转，然后对方没有礼让先行",
-      "PosX": -344,
-      "PosY": -1096
-    },
-    "4305": {
-      "ID": 4305,
-      "GroupId": 4,
-      "ChildIdList": [
-        4306
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|有目击者吗？",
-      "PosX": -572,
-      "PosY": -1317
-    },
-    "4306": {
-      "ID": 4306,
-      "GroupId": 4,
-      "ChildIdList": [
-        4307
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我不知道有没有，现在这里没有人",
-      "PosX": -258,
-      "PosY": -1538
-    },
-    "4307": {
-      "ID": 4307,
-      "GroupId": 4,
-      "ChildIdList": [
-        4308
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|声音应该很大，有人能听到吗？",
-      "PosX": 99,
-      "PosY": -1762
-    },
-    "4308": {
-      "ID": 4308,
-      "GroupId": 4,
-      "ChildIdList": [
-        4309,
-        4310,
-        4294
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你想要我去敲周围人家的门，问他们是否看到一辆无人驾驶汽车撞了我，然后消失？",
-      "PosX": -570,
-      "PosY": -1947
-    },
-    "4309": {
-      "ID": 4309,
-      "GroupId": 4,
-      "ChildIdList": [
-        4311
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|无人驾驶？无人驾驶车吗？",
-      "PosX": 80,
-      "PosY": -2164
-    },
-    "4310": {
-      "ID": 4310,
-      "GroupId": 4,
-      "ChildIdList": [
-        4341
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|哦，为什么不呢？",
-      "PosX": -601,
-      "PosY": -2138
-    },
-    "4311": {
-      "ID": 4311,
-      "GroupId": 4,
-      "ChildIdList": [
-        4290
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|没有司机",
-      "PosX": 90,
-      "PosY": -2372
-    },
-    "4312": {
-      "ID": 4312,
-      "GroupId": 4,
-      "ChildIdList": [
-        4290,
-        4297
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯，他好像都没有注意到，它撞到我的车了",
-      "PosX": 391,
-      "PosY": -1157
-    },
-    "4313": {
-      "ID": 4313,
-      "GroupId": 4,
-      "ChildIdList": [],
-      "EventID": 16,
-      "IsSubSocre": 1,
-      "Text": "1|我不管，我不知道现在为什么打电话了，再见!",
-      "PosX": -254,
-      "PosY": -2762
-    },
-    "4314": {
-      "ID": 4314,
-      "GroupId": 4,
-      "ChildIdList": [
-        4297,
-        4316
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我想是的",
-      "PosX": 104,
-      "PosY": -2550
-    },
-    "4316": {
-      "ID": 4316,
-      "GroupId": 4,
-      "ChildIdList": [
-        4317
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|那么你应该回家了",
-      "PosX": 101,
-      "PosY": -2704
-    },
-    "4317": {
-      "ID": 4317,
-      "GroupId": 4,
-      "ChildIdList": [],
-      "EventID": 16,
-      "IsSubSocre": 1,
-      "Text": "1|好的，再见",
-      "PosX": -180,
-      "PosY": -3160
-    },
-    "4318": {
-      "ID": 4318,
-      "GroupId": 4,
-      "ChildIdList": [
-        4319,
-        4297
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我需要你的帮忙",
-      "PosX": -241,
-      "PosY": -1951
-    },
-    "4319": {
-      "ID": 4319,
-      "GroupId": 4,
-      "ChildIdList": [
-        4317
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我很抱歉，但是这个事故没有严重到需要派人去",
-      "PosX": -590,
-      "PosY": -2579
-    },
-    "4341": {
-      "ID": 4341,
-      "GroupId": 4,
-      "ChildIdList": [
-        4319
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|声音太小了，几乎没有颠簸",
-      "PosX": -609,
-      "PosY": -2345
-    },
-    "4342": {
-      "ID": 4342,
-      "GroupId": 4,
-      "ChildIdList": [
-        4344,
-        4295
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|没有的，我不是那种人，我不会喝酒开车的",
-      "PosX": 26,
-      "PosY": -1547
-    },
-    "4344": {
-      "ID": 4344,
-      "GroupId": 4,
-      "ChildIdList": [
-        4318
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|那你想让我做什么",
-      "PosX": -246,
-      "PosY": -1747
-    },
-    "5361": {
-      "ID": 5361,
-      "GroupId": 5,
-      "ChildIdList": [
-        5362
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "5362": {
-      "ID": 5362,
-      "GroupId": 5,
-      "ChildIdList": [
-        5363
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是112，你有什么事情么？",
-      "PosX": 0,
-      "PosY": 240
-    },
-    "5363": {
-      "ID": 5363,
-      "GroupId": 5,
-      "ChildIdList": [
-        5364,
-        5365,
-        5366,
-        5367
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好？我这里是黑武士学院，我们的一名学员刚不小心用剑刺伤了自己。",
-      "PosX": 0,
-      "PosY": 40
-    },
-    "5364": {
-      "ID": 5364,
-      "GroupId": 5,
-      "ChildIdList": [
-        5368
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他现在怎么样了？？",
-      "PosX": 211,
-      "PosY": -168
-    },
-    "5365": {
-      "ID": 5365,
-      "GroupId": 5,
-      "ChildIdList": [
-        5395
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|一把剑？这是怎么回事？",
-      "PosX": -58,
-      "PosY": -166
-    },
-    "5366": {
-      "ID": 5366,
-      "GroupId": 5,
-      "ChildIdList": [
-        5392
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他自己刺伤了自己？",
-      "PosX": 468,
-      "PosY": -160
-    },
-    "5367": {
-      "ID": 5367,
-      "GroupId": 5,
-      "ChildIdList": [
-        5396
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|他伤到哪里了？",
-      "PosX": -360,
-      "PosY": -160
-    },
-    "5368": {
-      "ID": 5368,
-      "GroupId": 5,
-      "ChildIdList": [
-        5393
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|他看起来脸色苍白…并且很紧张。",
-      "PosX": 234,
-      "PosY": -364
-    },
-    "5369": {
-      "ID": 5369,
-      "GroupId": 5,
-      "ChildIdList": [
-        5385
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|救护车已经在路上了。",
-      "PosX": 354,
-      "PosY": -2340
-    },
-    "5370": {
-      "ID": 5370,
-      "GroupId": 5,
-      "ChildIdList": [
-        5371,
-        5372
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|还有其他办法么？",
-      "PosX": -348,
-      "PosY": -1351
-    },
-    "5371": {
-      "ID": 5371,
-      "GroupId": 5,
-      "ChildIdList": [
-        5374
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你需要固定住他的肩膀。",
-      "PosX": -342,
-      "PosY": -1553
-    },
-    "5372": {
-      "ID": 5372,
-      "GroupId": 5,
-      "ChildIdList": [
-        5399
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|告诉他抬起手臂并保持住。",
-      "PosX": -635,
-      "PosY": -1545
-    },
-    "5373": {
-      "ID": 5373,
-      "GroupId": 5,
-      "ChildIdList": [
-        5400
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你应该压住伤口。",
-      "PosX": -367,
-      "PosY": -951
-    },
-    "5374": {
-      "ID": 5374,
-      "GroupId": 5,
-      "ChildIdList": [
-        5375,
-        5376,
-        5377
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我应该用什么固定住它？",
-      "PosX": -348,
-      "PosY": -1757
-    },
-    "5375": {
-      "ID": 5375,
-      "GroupId": 5,
-      "ChildIdList": [
-        5378
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你可以用衬衫来固定肩膀。",
-      "PosX": -348,
-      "PosY": -1966
-    },
-    "5376": {
-      "ID": 5376,
-      "GroupId": 5,
-      "ChildIdList": [
-        5378
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你看看你的急救箱里有没有弹性绷带，你可以用它来固定肩膀。",
-      "PosX": -667,
-      "PosY": -1985
-    },
-    "5377": {
-      "ID": 5377,
-      "GroupId": 5,
-      "ChildIdList": [
-        5378
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你可以用你的腰带来固定肩膀",
-      "PosX": 0,
-      "PosY": -1960
-    },
-    "5378": {
-      "ID": 5378,
-      "GroupId": 5,
-      "ChildIdList": [
-        5379,
-        5380,
-        5383,
-        5372,
-        5369
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|好的，我们会这么做的。",
-      "PosX": 0,
-      "PosY": -2160
-    },
-    "5379": {
-      "ID": 5379,
-      "GroupId": 5,
-      "ChildIdList": [
-        5385
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|好的，就这样就可以了。",
-      "PosX": -329,
-      "PosY": -2355
-    },
-    "5380": {
-      "ID": 5380,
-      "GroupId": 5,
-      "ChildIdList": [
-        5390
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你是哪位？",
-      "PosX": -703,
-      "PosY": -2334
-    },
-    "5383": {
-      "ID": 5383,
-      "GroupId": 5,
-      "ChildIdList": [
-        5387
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你应该尽快送他去医院。",
-      "PosX": -14,
-      "PosY": -2364
-    },
-    "5385": {
-      "ID": 5385,
-      "GroupId": 5,
-      "ChildIdList": [],
-      "EventID": 17,
-      "IsSubSocre": 0,
-      "Text": "1|好的，我们会等待救护车过来。",
-      "PosX": -34,
-      "PosY": -2562
-    },
-    "5387": {
-      "ID": 5387,
-      "GroupId": 5,
-      "ChildIdList": [
-        5388
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|呃，好吧，但为什么不能直接派救护车过来呢？",
-      "PosX": -336,
-      "PosY": -2795
-    },
-    "5388": {
-      "ID": 5388,
-      "GroupId": 5,
-      "ChildIdList": [
-        5389
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这只是个小伤，你开车送他去医院就行。医生会把他的伤口缝合起来的。",
-      "PosX": -323,
-      "PosY": -3042
-    },
-    "5389": {
-      "ID": 5389,
-      "GroupId": 5,
-      "ChildIdList": [
-        5369
-      ],
-      "EventID": 17,
-      "IsSubSocre": 1,
-      "Text": "1|嗯...好的，如果你这么说的话。",
-      "PosX": -313,
-      "PosY": -3297
-    },
-    "5390": {
-      "ID": 5390,
-      "GroupId": 5,
-      "ChildIdList": [
-        5383,
-        5369
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我是他们的教练",
-      "PosX": -379,
-      "PosY": -2555
-    },
-    "5392": {
-      "ID": 5392,
-      "GroupId": 5,
-      "ChildIdList": [
-        5393
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，他正试着用他的右手，把剑从臀部拔出来，话说是谁刺伤的真的很重要吗？他正在流血啊，看上去非常严重...",
-      "PosX": 521,
-      "PosY": -362
-    },
-    "5393": {
-      "ID": 5393,
-      "GroupId": 5,
-      "ChildIdList": [
-        5394
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我们需要仔细调查这件事，正常来说不会发生这种事情。",
-      "PosX": 180,
-      "PosY": -560
-    },
-    "5394": {
-      "ID": 5394,
-      "GroupId": 5,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|当然可以派警察来调查，但是现在他急需一辆救护车，非常急！",
-      "PosX": 0,
-      "PosY": -760
-    },
-    "5395": {
-      "ID": 5395,
-      "GroupId": 5,
-      "ChildIdList": [
-        5393
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，用武士刀。我们在这里练习日本剑术。",
-      "PosX": -45,
-      "PosY": -353
-    },
-    "5396": {
-      "ID": 5396,
-      "GroupId": 5,
-      "ChildIdList": [
-        5397
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|在黑武士学院的练习大厅里，我记得我告诉过你。",
-      "PosX": -360,
-      "PosY": -360
-    },
-    "5397": {
-      "ID": 5397,
-      "GroupId": 5,
-      "ChildIdList": [
-        5398
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我是说身体部位！",
-      "PosX": -360,
-      "PosY": -560
-    },
-    "5398": {
-      "ID": 5398,
-      "GroupId": 5,
-      "ChildIdList": [
-        5388,
-        5369,
-        5373
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|哦，右...在他的左肘内侧。",
-      "PosX": -360,
-      "PosY": -760
-    },
-    "5399": {
-      "ID": 5399,
-      "GroupId": 5,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|好的，听起来很合理…小明，把手举起来，要举过头顶。",
-      "PosX": -670,
-      "PosY": -2540
-    },
-    "5400": {
-      "ID": 5400,
-      "GroupId": 5,
-      "ChildIdList": [
-        5370
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，我们已经在这么做了。",
-      "PosX": -348,
-      "PosY": -1159
-    },
-    "6820": {
-      "ID": 6820,
-      "GroupId": 6,
-      "ChildIdList": [
-        6821
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是911，有什么可以帮你的？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "6821": {
-      "ID": 6821,
-      "GroupId": 6,
-      "ChildIdList": [
-        6822,
-        6825,
-        6836
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|救命呀，帮帮我，我的房间里有一只蝙蝠",
-      "PosX": 177,
-      "PosY": 233
-    },
-    "6822": {
-      "ID": 6822,
-      "GroupId": 6,
-      "ChildIdList": [
-        6824
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|蝙蝠不会伤害你，实际上它比你更害怕。 你只需关上门，保持冷静就好。",
-      "PosX": -105,
-      "PosY": 82
-    },
-    "6824": {
-      "ID": 6824,
-      "GroupId": 6,
-      "ChildIdList": [
-        6825,
-        6833
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我这么做了，我待在厕所里面，但我能听到它在整个公寓里飞来飞去！ 我被困在这里了，请帮帮我！",
-      "PosX": -324,
-      "PosY": -176
-    },
-    "6825": {
-      "ID": 6825,
-      "GroupId": 6,
-      "ChildIdList": [
-        6829
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|女士，你可以自己把窗户开大，关掉灯，蝙蝠就会自己飞走的。",
-      "PosX": 0,
-      "PosY": -396
-    },
-    "6829": {
-      "ID": 6829,
-      "GroupId": 6,
-      "ChildIdList": [
-        6830,
-        6833,
-        6836
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我绝对不会离开这里的",
-      "PosX": 8,
-      "PosY": -559
-    },
-    "6830": {
-      "ID": 6830,
-      "GroupId": 6,
-      "ChildIdList": [
-        6831
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你必须这么做，我不会派警察过去。你的生命安全并没有受到威胁，只是一只蝙蝠而已。",
-      "PosX": 0,
-      "PosY": -761
-    },
-    "6831": {
-      "ID": 6831,
-      "GroupId": 6,
-      "ChildIdList": [
-        6833,
-        6842
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|但是，天啊...不，帮帮我",
-      "PosX": -2,
-      "PosY": -982
-    },
-    "6833": {
-      "ID": 6833,
-      "GroupId": 6,
-      "ChildIdList": [
-        6841
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|所以你想让我做什么……派……蝙蝠侠？",
-      "PosX": -4,
-      "PosY": -1151
-    },
-    "6835": {
-      "ID": 6835,
-      "GroupId": 6,
-      "ChildIdList": [
-        6836,
-        6837,
-        6838
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|不，我不行，我做不到",
-      "PosX": -7,
-      "PosY": -1328
-    },
-    "6836": {
-      "ID": 6836,
-      "GroupId": 6,
-      "ChildIdList": [
-        6843
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你的地址在哪里？",
-      "PosX": -7,
-      "PosY": -1528
-    },
-    "6837": {
-      "ID": 6837,
-      "GroupId": 6,
-      "ChildIdList": [
-        6844
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0| 好的，我会派人帮你，请留在那里。",
-      "PosX": -281,
-      "PosY": -1523
-    },
-    "6838": {
-      "ID": 6838,
-      "GroupId": 6,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|很抱歉我们不能因为这点小事而出警",
-      "PosX": 276,
-      "PosY": -1530
-    },
-    "6841": {
-      "ID": 6841,
-      "GroupId": 6,
-      "ChildIdList": [
-        6837
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "我不在乎是谁，请派人帮助我！",
-      "PosX": 470,
-      "PosY": -1360
-    },
-    "6842": {
-      "ID": 6842,
-      "GroupId": 6,
-      "ChildIdList": [
-        6835
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你可以做到，女士。小心点好吗？",
-      "PosX": -378,
-      "PosY": -1189
-    },
-    "6843": {
-      "ID": 6843,
-      "GroupId": 6,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|地址是：宜爱路520号，麻烦快点！",
-      "PosX": -280,
-      "PosY": -1723
-    },
-    "6844": {
-      "ID": 6844,
-      "GroupId": 6,
-      "ChildIdList": [
-        6836
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|快点",
-      "PosX": -4,
-      "PosY": -1737
-    },
-    "7845": {
-      "ID": 7845,
-      "GroupId": 7,
-      "ChildIdList": [
-        7846
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|这里是911，有什么能帮到你的？",
-      "PosX": 0,
-      "PosY": 440
-    },
-    "7846": {
-      "ID": 7846,
-      "GroupId": 7,
-      "ChildIdList": [
-        7847,
-        7848,
-        7849
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|你好，我知道这听起来很傻，但我想我家后院可能有只熊。",
-      "PosX": 0,
-      "PosY": 242
-    },
-    "7847": {
-      "ID": 7847,
-      "GroupId": 7,
-      "ChildIdList": [
-        7850
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，你确定你有紧急情况吗？严禁在911电话线上开玩笑。",
-      "PosX": 0,
-      "PosY": 46
-    },
-    "7848": {
-      "ID": 7848,
-      "GroupId": 7,
-      "ChildIdList": [
-        7879
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|请问你的地址是？",
-      "PosX": 3,
-      "PosY": -3492
-    },
-    "7849": {
-      "ID": 7849,
-      "GroupId": 7,
-      "ChildIdList": [
-        7851
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你看到熊了吗？",
-      "PosX": 372,
-      "PosY": -96
-    },
-    "7850": {
-      "ID": 7850,
-      "GroupId": 7,
-      "ChildIdList": [
-        7848,
-        7849
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我不是在开玩笑！我现在听到了熊的声音！",
-      "PosX": 0,
-      "PosY": -153
-    },
-    "7851": {
-      "ID": 7851,
-      "GroupId": 7,
-      "ChildIdList": [
-        7852,
-        7848,
-        7860
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|不，我没见过。但是我听到了它发出非常恐怖的咆哮声",
-      "PosX": 273,
-      "PosY": -356
-    },
-    "7852": {
-      "ID": 7852,
-      "GroupId": 7,
-      "ChildIdList": [
-        7854
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0| 先生，您完全确定那只熊在那里，即使您并没有真正看到它。对吗？",
-      "PosX": -185,
-      "PosY": -566
-    },
-    "7854": {
-      "ID": 7854,
-      "GroupId": 7,
-      "ChildIdList": [
-        7855,
-        7856,
-        7857
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1| 嗯......我不会说我完全确定，但是......天很黑，我们院子里有一棵大灌木，它在摇晃，发出疯狂的咆哮声",
-      "PosX": -411,
-      "PosY": -854
-    },
-    "7855": {
-      "ID": 7855,
-      "GroupId": 7,
-      "ChildIdList": [
-        7858
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|还有别的吗？",
-      "PosX": 241,
-      "PosY": -1032
-    },
-    "7856": {
-      "ID": 7856,
-      "GroupId": 7,
-      "ChildIdList": [
-        7871
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，您家后院还有吃的吗？即使在垃圾桶里？",
-      "PosX": 229,
-      "PosY": -2625
-    },
-    "7857": {
-      "ID": 7857,
-      "GroupId": 7,
-      "ChildIdList": [
-        7861
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|你能给我描述一下声音吗？",
-      "PosX": -265,
-      "PosY": -1470
-    },
-    "7858": {
-      "ID": 7858,
-      "GroupId": 7,
-      "ChildIdList": [
-        7860,
-        7857
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|嗯...我听到他沉重的呼吸声。而且树叶沙沙作响。",
-      "PosX": 327,
-      "PosY": -1236
-    },
-    "7860": {
-      "ID": 7860,
-      "GroupId": 7,
-      "ChildIdList": [
-        7865
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，如果它是一只熊，你会很容易认出它的。它可能只是一种普通的无害动物，如流浪猫或浣熊。",
-      "PosX": 330,
-      "PosY": -2185
-    },
-    "7861": {
-      "ID": 7861,
-      "GroupId": 7,
-      "ChildIdList": [
-        7862
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|听起来就像是...嗷~呜呜",
-      "PosX": -244,
-      "PosY": -1652
-    },
-    "7862": {
-      "ID": 7862,
-      "GroupId": 7,
-      "ChildIdList": [
-        7863
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|谢谢你先生",
-      "PosX": -306,
-      "PosY": -1827
-    },
-    "7863": {
-      "ID": 7863,
-      "GroupId": 7,
-      "ChildIdList": [
-        7860,
-        7856,
-        7864
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|.....",
-      "PosX": -184,
-      "PosY": -2070
-    },
-    "7864": {
-      "ID": 7864,
-      "GroupId": 7,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我会派出一支最近的消防队。他们会处理好的。",
-      "PosX": -298,
-      "PosY": -3497
-    },
-    "7865": {
-      "ID": 7865,
-      "GroupId": 7,
-      "ChildIdList": [
-        7867,
-        7856,
-        7869
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|但是……但是……如果不是呢？！",
-      "PosX": 189,
-      "PosY": -2460
-    },
-    "7867": {
-      "ID": 7867,
-      "GroupId": 7,
-      "ChildIdList": [
-        7868
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|正如我所说，没有任何紧急情况的迹象。请不要占用紧急线路，先生。",
-      "PosX": -286,
-      "PosY": -2665
-    },
-    "7868": {
-      "ID": 7868,
-      "GroupId": 7,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|呃...我以为你会认真对待我的问题....再见",
-      "PosX": -286,
-      "PosY": -2865
-    },
-    "7869": {
-      "ID": 7869,
-      "GroupId": 7,
-      "ChildIdList": [
-        7874
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|如果您在屋外，请进门并锁上门，先生。",
-      "PosX": 240,
-      "PosY": -3067
-    },
-    "7871": {
-      "ID": 7871,
-      "GroupId": 7,
-      "ChildIdList": [
-        7873,
-        7869
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的。昨天，我为几个朋友做了烧烤。剩菜太多了，所以我把它们放在垃圾桶里。",
-      "PosX": 228,
-      "PosY": -2844
-    },
-    "7873": {
-      "ID": 7873,
-      "GroupId": 7,
-      "ChildIdList": [
-        7880
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，您有锅、平底锅或其他可以用来发出声音的东西吗？",
-      "PosX": -282,
-      "PosY": -3073
-    },
-    "7874": {
-      "ID": 7874,
-      "GroupId": 7,
-      "ChildIdList": [
-        7875,
-        7848,
-        7864
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1| 是的，这是个好主意。等一等。",
-      "PosX": 214,
-      "PosY": -3280
-    },
-    "7875": {
-      "ID": 7875,
-      "GroupId": 7,
-      "ChildIdList": [
-        7877
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|现在，等待并观察灌木丛。尽量不要在没有需要的情况下离开家。我猜它只是一只猫，但如果熊出来了，请再给我们打电话，我会立即派急救队。",
-      "PosX": 327,
-      "PosY": -3510
-    },
-    "7877": {
-      "ID": 7877,
-      "GroupId": 7,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|我希望你现在派人来。不过没关系。我会等待。",
-      "PosX": 327,
-      "PosY": -3710
-    },
-    "7879": {
-      "ID": 7879,
-      "GroupId": 7,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|这里是槟榔路11号",
-      "PosX": 3,
-      "PosY": -3692
-    },
-    "7880": {
-      "ID": 7880,
-      "GroupId": 7,
-      "ChildIdList": [
-        7881
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|是的，有的。",
-      "PosX": -282,
-      "PosY": -3273
-    },
-    "7881": {
-      "ID": 7881,
-      "GroupId": 7,
-      "ChildIdList": [
-        7882
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|我想让你在灌木丛前制造一些噪音。",
-      "PosX": -653,
-      "PosY": -3435
-    },
-    "7882": {
-      "ID": 7882,
-      "GroupId": 7,
-      "ChildIdList": [
-        7883
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|什么？为什么？那么吓人",
-      "PosX": -653,
-      "PosY": -3635
-    },
-    "7883": {
-      "ID": 7883,
-      "GroupId": 7,
-      "ChildIdList": [
-        7884
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|如果真的有熊，它应该会跑出来。",
-      "PosX": -653,
-      "PosY": -3835
-    },
-    "7884": {
-      "ID": 7884,
-      "GroupId": 7,
-      "ChildIdList": [
-        7885,
-        7886
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|这是明智的选择吗？",
-      "PosX": -653,
-      "PosY": -4035
-    },
-    "7885": {
-      "ID": 7885,
-      "GroupId": 7,
-      "ChildIdList": [
-        7888
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0| 先生，我们需要先确认有威胁，然后才能派遣应急部队。",
-      "PosX": -655,
-      "PosY": -4233
-    },
-    "7886": {
-      "ID": 7886,
-      "GroupId": 7,
-      "ChildIdList": [
-        7887
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|如果你不敢一个人做，我会派消防员去检查。",
-      "PosX": -940,
-      "PosY": -4237
-    },
-    "7887": {
-      "ID": 7887,
-      "GroupId": 7,
-      "ChildIdList": [
-        7864
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|非常感谢你，我会一直在这里等的！",
-      "PosX": -940,
-      "PosY": -4437
-    },
-    "7888": {
-      "ID": 7888,
-      "GroupId": 7,
-      "ChildIdList": [
-        7889
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|所以只能这样了，好的...",
-      "PosX": -655,
-      "PosY": -4433
-    },
-    "7889": {
-      "ID": 7889,
-      "GroupId": 7,
-      "ChildIdList": [
-        7890
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "1|哇靠，原来有熊啊！但它并没有消失！",
-      "PosX": -655,
-      "PosY": -4633
-    },
-    "7890": {
-      "ID": 7890,
-      "GroupId": 7,
-      "ChildIdList": [
-        7891
-      ],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "0|先生，先生，你还在吗？",
-      "PosX": -655,
-      "PosY": -4833
-    },
-    "7891": {
-      "ID": 7891,
-      "GroupId": 7,
-      "ChildIdList": [],
-      "EventID": 0,
-      "IsSubSocre": 0,
-      "Text": "...............",
-      "PosX": -655,
-      "PosY": -5033
-    }
-  },
-  "group": {
-    "0": {
-      "GroupId": 0,
-      "ID": 1,
-      "Name": "网络抢劫",
-      "isChoose": false
-    },
-    "1": {
-      "GroupId": 1,
-      "ID": 1061,
-      "Name": "膝盖受伤",
-      "isChoose": false
-    },
-    "2": {
-      "GroupId": 2,
-      "ID": 2104,
-      "Name": "投诉商家",
-      "isChoose": false
-    },
-    "3": {
-      "GroupId": 3,
-      "ID": 3236,
-      "Name": "菊花上的灯泡",
-      "isChoose": false
-    },
-    "4": {
-      "GroupId": 4,
-      "ID": 4276,
-      "Name": "肇事逃逸",
-      "isChoose": false
-    },
-    "5": {
-      "GroupId": 5,
-      "ID": 5361,
-      "Name": "被剑刺伤",
-      "isChoose": false
-    },
-    "6": {
-      "GroupId": 6,
-      "ID": 6820,
-      "Name": "蝙蝠侠",
-      "isChoose": false
-    },
-    "7": {
-      "GroupId": 7,
-      "ID": 7845,
-      "Name": "有只熊",
-      "isChoose": false
+  "stroy911": {
+    "story": {
+      "1": {
+        "ID": 1,
+        "GroupId": 0,
+        "ChildIdList": [
+          2
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "2": {
+        "ID": 2,
+        "GroupId": 0,
+        "ChildIdList": [
+          3
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|在听么？",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "3": {
+        "ID": 3,
+        "GroupId": 0,
+        "ChildIdList": [
+          4
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是911，有什么可以帮到你的？",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "4": {
+        "ID": 4,
+        "GroupId": 0,
+        "ChildIdList": [
+          5,
+          634
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我的天啊，我被人抢劫了。",
+        "PosX": 0,
+        "PosY": -160
+      },
+      "5": {
+        "ID": 5,
+        "GroupId": 0,
+        "ChildIdList": [
+          7
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，你被袭击了吗?这是入室盗窃吗?",
+        "PosX": 0,
+        "PosY": -351
+      },
+      "6": {
+        "ID": 6,
+        "GroupId": 0,
+        "ChildIdList": [
+          24
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这件事是在哪里发生的?",
+        "PosX": -702,
+        "PosY": -1942
+      },
+      "7": {
+        "ID": 7,
+        "GroupId": 0,
+        "ChildIdList": [
+          6,
+          8,
+          9
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|不，只是个无耻的抢劫犯!交易的规则是这样的：“我扔下斧子，他扔下金币”。但那个混蛋拿了斧子就跑了，金币还没给我呢!",
+        "PosX": -5,
+        "PosY": -557
+      },
+      "8": {
+        "ID": 8,
+        "GroupId": 0,
+        "ChildIdList": [
+          10
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|所以，他应该用…金币来支付？",
+        "PosX": -276,
+        "PosY": -734
+      },
+      "9": {
+        "ID": 9,
+        "GroupId": 0,
+        "ChildIdList": [
+          36
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生。虚拟世界中发生的事件不是紧急情况。",
+        "PosX": -16,
+        "PosY": -747
+      },
+      "10": {
+        "ID": 10,
+        "GroupId": 0,
+        "ChildIdList": [
+          11,
+          12
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，金子这是这里的货币。我们已经商定以6000枚金币的价格进行交易。",
+        "PosX": -271,
+        "PosY": -934
+      },
+      "11": {
+        "ID": 11,
+        "GroupId": 0,
+        "ChildIdList": [
+          13
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我有点懵，不太能理解你的意思。",
+        "PosX": -39,
+        "PosY": -1132
+      },
+      "12": {
+        "ID": 12,
+        "GroupId": 0,
+        "ChildIdList": [
+          52
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|什么东西被抢了？",
+        "PosX": -360,
+        "PosY": -1160
+      },
+      "13": {
+        "ID": 13,
+        "GroupId": 0,
+        "ChildIdList": [
+          9,
+          14
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|游戏中的交易就是这样进行的，但他欺骗了我，偷走了我的斧头！",
+        "PosX": -54,
+        "PosY": -1558
+      },
+      "14": {
+        "ID": 14,
+        "GroupId": 0,
+        "ChildIdList": [
+          15
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你知道是谁干的吗？",
+        "PosX": -360,
+        "PosY": -1560
+      },
+      "15": {
+        "ID": 15,
+        "GroupId": 0,
+        "ChildIdList": [
+          16,
+          6,
+          9
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|他的昵称是 NiceOrk1337，是迷雾刺客公会的一员。",
+        "PosX": -360,
+        "PosY": -1939
+      },
+      "16": {
+        "ID": 16,
+        "GroupId": 0,
+        "ChildIdList": [
+          17
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我需要知道你的真实地址。",
+        "PosX": -48,
+        "PosY": -1945
+      },
+      "17": {
+        "ID": 17,
+        "GroupId": 0,
+        "ChildIdList": [
+          40
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|这里是#龙山南路117号#",
+        "PosX": -46,
+        "PosY": -1315
+      },
+      "24": {
+        "ID": 24,
+        "GroupId": 0,
+        "ChildIdList": [
+          16
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|在常青林的铁匠铺附近。",
+        "PosX": -27,
+        "PosY": -906
+      },
+      "36": {
+        "ID": 36,
+        "GroupId": 0,
+        "ChildIdList": [
+          38,
+          39,
+          40,
+          16
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|但这是抢劫！",
+        "PosX": -54,
+        "PosY": -1747
+      },
+      "38": {
+        "ID": 38,
+        "GroupId": 0,
+        "ChildIdList": [
+          42
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你老实说，如果我派警察过去会对你有帮助吗?",
+        "PosX": 280,
+        "PosY": -1930
+      },
+      "39": {
+        "ID": 39,
+        "GroupId": 0,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|回到现实吧，伙计。911只处理现实中的紧急情况。",
+        "PosX": -351,
+        "PosY": -2166
+      },
+      "40": {
+        "ID": 40,
+        "GroupId": 0,
+        "ChildIdList": [
+          41
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好吧，我派警察去找你。",
+        "PosX": 599,
+        "PosY": -1942
+      },
+      "41": {
+        "ID": 41,
+        "GroupId": 0,
+        "ChildIdList": [],
+        "EventID": 5,
+        "IsSubSocre": 0,
+        "Text": "1|你最好快点！",
+        "PosX": 590,
+        "PosY": -2235
+      },
+      "42": {
+        "ID": 42,
+        "GroupId": 0,
+        "ChildIdList": [
+          16,
+          50,
+          40
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|额……是不一定有帮助，但就是不爽",
+        "PosX": -84,
+        "PosY": -2153
+      },
+      "50": {
+        "ID": 50,
+        "GroupId": 0,
+        "ChildIdList": [
+          51
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|恕我无能为力，先生。",
+        "PosX": -84,
+        "PosY": -2347
+      },
+      "51": {
+        "ID": 51,
+        "GroupId": 0,
+        "ChildIdList": [],
+        "EventID": 5,
+        "IsSubSocre": 1,
+        "Text": "1|呃……天哪。 好吧，我会找到他，然后亲手杀了他。",
+        "PosX": -74,
+        "PosY": -2553
+      },
+      "52": {
+        "ID": 52,
+        "GroupId": 0,
+        "ChildIdList": [
+          54
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我的斧头!我为了它付出了许多心血!",
+        "PosX": -360,
+        "PosY": -1360
+      },
+      "54": {
+        "ID": 54,
+        "GroupId": 0,
+        "ChildIdList": [
+          55
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|对不起，我真的听不懂。",
+        "PosX": -360,
+        "PosY": -1560
+      },
+      "55": {
+        "ID": 55,
+        "GroupId": 0,
+        "ChildIdList": [
+          13
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嘿，很简单的。",
+        "PosX": -357,
+        "PosY": -1736
+      },
+      "634": {
+        "ID": 634,
+        "GroupId": 0,
+        "ChildIdList": [
+          7
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你有受伤吗？",
+        "PosX": -288,
+        "PosY": -336
+      },
+      "1061": {
+        "ID": 1061,
+        "GroupId": 1,
+        "ChildIdList": [
+          1062
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "1062": {
+        "ID": 1062,
+        "GroupId": 1,
+        "ChildIdList": [
+          1064
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是112，有什么可以帮您的？",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "1064": {
+        "ID": 1064,
+        "GroupId": 1,
+        "ChildIdList": [
+          1065,
+          1148,
+          1149,
+          1150
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|小心。小心，不要…你好？我从一所武术学校打来电话，我认为我的一个学生扭伤了膝盖，我们需要一辆救护车。",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "1065": {
+        "ID": 1065,
+        "GroupId": 1,
+        "ChildIdList": [
+          1071
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他现在感觉怎么样？",
+        "PosX": 275,
+        "PosY": -151
+      },
+      "1071": {
+        "ID": 1071,
+        "GroupId": 1,
+        "ChildIdList": [
+          1074
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯，他看上去不是很开心",
+        "PosX": 283,
+        "PosY": -349
+      },
+      "1074": {
+        "ID": 1074,
+        "GroupId": 1,
+        "ChildIdList": [
+          1076
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我的意思是，那名学员的身体感觉怎么样？",
+        "PosX": 311,
+        "PosY": -540
+      },
+      "1076": {
+        "ID": 1076,
+        "GroupId": 1,
+        "ChildIdList": [
+          1078,
+          1156
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|好吧，看他现在很痛苦，但应该不会危及生命。",
+        "PosX": 0,
+        "PosY": -732
+      },
+      "1078": {
+        "ID": 1078,
+        "GroupId": 1,
+        "ChildIdList": [
+          1080
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他现在有意识吗？",
+        "PosX": 0,
+        "PosY": -960
+      },
+      "1080": {
+        "ID": 1080,
+        "GroupId": 1,
+        "ChildIdList": [
+          1081,
+          1159,
+          1160
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，他现在有意识。",
+        "PosX": 0,
+        "PosY": -1160
+      },
+      "1081": {
+        "ID": 1081,
+        "GroupId": 1,
+        "ChildIdList": [
+          1088
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他能自己站起来吗？",
+        "PosX": -9,
+        "PosY": -1349
+      },
+      "1088": {
+        "ID": 1088,
+        "GroupId": 1,
+        "ChildIdList": [
+          1092
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我认为不行，但他还没试过。",
+        "PosX": 330,
+        "PosY": -1532
+      },
+      "1092": {
+        "ID": 1092,
+        "GroupId": 1,
+        "ChildIdList": [
+          1098
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|告诉他试着站起来。",
+        "PosX": 26,
+        "PosY": -2157
+      },
+      "1098": {
+        "ID": 1098,
+        "GroupId": 1,
+        "ChildIdList": [
+          1101,
+          1177,
+          1179
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|为什么？他看上去很痛苦…",
+        "PosX": 616,
+        "PosY": -1960
+      },
+      "1101": {
+        "ID": 1101,
+        "GroupId": 1,
+        "ChildIdList": [
+          1103
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我们需要检查膝盖的状态是否稳定。",
+        "PosX": -360,
+        "PosY": -2560
+      },
+      "1103": {
+        "ID": 1103,
+        "GroupId": 1,
+        "ChildIdList": [
+          1179
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯，好吧，我们试试……听着，你必须站起来，把他扶起来。哦！ 抱住他！抱住...抱住他..！等下，坐下，坐下...我们没法这样做...你还有其他办法吗？",
+        "PosX": 21,
+        "PosY": -2524
+      },
+      "1148": {
+        "ID": 1148,
+        "GroupId": 1,
+        "ChildIdList": [
+          1151
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这是什么时候发生的事？",
+        "PosX": 3,
+        "PosY": -155
+      },
+      "1149": {
+        "ID": 1149,
+        "GroupId": 1,
+        "ChildIdList": [
+          1153
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|教练在场吗？",
+        "PosX": 566,
+        "PosY": -157
+      },
+      "1150": {
+        "ID": 1150,
+        "GroupId": 1,
+        "ChildIdList": [
+          1152
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|具体发生了什么事？",
+        "PosX": -296,
+        "PosY": -151
+      },
+      "1151": {
+        "ID": 1151,
+        "GroupId": 1,
+        "ChildIdList": [
+          1156
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|差不多20分钟前。",
+        "PosX": 5,
+        "PosY": -362
+      },
+      "1152": {
+        "ID": 1152,
+        "GroupId": 1,
+        "ChildIdList": [
+          1154,
+          1156
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我们是#黎明小学#旁的武术学校…我们在练习投掷的时候，一个学生突然跪在了地上。他说他感觉膝盖上有条裂缝…情况就是这样。",
+        "PosX": -302,
+        "PosY": -347
+      },
+      "1153": {
+        "ID": 1153,
+        "GroupId": 1,
+        "ChildIdList": [
+          1156
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，我当时在场",
+        "PosX": 561,
+        "PosY": -338
+      },
+      "1154": {
+        "ID": 1154,
+        "GroupId": 1,
+        "ChildIdList": [
+          1155
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你确定这只是意外吗？他没有被其他人袭击？",
+        "PosX": 11,
+        "PosY": -534
+      },
+      "1155": {
+        "ID": 1155,
+        "GroupId": 1,
+        "ChildIdList": [
+          1156
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|他没有被人攻击。他总是训练很刻苦，仅此而已。",
+        "PosX": -304,
+        "PosY": -749
+      },
+      "1156": {
+        "ID": 1156,
+        "GroupId": 1,
+        "ChildIdList": [
+          1158
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我需要你描述一下具体的受伤情况。",
+        "PosX": -309,
+        "PosY": -549
+      },
+      "1158": {
+        "ID": 1158,
+        "GroupId": 1,
+        "ChildIdList": [
+          1081,
+          1167,
+          1159
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|膝盖看起来肿得很厉害…像个球一样…你现在能派辆救护车来吗？",
+        "PosX": -310,
+        "PosY": -1000
+      },
+      "1159": {
+        "ID": 1159,
+        "GroupId": 1,
+        "ChildIdList": [
+          1162
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|听起来像是撞到东西的正常反应，过几天就好了。",
+        "PosX": 326,
+        "PosY": -1336
+      },
+      "1160": {
+        "ID": 1160,
+        "GroupId": 1,
+        "ChildIdList": [
+          1161
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你能看到瘀伤吗？",
+        "PosX": 572,
+        "PosY": -1336
+      },
+      "1161": {
+        "ID": 1161,
+        "GroupId": 1,
+        "ChildIdList": [
+          1163
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|不，什么都没有。",
+        "PosX": 578,
+        "PosY": -1523
+      },
+      "1162": {
+        "ID": 1162,
+        "GroupId": 1,
+        "ChildIdList": [
+          1163
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你是认真的？ 我们什么都不用做吗？",
+        "PosX": -11,
+        "PosY": -1549
+      },
+      "1163": {
+        "ID": 1163,
+        "GroupId": 1,
+        "ChildIdList": [
+          1164
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，这个情况并不是很紧急。 你应该开车送他去医院。",
+        "PosX": 325,
+        "PosY": -1740
+      },
+      "1164": {
+        "ID": 1164,
+        "GroupId": 1,
+        "ChildIdList": [
+          1165
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|…你确定这是个好主意吗？他现在应该不能上车吧…",
+        "PosX": 323,
+        "PosY": -1945
+      },
+      "1165": {
+        "ID": 1165,
+        "GroupId": 1,
+        "ChildIdList": [
+          1175
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|是的，开车送他去医院。 我们不能为一点小伤去派救护车。",
+        "PosX": 673,
+        "PosY": -2198
+      },
+      "1167": {
+        "ID": 1167,
+        "GroupId": 1,
+        "ChildIdList": [
+          1168
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好的，我会派一辆救护车到你的位置。",
+        "PosX": -313,
+        "PosY": -1349
+      },
+      "1168": {
+        "ID": 1168,
+        "GroupId": 1,
+        "ChildIdList": [
+          1170,
+          1179,
+          1174
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|谢谢…但是我们不应该在等待的时候做点什么吗？",
+        "PosX": -360,
+        "PosY": -1560
+      },
+      "1169": {
+        "ID": 1169,
+        "GroupId": 1,
+        "ChildIdList": [],
+        "EventID": 4,
+        "IsSubSocre": 1,
+        "Text": "0|我们需要让膝盖动起来，这很重要。",
+        "PosX": 40,
+        "PosY": -2322
+      },
+      "1170": {
+        "ID": 1170,
+        "GroupId": 1,
+        "ChildIdList": [
+          1172,
+          1180
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|让他抬起腿，让血液向下流动…你可以用让他坐在椅子上试试。",
+        "PosX": -18,
+        "PosY": -1745
+      },
+      "1172": {
+        "ID": 1172,
+        "GroupId": 1,
+        "ChildIdList": [
+          1173,
+          1174,
+          1092
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你说怎么做？",
+        "PosX": 6,
+        "PosY": -1949
+      },
+      "1173": {
+        "ID": 1173,
+        "GroupId": 1,
+        "ChildIdList": [
+          1176
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他应该试着弯曲膝盖，慢慢把它伸开……",
+        "PosX": -236,
+        "PosY": -2162
+      },
+      "1174": {
+        "ID": 1174,
+        "GroupId": 1,
+        "ChildIdList": [
+          1185
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|其实，你只需要等待救护车就行。",
+        "PosX": -507,
+        "PosY": -2164
+      },
+      "1175": {
+        "ID": 1175,
+        "GroupId": 1,
+        "ChildIdList": [],
+        "EventID": 4,
+        "IsSubSocre": 1,
+        "Text": "1|真是难以置信",
+        "PosX": 745,
+        "PosY": -2718
+      },
+      "1176": {
+        "ID": 1176,
+        "GroupId": 1,
+        "ChildIdList": [
+          1101
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯...这听起来不太妙。你确定它不会让它变得更糟吗？",
+        "PosX": -360,
+        "PosY": -2360
+      },
+      "1177": {
+        "ID": 1177,
+        "GroupId": 1,
+        "ChildIdList": [
+          1178
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我们需要这样做以改善血液的流动，相信我，我们是专业的。",
+        "PosX": 317,
+        "PosY": -2160
+      },
+      "1178": {
+        "ID": 1178,
+        "GroupId": 1,
+        "ChildIdList": [
+          1179
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|...好的。听着，他们说你应该试着弯曲它，好吗？不，不，不，不，不，不，停下来。他没办法那样做。",
+        "PosX": 308,
+        "PosY": -2396
+      },
+      "1179": {
+        "ID": 1179,
+        "GroupId": 1,
+        "ChildIdList": [
+          1183
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|如果你有冰块的话就用冰块冷敷下吧…也可以用冷饮试试。",
+        "PosX": 447,
+        "PosY": -2920
+      },
+      "1180": {
+        "ID": 1180,
+        "GroupId": 1,
+        "ChildIdList": [
+          1169,
+          1182,
+          1179
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|好的，一把椅子...好吧，我们坐在上面...把你的腿抬起来。",
+        "PosX": -337,
+        "PosY": -1960
+      },
+      "1182": {
+        "ID": 1182,
+        "GroupId": 1,
+        "ChildIdList": [
+          1186
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|救护车马上就到。",
+        "PosX": -796,
+        "PosY": -2162
+      },
+      "1183": {
+        "ID": 1183,
+        "GroupId": 1,
+        "ChildIdList": [
+          1184
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|好的，我想我们可以找到一些冰块...还有别的吗？",
+        "PosX": 23,
+        "PosY": -2757
+      },
+      "1184": {
+        "ID": 1184,
+        "GroupId": 1,
+        "ChildIdList": [
+          1185
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|没什么，剩下的只需要等待救护车了。",
+        "PosX": 32,
+        "PosY": -2962
+      },
+      "1185": {
+        "ID": 1185,
+        "GroupId": 1,
+        "ChildIdList": [],
+        "EventID": 4,
+        "IsSubSocre": 0,
+        "Text": "1|好的，谢谢！我们会在这等救护车的。",
+        "PosX": -643,
+        "PosY": -1750
+      },
+      "1186": {
+        "ID": 1186,
+        "GroupId": 1,
+        "ChildIdList": [],
+        "EventID": 4,
+        "IsSubSocre": 0,
+        "Text": "1|好的谢谢你。",
+        "PosX": -720,
+        "PosY": -2360
+      },
+      "2104": {
+        "ID": 2104,
+        "GroupId": 2,
+        "ChildIdList": [
+          2105
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|呃…太热了。",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "2105": {
+        "ID": 2105,
+        "GroupId": 2,
+        "ChildIdList": [
+          2106
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是911，有什么能帮你的？",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "2106": {
+        "ID": 2106,
+        "GroupId": 2,
+        "ChildIdList": [
+          2107,
+          2108
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好？ 啊，你好。 我有个问题，我点了一个披萨，可是它太辣了……",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "2107": {
+        "ID": 2107,
+        "GroupId": 2,
+        "ChildIdList": [
+          2123
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你没有打错电话么？",
+        "PosX": -4,
+        "PosY": -166
+      },
+      "2108": {
+        "ID": 2108,
+        "GroupId": 2,
+        "ChildIdList": [
+          2109
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|对不起，我没有听懂，能再说一遍么？",
+        "PosX": -265,
+        "PosY": -162
+      },
+      "2109": {
+        "ID": 2109,
+        "GroupId": 2,
+        "ChildIdList": [
+          2110,
+          2111,
+          2112
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我订的披萨太辣了，辣到我一片都吃不下。",
+        "PosX": -269,
+        "PosY": -349
+      },
+      "2110": {
+        "ID": 2110,
+        "GroupId": 2,
+        "ChildIdList": [
+          2137
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|警察不管这些事，你可以给商家打电话投诉他们。",
+        "PosX": -275,
+        "PosY": -549
+      },
+      "2111": {
+        "ID": 2111,
+        "GroupId": 2,
+        "ChildIdList": [
+          2113
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，你是否有危险，但你却因为房间里有人而不敢说?",
+        "PosX": -588,
+        "PosY": -545
+      },
+      "2112": {
+        "ID": 2112,
+        "GroupId": 2,
+        "ChildIdList": [
+          2428
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|没事的话，请不要占用紧急线路。",
+        "PosX": 405,
+        "PosY": -534
+      },
+      "2113": {
+        "ID": 2113,
+        "GroupId": 2,
+        "ChildIdList": [
+          2114,
+          2116,
+          2112
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|什么？ 不！ 我只想让商家退款！",
+        "PosX": -279,
+        "PosY": -774
+      },
+      "2114": {
+        "ID": 2114,
+        "GroupId": 2,
+        "ChildIdList": [
+          2117
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你是在开玩笑么？",
+        "PosX": 18,
+        "PosY": -551
+      },
+      "2116": {
+        "ID": 2116,
+        "GroupId": 2,
+        "ChildIdList": [
+          2121
+        ],
+        "EventID": 6,
+        "IsSubSocre": 0,
+        "Text": "0|伙计，不要浪费我的时间！",
+        "PosX": -278,
+        "PosY": -962
+      },
+      "2117": {
+        "ID": 2117,
+        "GroupId": 2,
+        "ChildIdList": [
+          2110,
+          2118
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|哟，我听起来像是在开玩笑吗？ 有关披萨的事绝对不是开玩笑！",
+        "PosX": 10,
+        "PosY": -978
+      },
+      "2118": {
+        "ID": 2118,
+        "GroupId": 2,
+        "ChildIdList": [
+          2119
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你嗑药嗨了吗?",
+        "PosX": -271,
+        "PosY": -1336
+      },
+      "2119": {
+        "ID": 2119,
+        "GroupId": 2,
+        "ChildIdList": [
+          2120,
+          2112,
+          2116
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗨个风筝啊，我只想要商家给我退款，但这太难了老兄。",
+        "PosX": -360,
+        "PosY": -1887
+      },
+      "2120": {
+        "ID": 2120,
+        "GroupId": 2,
+        "ChildIdList": [
+          2121
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，不好意思，这种事不在我们的管辖范围内",
+        "PosX": -108,
+        "PosY": -2191
+      },
+      "2121": {
+        "ID": 2121,
+        "GroupId": 2,
+        "ChildIdList": [],
+        "EventID": 6,
+        "IsSubSocre": 0,
+        "Text": "1|如果是你的披萨，你会有什么感想？我很失望，伙计，愿你的披萨永远不会太辣，生活永远和谐。再见！",
+        "PosX": -49,
+        "PosY": -1893
+      },
+      "2123": {
+        "ID": 2123,
+        "GroupId": 2,
+        "ChildIdList": [
+          2111,
+          2114
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|该死的，我当然没打错！",
+        "PosX": 0,
+        "PosY": -360
+      },
+      "2137": {
+        "ID": 2137,
+        "GroupId": 2,
+        "ChildIdList": [
+          2112,
+          2116,
+          2120,
+          2118
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我试过了，但是他们叫我滚开。这太没素质了！能找个警官来帮我吗？",
+        "PosX": -273,
+        "PosY": -1528
+      },
+      "2428": {
+        "ID": 2428,
+        "GroupId": 2,
+        "ChildIdList": [
+          2120
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我只是想要商家给我退款好吗！你们帮忙处理下不行吗？",
+        "PosX": 189,
+        "PosY": -1928
+      },
+      "3236": {
+        "ID": 3236,
+        "GroupId": 3,
+        "ChildIdList": [
+          3237
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|先生，你在吗？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "3237": {
+        "ID": 3237,
+        "GroupId": 3,
+        "ChildIdList": [
+          3238
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你好，112，你有什么急事吗？",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "3238": {
+        "ID": 3238,
+        "GroupId": 3,
+        "ChildIdList": [
+          3239,
+          3551
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好，我确实有紧急情况",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "3239": {
+        "ID": 3239,
+        "GroupId": 3,
+        "ChildIdList": [
+          3242
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我需要怎么帮你呢？先生",
+        "PosX": 14,
+        "PosY": -157
+      },
+      "3240": {
+        "ID": 3240,
+        "GroupId": 3,
+        "ChildIdList": [
+          3241
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好吧，我知道了，这就是你拨打这个电话的原因对吗？",
+        "PosX": -387,
+        "PosY": -1351
+      },
+      "3241": {
+        "ID": 3241,
+        "GroupId": 3,
+        "ChildIdList": [
+          3245
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，没错，这就是为什么，嗯...",
+        "PosX": -360,
+        "PosY": -1560
+      },
+      "3242": {
+        "ID": 3242,
+        "GroupId": 3,
+        "ChildIdList": [
+          3243
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯...这是个意外，请帮我派救护车",
+        "PosX": 18,
+        "PosY": -360
+      },
+      "3243": {
+        "ID": 3243,
+        "GroupId": 3,
+        "ChildIdList": [
+          3244
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|什么样的意外？",
+        "PosX": 21,
+        "PosY": -560
+      },
+      "3244": {
+        "ID": 3244,
+        "GroupId": 3,
+        "ChildIdList": [
+          3246,
+          3247,
+          3552
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯...灯泡，我和我的伴侣，呃，我们玩灯泡，呃...我们实验",
+        "PosX": 19,
+        "PosY": -760
+      },
+      "3245": {
+        "ID": 3245,
+        "GroupId": 3,
+        "ChildIdList": [
+          3264
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好的，我会派救护车过去",
+        "PosX": -360,
+        "PosY": -1760
+      },
+      "3246": {
+        "ID": 3246,
+        "GroupId": 3,
+        "ChildIdList": [
+          3248
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你被电击了吗？",
+        "PosX": 29,
+        "PosY": -957
+      },
+      "3247": {
+        "ID": 3247,
+        "GroupId": 3,
+        "ChildIdList": [
+          3265
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|玩灯泡？在...性交的时候吗？",
+        "PosX": -352,
+        "PosY": -947
+      },
+      "3248": {
+        "ID": 3248,
+        "GroupId": 3,
+        "ChildIdList": [
+          3249,
+          3250,
+          3247,
+          3240
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|不，呃...就是...就像...呃...就是...把灯泡拿来当情趣用品了",
+        "PosX": 28,
+        "PosY": -1147
+      },
+      "3249": {
+        "ID": 3249,
+        "GroupId": 3,
+        "ChildIdList": [
+          3252,
+          3265
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|它断裂了吗？你受伤了吗？",
+        "PosX": 381,
+        "PosY": -1351
+      },
+      "3250": {
+        "ID": 3250,
+        "GroupId": 3,
+        "ChildIdList": [
+          3275
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，你在哪？",
+        "PosX": 29,
+        "PosY": -1353
+      },
+      "3252": {
+        "ID": 3252,
+        "GroupId": 3,
+        "ChildIdList": [
+          3253,
+          3250,
+          3245
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|人没有受伤但我的自尊心受到了伤害",
+        "PosX": 68,
+        "PosY": -1557
+      },
+      "3253": {
+        "ID": 3253,
+        "GroupId": 3,
+        "ChildIdList": [
+          3254
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你有小汽车吗？",
+        "PosX": -360,
+        "PosY": -2160
+      },
+      "3254": {
+        "ID": 3254,
+        "GroupId": 3,
+        "ChildIdList": [
+          3257,
+          3258
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，我有一辆车",
+        "PosX": 66,
+        "PosY": -1953
+      },
+      "3257": {
+        "ID": 3257,
+        "GroupId": 3,
+        "ChildIdList": [
+          3259
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|开车去医院",
+        "PosX": 123,
+        "PosY": -2155
+      },
+      "3258": {
+        "ID": 3258,
+        "GroupId": 3,
+        "ChildIdList": [
+          3260
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你可以请人开车送你吗？",
+        "PosX": -94,
+        "PosY": -2157
+      },
+      "3259": {
+        "ID": 3259,
+        "GroupId": 3,
+        "ChildIdList": [
+          3258,
+          3250,
+          3269,
+          3271
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|呃...我不能完全，嗯...呃...坐。驾驶需要坐着会不舒服",
+        "PosX": 383,
+        "PosY": -2441
+      },
+      "3260": {
+        "ID": 3260,
+        "GroupId": 3,
+        "ChildIdList": [
+          3250,
+          3269,
+          3271
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯...我可以，但是安全吗？我真的不想在没有任何医疗监督的情况下去医院",
+        "PosX": 34,
+        "PosY": -2493
+      },
+      "3264": {
+        "ID": 3264,
+        "GroupId": 3,
+        "ChildIdList": [
+          3250
+        ],
+        "EventID": 7,
+        "IsSubSocre": 0,
+        "Text": "1|天啊，太感谢了，麻烦快点，谢谢",
+        "PosX": 393,
+        "PosY": -1981
+      },
+      "3265": {
+        "ID": 3265,
+        "GroupId": 3,
+        "ChildIdList": [
+          3266,
+          3250,
+          3267
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|哦，天哪，是的...它在那里。它被卡住了。我需要帮助。",
+        "PosX": 359,
+        "PosY": -1566
+      },
+      "3266": {
+        "ID": 3266,
+        "GroupId": 3,
+        "ChildIdList": [
+          3268
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你可以自己吃辣，它会帮你解决的，相信我",
+        "PosX": 63,
+        "PosY": -1766
+      },
+      "3267": {
+        "ID": 3267,
+        "GroupId": 3,
+        "ChildIdList": [
+          3268
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|取一些油出来，让人帮你把灯泡拿出来",
+        "PosX": 356,
+        "PosY": -1779
+      },
+      "3268": {
+        "ID": 3268,
+        "GroupId": 3,
+        "ChildIdList": [
+          3250,
+          3253,
+          3269
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|什么？我不能等那么长的时间，如果它断裂了怎么办？我需要帮助！",
+        "PosX": -275,
+        "PosY": -1955
+      },
+      "3269": {
+        "ID": 3269,
+        "GroupId": 3,
+        "ChildIdList": [
+          3270
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你会没事的，只要听从我的指示",
+        "PosX": 388,
+        "PosY": -2160
+      },
+      "3270": {
+        "ID": 3270,
+        "GroupId": 3,
+        "ChildIdList": [
+          3250,
+          3271,
+          3272
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|拜托了，再一次请求你派个专业的人",
+        "PosX": -233,
+        "PosY": -2741
+      },
+      "3271": {
+        "ID": 3271,
+        "GroupId": 3,
+        "ChildIdList": [],
+        "EventID": 7,
+        "IsSubSocre": 0,
+        "Text": "0|我马上派救护车过去，你尽量不要乱动",
+        "PosX": 442,
+        "PosY": -2777
+      },
+      "3272": {
+        "ID": 3272,
+        "GroupId": 3,
+        "ChildIdList": [
+          3273
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|没那么严重，只是个灯泡而已",
+        "PosX": -230,
+        "PosY": -2999
+      },
+      "3273": {
+        "ID": 3273,
+        "GroupId": 3,
+        "ChildIdList": [],
+        "EventID": 7,
+        "IsSubSocre": 1,
+        "Text": "1|呃...好吧，如果你非要这说，但这对我来说没有任何帮助",
+        "PosX": -236,
+        "PosY": -3231
+      },
+      "3275": {
+        "ID": 3275,
+        "GroupId": 3,
+        "ChildIdList": [
+          3271
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我在#禾祥西路7号#，我真的需要帮助!",
+        "PosX": 57,
+        "PosY": -2844
+      },
+      "3551": {
+        "ID": 3551,
+        "GroupId": 3,
+        "ChildIdList": [
+          3242
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|发生什么事了吗？",
+        "PosX": -252,
+        "PosY": -149
+      },
+      "3552": {
+        "ID": 3552,
+        "GroupId": 3,
+        "ChildIdList": [
+          3248
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|玩灯泡？然后呢？",
+        "PosX": 369,
+        "PosY": -938
+      },
+      "4276": {
+        "ID": 4276,
+        "GroupId": 4,
+        "ChildIdList": [
+          4277
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好，112吗？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "4277": {
+        "ID": 4277,
+        "GroupId": 4,
+        "ChildIdList": [
+          4278
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你好，112，先生有什么紧急情况吗",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "4278": {
+        "ID": 4278,
+        "GroupId": 4,
+        "ChildIdList": [
+          4279,
+          4280,
+          4281
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|这里发生了一场事故",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "4279": {
+        "ID": 4279,
+        "GroupId": 4,
+        "ChildIdList": [
+          4282
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|在哪发生的？",
+        "PosX": 0,
+        "PosY": -160
+      },
+      "4280": {
+        "ID": 4280,
+        "GroupId": 4,
+        "ChildIdList": [
+          4302
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|是谁的责任?",
+        "PosX": -357,
+        "PosY": -125
+      },
+      "4281": {
+        "ID": 4281,
+        "GroupId": 4,
+        "ChildIdList": [
+          4303
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|出什么事了吗？",
+        "PosX": 406,
+        "PosY": -181
+      },
+      "4282": {
+        "ID": 4282,
+        "GroupId": 4,
+        "ChildIdList": [
+          4283
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|在#湖滨东路9号#",
+        "PosX": 0,
+        "PosY": -360
+      },
+      "4283": {
+        "ID": 4283,
+        "GroupId": 4,
+        "ChildIdList": [
+          4284
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|有人受伤吗？",
+        "PosX": -333,
+        "PosY": -551
+      },
+      "4284": {
+        "ID": 4284,
+        "GroupId": 4,
+        "ChildIdList": [
+          4285,
+          4286,
+          4287
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|没有人受伤，但是我的车被划伤了，对方已经不在这里了",
+        "PosX": 32,
+        "PosY": -612
+      },
+      "4285": {
+        "ID": 4285,
+        "GroupId": 4,
+        "ChildIdList": [
+          4288
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他逃跑了吗？",
+        "PosX": 49,
+        "PosY": -960
+      },
+      "4286": {
+        "ID": 4286,
+        "GroupId": 4,
+        "ChildIdList": [
+          4304
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这是怎么发生的",
+        "PosX": 365,
+        "PosY": -560
+      },
+      "4287": {
+        "ID": 4287,
+        "GroupId": 4,
+        "ChildIdList": [
+          4312
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|慢慢开走了吗？",
+        "PosX": 369,
+        "PosY": -932
+      },
+      "4288": {
+        "ID": 4288,
+        "GroupId": 4,
+        "ChildIdList": [
+          4289,
+          4290,
+          4297
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|车里没有人在，所以我，甚至不知道这算不算逃跑",
+        "PosX": 38,
+        "PosY": -1153
+      },
+      "4289": {
+        "ID": 4289,
+        "GroupId": 4,
+        "ChildIdList": [
+          4292
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你这是在开玩笑吗？",
+        "PosX": -241,
+        "PosY": -1334
+      },
+      "4290": {
+        "ID": 4290,
+        "GroupId": 4,
+        "ChildIdList": [
+          4342
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你喝醉了吗？",
+        "PosX": 386,
+        "PosY": -1377
+      },
+      "4292": {
+        "ID": 4292,
+        "GroupId": 4,
+        "ChildIdList": [
+          4293,
+          4294,
+          4295
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我知道这很荒谬，但我认为这是一辆自动驾驶汽车",
+        "PosX": 392,
+        "PosY": -1562
+      },
+      "4293": {
+        "ID": 4293,
+        "GroupId": 4,
+        "ChildIdList": [
+          4296
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你好好在回想一下",
+        "PosX": 345,
+        "PosY": -1791
+      },
+      "4294": {
+        "ID": 4294,
+        "GroupId": 4,
+        "ChildIdList": [
+          4318
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|那你想让我做什么",
+        "PosX": 377,
+        "PosY": -2177
+      },
+      "4295": {
+        "ID": 4295,
+        "GroupId": 4,
+        "ChildIdList": [
+          4314
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你觉得你有安全驾驶吗？",
+        "PosX": -628,
+        "PosY": -1717
+      },
+      "4296": {
+        "ID": 4296,
+        "GroupId": 4,
+        "ChildIdList": [
+          4297,
+          4298
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我不知道该怎么办了。我从来没处理过这种事故...",
+        "PosX": 104,
+        "PosY": -1957
+      },
+      "4297": {
+        "ID": 4297,
+        "GroupId": 4,
+        "ChildIdList": [
+          4299
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好的，我马上派人去，你在出事的地方等着",
+        "PosX": 19,
+        "PosY": -1336
+      },
+      "4298": {
+        "ID": 4298,
+        "GroupId": 4,
+        "ChildIdList": [
+          4300
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|深呼吸，先生，如果你是安全的就没有必要恐慌",
+        "PosX": -276,
+        "PosY": -2151
+      },
+      "4299": {
+        "ID": 4299,
+        "GroupId": 4,
+        "ChildIdList": [],
+        "EventID": 16,
+        "IsSubSocre": 0,
+        "Text": "1|好的，麻烦你了，再见！",
+        "PosX": 322,
+        "PosY": -2385
+      },
+      "4300": {
+        "ID": 4300,
+        "GroupId": 4,
+        "ChildIdList": [
+          4301,
+          4294,
+          4295
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|放松个屁，记住我的话，机器人要崛起了",
+        "PosX": -241,
+        "PosY": -2368
+      },
+      "4301": {
+        "ID": 4301,
+        "GroupId": 4,
+        "ChildIdList": [
+          4313
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|机器人崛起吗？先生",
+        "PosX": -237,
+        "PosY": -2572
+      },
+      "4302": {
+        "ID": 4302,
+        "GroupId": 4,
+        "ChildIdList": [
+          4283
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我的车被撞了，但是另外一辆车里没有人",
+        "PosX": -337,
+        "PosY": -364
+      },
+      "4303": {
+        "ID": 4303,
+        "GroupId": 4,
+        "ChildIdList": [
+          4286
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我的车被撞了",
+        "PosX": 410,
+        "PosY": -357
+      },
+      "4304": {
+        "ID": 4304,
+        "GroupId": 4,
+        "ChildIdList": [
+          4305
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我车子直行，对方左转，然后对方没有礼让先行",
+        "PosX": -344,
+        "PosY": -1096
+      },
+      "4305": {
+        "ID": 4305,
+        "GroupId": 4,
+        "ChildIdList": [
+          4306
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|有目击者吗？",
+        "PosX": -572,
+        "PosY": -1317
+      },
+      "4306": {
+        "ID": 4306,
+        "GroupId": 4,
+        "ChildIdList": [
+          4307
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我不知道有没有，现在这里没有人",
+        "PosX": -258,
+        "PosY": -1538
+      },
+      "4307": {
+        "ID": 4307,
+        "GroupId": 4,
+        "ChildIdList": [
+          4308
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|声音应该很大，有人能听到吗？",
+        "PosX": 99,
+        "PosY": -1762
+      },
+      "4308": {
+        "ID": 4308,
+        "GroupId": 4,
+        "ChildIdList": [
+          4309,
+          4310,
+          4294
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你想要我去敲周围人家的门，问他们是否看到一辆无人驾驶汽车撞了我，然后消失？",
+        "PosX": -570,
+        "PosY": -1947
+      },
+      "4309": {
+        "ID": 4309,
+        "GroupId": 4,
+        "ChildIdList": [
+          4311
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|无人驾驶？无人驾驶车吗？",
+        "PosX": 80,
+        "PosY": -2164
+      },
+      "4310": {
+        "ID": 4310,
+        "GroupId": 4,
+        "ChildIdList": [
+          4341
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|哦，为什么不呢？",
+        "PosX": -601,
+        "PosY": -2138
+      },
+      "4311": {
+        "ID": 4311,
+        "GroupId": 4,
+        "ChildIdList": [
+          4290
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|没有司机",
+        "PosX": 90,
+        "PosY": -2372
+      },
+      "4312": {
+        "ID": 4312,
+        "GroupId": 4,
+        "ChildIdList": [
+          4290,
+          4297
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯，他好像都没有注意到，它撞到我的车了",
+        "PosX": 391,
+        "PosY": -1157
+      },
+      "4313": {
+        "ID": 4313,
+        "GroupId": 4,
+        "ChildIdList": [],
+        "EventID": 16,
+        "IsSubSocre": 1,
+        "Text": "1|我不管，我不知道现在为什么打电话了，再见!",
+        "PosX": -254,
+        "PosY": -2762
+      },
+      "4314": {
+        "ID": 4314,
+        "GroupId": 4,
+        "ChildIdList": [
+          4297,
+          4316
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我想是的",
+        "PosX": 104,
+        "PosY": -2550
+      },
+      "4316": {
+        "ID": 4316,
+        "GroupId": 4,
+        "ChildIdList": [
+          4317
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|那么你应该回家了",
+        "PosX": 101,
+        "PosY": -2704
+      },
+      "4317": {
+        "ID": 4317,
+        "GroupId": 4,
+        "ChildIdList": [],
+        "EventID": 16,
+        "IsSubSocre": 1,
+        "Text": "1|好的，再见",
+        "PosX": -180,
+        "PosY": -3160
+      },
+      "4318": {
+        "ID": 4318,
+        "GroupId": 4,
+        "ChildIdList": [
+          4319,
+          4297
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我需要你的帮忙",
+        "PosX": -241,
+        "PosY": -1951
+      },
+      "4319": {
+        "ID": 4319,
+        "GroupId": 4,
+        "ChildIdList": [
+          4317
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我很抱歉，但是这个事故没有严重到需要派人去",
+        "PosX": -590,
+        "PosY": -2579
+      },
+      "4341": {
+        "ID": 4341,
+        "GroupId": 4,
+        "ChildIdList": [
+          4319
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|声音太小了，几乎没有颠簸",
+        "PosX": -609,
+        "PosY": -2345
+      },
+      "4342": {
+        "ID": 4342,
+        "GroupId": 4,
+        "ChildIdList": [
+          4344,
+          4295
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|没有的，我不是那种人，我不会喝酒开车的",
+        "PosX": 26,
+        "PosY": -1547
+      },
+      "4344": {
+        "ID": 4344,
+        "GroupId": 4,
+        "ChildIdList": [
+          4318
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|那你想让我做什么",
+        "PosX": -246,
+        "PosY": -1747
+      },
+      "5361": {
+        "ID": 5361,
+        "GroupId": 5,
+        "ChildIdList": [
+          5362
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "5362": {
+        "ID": 5362,
+        "GroupId": 5,
+        "ChildIdList": [
+          5363
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是112，你有什么事情么？",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "5363": {
+        "ID": 5363,
+        "GroupId": 5,
+        "ChildIdList": [
+          5364,
+          5365,
+          5366,
+          5367
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好？我这里是黑武士学院，我们的一名学员刚不小心用剑刺伤了自己。",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "5364": {
+        "ID": 5364,
+        "GroupId": 5,
+        "ChildIdList": [
+          5368
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他现在怎么样了？？",
+        "PosX": 211,
+        "PosY": -168
+      },
+      "5365": {
+        "ID": 5365,
+        "GroupId": 5,
+        "ChildIdList": [
+          5395
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|一把剑？这是怎么回事？",
+        "PosX": -58,
+        "PosY": -166
+      },
+      "5366": {
+        "ID": 5366,
+        "GroupId": 5,
+        "ChildIdList": [
+          5392
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他自己刺伤了自己？",
+        "PosX": 468,
+        "PosY": -160
+      },
+      "5367": {
+        "ID": 5367,
+        "GroupId": 5,
+        "ChildIdList": [
+          5396
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|他伤到哪里了？",
+        "PosX": -360,
+        "PosY": -160
+      },
+      "5368": {
+        "ID": 5368,
+        "GroupId": 5,
+        "ChildIdList": [
+          5393
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|他看起来脸色苍白…并且很紧张。",
+        "PosX": 234,
+        "PosY": -364
+      },
+      "5369": {
+        "ID": 5369,
+        "GroupId": 5,
+        "ChildIdList": [
+          5385
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|救护车已经在路上了。",
+        "PosX": 354,
+        "PosY": -2340
+      },
+      "5370": {
+        "ID": 5370,
+        "GroupId": 5,
+        "ChildIdList": [
+          5371,
+          5372
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|还有其他办法么？",
+        "PosX": -348,
+        "PosY": -1351
+      },
+      "5371": {
+        "ID": 5371,
+        "GroupId": 5,
+        "ChildIdList": [
+          5374
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你需要固定住他的肩膀。",
+        "PosX": -342,
+        "PosY": -1553
+      },
+      "5372": {
+        "ID": 5372,
+        "GroupId": 5,
+        "ChildIdList": [
+          5399
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|告诉他抬起手臂并保持住。",
+        "PosX": -635,
+        "PosY": -1545
+      },
+      "5373": {
+        "ID": 5373,
+        "GroupId": 5,
+        "ChildIdList": [
+          5400
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你应该压住伤口。",
+        "PosX": -367,
+        "PosY": -951
+      },
+      "5374": {
+        "ID": 5374,
+        "GroupId": 5,
+        "ChildIdList": [
+          5375,
+          5376,
+          5377
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我应该用什么固定住它？",
+        "PosX": -348,
+        "PosY": -1757
+      },
+      "5375": {
+        "ID": 5375,
+        "GroupId": 5,
+        "ChildIdList": [
+          5378
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你可以用衬衫来固定肩膀。",
+        "PosX": -348,
+        "PosY": -1966
+      },
+      "5376": {
+        "ID": 5376,
+        "GroupId": 5,
+        "ChildIdList": [
+          5378
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你看看你的急救箱里有没有弹性绷带，你可以用它来固定肩膀。",
+        "PosX": -667,
+        "PosY": -1985
+      },
+      "5377": {
+        "ID": 5377,
+        "GroupId": 5,
+        "ChildIdList": [
+          5378
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你可以用你的腰带来固定肩膀",
+        "PosX": 0,
+        "PosY": -1960
+      },
+      "5378": {
+        "ID": 5378,
+        "GroupId": 5,
+        "ChildIdList": [
+          5379,
+          5380,
+          5383,
+          5372,
+          5369
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|好的，我们会这么做的。",
+        "PosX": 0,
+        "PosY": -2160
+      },
+      "5379": {
+        "ID": 5379,
+        "GroupId": 5,
+        "ChildIdList": [
+          5385
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|好的，就这样就可以了。",
+        "PosX": -329,
+        "PosY": -2355
+      },
+      "5380": {
+        "ID": 5380,
+        "GroupId": 5,
+        "ChildIdList": [
+          5390
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你是哪位？",
+        "PosX": -703,
+        "PosY": -2334
+      },
+      "5383": {
+        "ID": 5383,
+        "GroupId": 5,
+        "ChildIdList": [
+          5387
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你应该尽快送他去医院。",
+        "PosX": -14,
+        "PosY": -2364
+      },
+      "5385": {
+        "ID": 5385,
+        "GroupId": 5,
+        "ChildIdList": [],
+        "EventID": 17,
+        "IsSubSocre": 0,
+        "Text": "1|好的，我们会等待救护车过来。",
+        "PosX": -34,
+        "PosY": -2562
+      },
+      "5387": {
+        "ID": 5387,
+        "GroupId": 5,
+        "ChildIdList": [
+          5388
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|呃，好吧，但为什么不能直接派救护车过来呢？",
+        "PosX": -336,
+        "PosY": -2795
+      },
+      "5388": {
+        "ID": 5388,
+        "GroupId": 5,
+        "ChildIdList": [
+          5389
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这只是个小伤，你开车送他去医院就行。医生会把他的伤口缝合起来的。",
+        "PosX": -323,
+        "PosY": -3042
+      },
+      "5389": {
+        "ID": 5389,
+        "GroupId": 5,
+        "ChildIdList": [
+          5369
+        ],
+        "EventID": 17,
+        "IsSubSocre": 1,
+        "Text": "1|嗯...好的，如果你这么说的话。",
+        "PosX": -313,
+        "PosY": -3297
+      },
+      "5390": {
+        "ID": 5390,
+        "GroupId": 5,
+        "ChildIdList": [
+          5383,
+          5369
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我是他们的教练",
+        "PosX": -379,
+        "PosY": -2555
+      },
+      "5392": {
+        "ID": 5392,
+        "GroupId": 5,
+        "ChildIdList": [
+          5393
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，他正试着用他的右手，把剑从臀部拔出来，话说是谁刺伤的真的很重要吗？他正在流血啊，看上去非常严重...",
+        "PosX": 521,
+        "PosY": -362
+      },
+      "5393": {
+        "ID": 5393,
+        "GroupId": 5,
+        "ChildIdList": [
+          5394
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我们需要仔细调查这件事，正常来说不会发生这种事情。",
+        "PosX": 180,
+        "PosY": -560
+      },
+      "5394": {
+        "ID": 5394,
+        "GroupId": 5,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|当然可以派警察来调查，但是现在他急需一辆救护车，非常急！",
+        "PosX": 0,
+        "PosY": -760
+      },
+      "5395": {
+        "ID": 5395,
+        "GroupId": 5,
+        "ChildIdList": [
+          5393
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，用武士刀。我们在这里练习日本剑术。",
+        "PosX": -45,
+        "PosY": -353
+      },
+      "5396": {
+        "ID": 5396,
+        "GroupId": 5,
+        "ChildIdList": [
+          5397
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|在黑武士学院的练习大厅里，我记得我告诉过你。",
+        "PosX": -360,
+        "PosY": -360
+      },
+      "5397": {
+        "ID": 5397,
+        "GroupId": 5,
+        "ChildIdList": [
+          5398
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我是说身体部位！",
+        "PosX": -360,
+        "PosY": -560
+      },
+      "5398": {
+        "ID": 5398,
+        "GroupId": 5,
+        "ChildIdList": [
+          5388,
+          5369,
+          5373
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|哦，右...在他的左肘内侧。",
+        "PosX": -360,
+        "PosY": -760
+      },
+      "5399": {
+        "ID": 5399,
+        "GroupId": 5,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|好的，听起来很合理…小明，把手举起来，要举过头顶。",
+        "PosX": -670,
+        "PosY": -2540
+      },
+      "5400": {
+        "ID": 5400,
+        "GroupId": 5,
+        "ChildIdList": [
+          5370
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，我们已经在这么做了。",
+        "PosX": -348,
+        "PosY": -1159
+      },
+      "6820": {
+        "ID": 6820,
+        "GroupId": 6,
+        "ChildIdList": [
+          6821
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是911，有什么可以帮你的？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "6821": {
+        "ID": 6821,
+        "GroupId": 6,
+        "ChildIdList": [
+          6822,
+          6825,
+          6836
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|救命呀，帮帮我，我的房间里有一只蝙蝠",
+        "PosX": 177,
+        "PosY": 233
+      },
+      "6822": {
+        "ID": 6822,
+        "GroupId": 6,
+        "ChildIdList": [
+          6824
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|蝙蝠不会伤害你，实际上它比你更害怕。 你只需关上门，保持冷静就好。",
+        "PosX": -105,
+        "PosY": 82
+      },
+      "6824": {
+        "ID": 6824,
+        "GroupId": 6,
+        "ChildIdList": [
+          6825,
+          6833
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我这么做了，我待在厕所里面，但我能听到它在整个公寓里飞来飞去！ 我被困在这里了，请帮帮我！",
+        "PosX": -324,
+        "PosY": -176
+      },
+      "6825": {
+        "ID": 6825,
+        "GroupId": 6,
+        "ChildIdList": [
+          6829
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|女士，你可以自己把窗户开大，关掉灯，蝙蝠就会自己飞走的。",
+        "PosX": 0,
+        "PosY": -396
+      },
+      "6829": {
+        "ID": 6829,
+        "GroupId": 6,
+        "ChildIdList": [
+          6830,
+          6833,
+          6836
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我绝对不会离开这里的",
+        "PosX": 8,
+        "PosY": -559
+      },
+      "6830": {
+        "ID": 6830,
+        "GroupId": 6,
+        "ChildIdList": [
+          6831
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你必须这么做，我不会派警察过去。你的生命安全并没有受到威胁，只是一只蝙蝠而已。",
+        "PosX": 0,
+        "PosY": -761
+      },
+      "6831": {
+        "ID": 6831,
+        "GroupId": 6,
+        "ChildIdList": [
+          6833,
+          6842
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|但是，天啊...不，帮帮我",
+        "PosX": -2,
+        "PosY": -982
+      },
+      "6833": {
+        "ID": 6833,
+        "GroupId": 6,
+        "ChildIdList": [
+          6841
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|所以你想让我做什么……派……蝙蝠侠？",
+        "PosX": -4,
+        "PosY": -1151
+      },
+      "6835": {
+        "ID": 6835,
+        "GroupId": 6,
+        "ChildIdList": [
+          6836,
+          6837,
+          6838
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|不，我不行，我做不到",
+        "PosX": -7,
+        "PosY": -1328
+      },
+      "6836": {
+        "ID": 6836,
+        "GroupId": 6,
+        "ChildIdList": [
+          6843
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你的地址在哪里？",
+        "PosX": -7,
+        "PosY": -1528
+      },
+      "6837": {
+        "ID": 6837,
+        "GroupId": 6,
+        "ChildIdList": [
+          6844
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0| 好的，我会派人帮你，请留在那里。",
+        "PosX": -281,
+        "PosY": -1523
+      },
+      "6838": {
+        "ID": 6838,
+        "GroupId": 6,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|很抱歉我们不能因为这点小事而出警",
+        "PosX": 276,
+        "PosY": -1530
+      },
+      "6841": {
+        "ID": 6841,
+        "GroupId": 6,
+        "ChildIdList": [
+          6837
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "我不在乎是谁，请派人帮助我！",
+        "PosX": 470,
+        "PosY": -1360
+      },
+      "6842": {
+        "ID": 6842,
+        "GroupId": 6,
+        "ChildIdList": [
+          6835
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你可以做到，女士。小心点好吗？",
+        "PosX": -378,
+        "PosY": -1189
+      },
+      "6843": {
+        "ID": 6843,
+        "GroupId": 6,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|地址是：宜爱路520号，麻烦快点！",
+        "PosX": -280,
+        "PosY": -1723
+      },
+      "6844": {
+        "ID": 6844,
+        "GroupId": 6,
+        "ChildIdList": [
+          6836
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|快点",
+        "PosX": -4,
+        "PosY": -1737
+      },
+      "7845": {
+        "ID": 7845,
+        "GroupId": 7,
+        "ChildIdList": [
+          7846
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|这里是911，有什么能帮到你的？",
+        "PosX": 0,
+        "PosY": 440
+      },
+      "7846": {
+        "ID": 7846,
+        "GroupId": 7,
+        "ChildIdList": [
+          7847,
+          7848,
+          7849
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|你好，我知道这听起来很傻，但我想我家后院可能有只熊。",
+        "PosX": 0,
+        "PosY": 240
+      },
+      "7847": {
+        "ID": 7847,
+        "GroupId": 7,
+        "ChildIdList": [
+          7850
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，你确定你有紧急情况吗？严禁在911电话线上开玩笑。",
+        "PosX": 0,
+        "PosY": 40
+      },
+      "7848": {
+        "ID": 7848,
+        "GroupId": 7,
+        "ChildIdList": [
+          7879
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|请问你的地址是？",
+        "PosX": 3,
+        "PosY": -3492
+      },
+      "7849": {
+        "ID": 7849,
+        "GroupId": 7,
+        "ChildIdList": [
+          7851
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你看到熊了吗？",
+        "PosX": 372,
+        "PosY": -96
+      },
+      "7850": {
+        "ID": 7850,
+        "GroupId": 7,
+        "ChildIdList": [
+          7848,
+          7849
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我不是在开玩笑！我现在听到了熊的声音！",
+        "PosX": 0,
+        "PosY": -160
+      },
+      "7851": {
+        "ID": 7851,
+        "GroupId": 7,
+        "ChildIdList": [
+          7852,
+          7848,
+          7860
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|不，我没见过。但是我听到了它发出非常恐怖的咆哮声",
+        "PosX": 289.3927427961578,
+        "PosY": -362.83030949839883
+      },
+      "7852": {
+        "ID": 7852,
+        "GroupId": 7,
+        "ChildIdList": [
+          7854
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0| 先生，您完全确定那只熊在那里，即使您并没有真正看到它。对吗？",
+        "PosX": -185,
+        "PosY": -566
+      },
+      "7854": {
+        "ID": 7854,
+        "GroupId": 7,
+        "ChildIdList": [
+          7855,
+          7856,
+          7857
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1| 嗯......我不会说我完全确定，但是......天很黑，我们院子里有一棵大灌木，它在摇晃，发出疯狂的咆哮声",
+        "PosX": -411,
+        "PosY": -854
+      },
+      "7855": {
+        "ID": 7855,
+        "GroupId": 7,
+        "ChildIdList": [
+          7858
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|还有别的吗？",
+        "PosX": 241,
+        "PosY": -1032
+      },
+      "7856": {
+        "ID": 7856,
+        "GroupId": 7,
+        "ChildIdList": [
+          7871
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，您家后院还有吃的吗？即使在垃圾桶里？",
+        "PosX": 229,
+        "PosY": -2625
+      },
+      "7857": {
+        "ID": 7857,
+        "GroupId": 7,
+        "ChildIdList": [
+          7861
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|你能给我描述一下声音吗？",
+        "PosX": -265,
+        "PosY": -1470
+      },
+      "7858": {
+        "ID": 7858,
+        "GroupId": 7,
+        "ChildIdList": [
+          7860,
+          7857
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|嗯...我听到他沉重的呼吸声。而且树叶沙沙作响。",
+        "PosX": 327,
+        "PosY": -1236
+      },
+      "7860": {
+        "ID": 7860,
+        "GroupId": 7,
+        "ChildIdList": [
+          7865
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，如果它是一只熊，你会很容易认出它的。它可能只是一种普通的无害动物，如流浪猫或浣熊。",
+        "PosX": 330,
+        "PosY": -2185
+      },
+      "7861": {
+        "ID": 7861,
+        "GroupId": 7,
+        "ChildIdList": [
+          7862
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|听起来就像是...嗷~呜呜",
+        "PosX": -244,
+        "PosY": -1652
+      },
+      "7862": {
+        "ID": 7862,
+        "GroupId": 7,
+        "ChildIdList": [
+          7863
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|谢谢你先生",
+        "PosX": -306,
+        "PosY": -1827
+      },
+      "7863": {
+        "ID": 7863,
+        "GroupId": 7,
+        "ChildIdList": [
+          7860,
+          7856,
+          7864
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|.....",
+        "PosX": -184,
+        "PosY": -2070
+      },
+      "7864": {
+        "ID": 7864,
+        "GroupId": 7,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我会派出一支最近的消防队。他们会处理好的。",
+        "PosX": -298,
+        "PosY": -3497
+      },
+      "7865": {
+        "ID": 7865,
+        "GroupId": 7,
+        "ChildIdList": [
+          7867,
+          7856,
+          7869
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|但是……但是……如果不是呢？！",
+        "PosX": 189,
+        "PosY": -2460
+      },
+      "7867": {
+        "ID": 7867,
+        "GroupId": 7,
+        "ChildIdList": [
+          7868
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|正如我所说，没有任何紧急情况的迹象。请不要占用紧急线路，先生。",
+        "PosX": -286,
+        "PosY": -2665
+      },
+      "7868": {
+        "ID": 7868,
+        "GroupId": 7,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|呃...我以为你会认真对待我的问题....再见",
+        "PosX": -286,
+        "PosY": -2865
+      },
+      "7869": {
+        "ID": 7869,
+        "GroupId": 7,
+        "ChildIdList": [
+          7874
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|如果您在屋外，请进门并锁上门，先生。",
+        "PosX": 240,
+        "PosY": -3067
+      },
+      "7871": {
+        "ID": 7871,
+        "GroupId": 7,
+        "ChildIdList": [
+          7873,
+          7869
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的。昨天，我为几个朋友做了烧烤。剩菜太多了，所以我把它们放在垃圾桶里。",
+        "PosX": 228,
+        "PosY": -2844
+      },
+      "7873": {
+        "ID": 7873,
+        "GroupId": 7,
+        "ChildIdList": [
+          7880
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，您有锅、平底锅或其他可以用来发出声音的东西吗？",
+        "PosX": -282,
+        "PosY": -3073
+      },
+      "7874": {
+        "ID": 7874,
+        "GroupId": 7,
+        "ChildIdList": [
+          7875,
+          7848,
+          7864
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1| 是的，这是个好主意。等一等。",
+        "PosX": 214,
+        "PosY": -3280
+      },
+      "7875": {
+        "ID": 7875,
+        "GroupId": 7,
+        "ChildIdList": [
+          7877
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|现在，等待并观察灌木丛。尽量不要在没有需要的情况下离开家。我猜它只是一只猫，但如果熊出来了，请再给我们打电话，我会立即派急救队。",
+        "PosX": 327,
+        "PosY": -3510
+      },
+      "7877": {
+        "ID": 7877,
+        "GroupId": 7,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|我希望你现在派人来。不过没关系。我会等待。",
+        "PosX": 327,
+        "PosY": -3710
+      },
+      "7879": {
+        "ID": 7879,
+        "GroupId": 7,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|这里是槟榔路11号",
+        "PosX": 3,
+        "PosY": -3692
+      },
+      "7880": {
+        "ID": 7880,
+        "GroupId": 7,
+        "ChildIdList": [
+          7881
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|是的，有的。",
+        "PosX": -282,
+        "PosY": -3273
+      },
+      "7881": {
+        "ID": 7881,
+        "GroupId": 7,
+        "ChildIdList": [
+          7882
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|我想让你在灌木丛前制造一些噪音。",
+        "PosX": -653,
+        "PosY": -3435
+      },
+      "7882": {
+        "ID": 7882,
+        "GroupId": 7,
+        "ChildIdList": [
+          7883
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|什么？为什么？那么吓人",
+        "PosX": -653,
+        "PosY": -3635
+      },
+      "7883": {
+        "ID": 7883,
+        "GroupId": 7,
+        "ChildIdList": [
+          7884
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|如果真的有熊，它应该会跑出来。",
+        "PosX": -653,
+        "PosY": -3835
+      },
+      "7884": {
+        "ID": 7884,
+        "GroupId": 7,
+        "ChildIdList": [
+          7885,
+          7886
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|这是明智的选择吗？",
+        "PosX": -653,
+        "PosY": -4035
+      },
+      "7885": {
+        "ID": 7885,
+        "GroupId": 7,
+        "ChildIdList": [
+          7888
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0| 先生，我们需要先确认有威胁，然后才能派遣应急部队。",
+        "PosX": -655,
+        "PosY": -4233
+      },
+      "7886": {
+        "ID": 7886,
+        "GroupId": 7,
+        "ChildIdList": [
+          7887
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|如果你不敢一个人做，我会派消防员去检查。",
+        "PosX": -940,
+        "PosY": -4237
+      },
+      "7887": {
+        "ID": 7887,
+        "GroupId": 7,
+        "ChildIdList": [
+          7864
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|非常感谢你，我会一直在这里等的！",
+        "PosX": -940,
+        "PosY": -4437
+      },
+      "7888": {
+        "ID": 7888,
+        "GroupId": 7,
+        "ChildIdList": [
+          7889
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|所以只能这样了，好的...",
+        "PosX": -655,
+        "PosY": -4433
+      },
+      "7889": {
+        "ID": 7889,
+        "GroupId": 7,
+        "ChildIdList": [
+          7890
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "1|哇靠，原来有熊啊！但它并没有消失！",
+        "PosX": -655,
+        "PosY": -4633
+      },
+      "7890": {
+        "ID": 7890,
+        "GroupId": 7,
+        "ChildIdList": [
+          7891
+        ],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "0|先生，先生，你还在吗？",
+        "PosX": -655,
+        "PosY": -4833
+      },
+      "7891": {
+        "ID": 7891,
+        "GroupId": 7,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "...............",
+        "PosX": -655,
+        "PosY": -5033
+      },
+      "8001": {
+        "ID": 8001,
+        "GroupId": 8,
+        "ChildIdList": [],
+        "EventID": 0,
+        "IsSubSocre": 0,
+        "Text": "测试",
+        "PosX": 0,
+        "PosY": 440
+      }
+    },
+    "group": {
+      "0": {
+        "GroupId": 0,
+        "ID": 1,
+        "Name": "网络抢劫",
+        "isChoose": true
+      },
+      "1": {
+        "GroupId": 1,
+        "ID": 1061,
+        "Name": "膝盖受伤",
+        "isChoose": true
+      },
+      "2": {
+        "GroupId": 2,
+        "ID": 2104,
+        "Name": "投诉商家",
+        "isChoose": true
+      },
+      "3": {
+        "GroupId": 3,
+        "ID": 3236,
+        "Name": "菊花上的灯泡",
+        "isChoose": true
+      },
+      "4": {
+        "GroupId": 4,
+        "ID": 4276,
+        "Name": "肇事逃逸",
+        "isChoose": true
+      },
+      "5": {
+        "GroupId": 5,
+        "ID": 5361,
+        "Name": "被剑刺伤",
+        "isChoose": true
+      },
+      "6": {
+        "GroupId": 6,
+        "ID": 6820,
+        "Name": "蝙蝠侠",
+        "isChoose": true
+      },
+      "7": {
+        "GroupId": 7,
+        "ID": 7845,
+        "Name": "有只熊",
+        "isChoose": false
+      },
+      "8": {
+        "GroupId": 8,
+        "ID": 8001,
+        "Name": "场景8",
+        "isChoose": false
+      }
     }
   }
 }

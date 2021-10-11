@@ -28,9 +28,9 @@ export class MindMapTool {
         this.storyMap = this.jsonMap["story"] || {};
         this.groupMap = this.jsonMap["group"] || {};
         this.groupList = Object.keys(this.groupMap);
-        if(this.groupList.length > 0){
-            this.ui.loadScene(this.groupList[this.groupList.length -1]);
-        }else {
+        if (this.groupList.length > 0) {
+            this.ui.loadScene(this.groupList[this.groupList.length - 1]);
+        } else {
             this.ui.onAddNewScene(null);
         }
     }
@@ -53,8 +53,8 @@ export class MindMapTool {
         }
     }
 
-    deleteBox(box:MindBox){
-        if(this.storyMap[box.id]){
+    deleteBox(box: MindBox) {
+        if (this.storyMap[box.id]) {
             delete this.storyMap[box.id];
         }
     }
@@ -78,6 +78,7 @@ export class MindMapTool {
                 EventID: eventid,
                 IsSubSocre: isSubsocre,
                 Text: content,
+                Sound:"",
                 PosX: box.node.x,
                 PosY: box.node.y
             }
@@ -88,12 +89,29 @@ export class MindMapTool {
         }
         fun(rootBox);
         ComTool.SetLocalItem("stroy911", this.jsonMap);
-        cc.log("保存场景",this.groupMap[this.ui.currentId].Name)
+        cc.log("保存场景", this.groupMap[this.ui.currentId].Name)
 
     }
 
     download() {
         ComTool.saveForBrowser(JSON.stringify(this.jsonMap), "story911", ".json");
+        this.writeExcel();
+    }
+
+    writeExcel(){
+        let txt = "Int\tInt\tArray\tInt\tBool\tString\tString\tInt\tInt\r\n"
+        txt += "ID\tGroupId\tChildIdList\tEventID\tIsSubSocre\tText\tSound\tPosX\tPosY\r\n"
+        txt += "id\t组ID\t子节点列表\t触发的事件ID\t是否扣分\t剧情内容\t语音名\t编辑位置x\t编辑位置y\r\n"
+        for (let key in this.storyMap){
+            let val = this.storyMap[key] as TableMindMap;
+            let list = [
+                val.ID,val.GroupId,val.ChildIdList.join("|"),val.EventID,val.IsSubSocre ? 1 : 0,
+                val.Text,val.Sound ? val.Sound : "",val.PosX,val.PosY
+            ]
+            let t = list.join("\t") + "\r\n"
+            txt += t;
+        }
+        ComTool.saveForBrowser(txt,"story911",".xlsx");
     }
 
 
