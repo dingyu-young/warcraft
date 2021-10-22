@@ -454,6 +454,22 @@ export class MindMap extends cc.Component {
         this.tool.downGroup();
     }
 
+    onResetPos(){
+        let box = this.rootBoxList[this.currentId];
+        let func = (box:MindBox)=>{
+            let children = box.children;
+            for (let i = 0; i < children.length; i++) {
+                let pos = box.getChildCurrentPos(i);
+                children[i].setPos(pos);
+                func(children[i])
+            }
+            box.resetLine();
+            // for (let i = 0; i < box.lines.length; i++) {
+            //     box.lines[i].resetPos();
+            // }
+        }
+        func(box)
+    }
 
     async loadScene(groupId) {
         if (Number(groupId) == this.currentId) {

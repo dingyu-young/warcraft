@@ -154,9 +154,9 @@ export class MindBox {
         if (index > 0) {
             //                   5  3  1  0  2  4  6
             let spac = Math.floor(index / 2) + 1;
-            x = index % 2 != 0 ? spac * -180 : (index / 2) * 180;
+            x = index % 2 != 0 ? spac * -300 : (index / 2) * 300;
         }
-        return this.node.convertToWorldSpaceAR(cc.v2(x, -200));
+        return this.node.convertToWorldSpaceAR(cc.v2(x, -300));
     }
 
     setPos(pos: cc.Vec2) {
