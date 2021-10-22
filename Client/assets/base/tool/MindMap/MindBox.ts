@@ -156,7 +156,7 @@ export class MindBox {
             let spac = Math.floor(index / 2) + 1;
             x = index % 2 != 0 ? spac * -300 : (index / 2) * 300;
         }
-        return this.node.convertToWorldSpaceAR(cc.v2(x, -300));
+        return this.node.convertToWorldSpaceAR(cc.v2(x, -200));
     }
 
     setPos(pos: cc.Vec2) {
