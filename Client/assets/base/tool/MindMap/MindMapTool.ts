@@ -19,12 +19,24 @@ export class MindMapTool {
 
 
     async init() {
-        let data = ComTool.GetLocalItem("stroy911", 0);
+        let data = ComTool.GetLocalItem("story911", 0);
         if (!data) {
-            let asset = await LoadManager.ins().loadRes("table/story911", cc.JsonAsset);
+            // let asset = await LoadManager.ins().loadRes("table/911group", cc.JsonAsset);
+            // data = asset.json;
+            // this.jsonMap = data;
+            let asset = await LoadManager.ins().loadRes("table/911group", cc.JsonAsset);
             data = asset.json;
+            let group = {};
+            for (let key in data["normal"]){
+                group[key] = data["normal"][key];
+            }
+            for (let key in data["theme"]) {
+                group[key] = data["theme"][key];
+            }
+            this.jsonMap = {group:group,story:{}};
+        }else {
+            this.jsonMap = data;
         }
-        this.jsonMap = data;
         this.storyMap = this.jsonMap["story"] || {};
         this.groupMap = this.jsonMap["group"] || {};
         this.groupList = Object.keys(this.groupMap);
@@ -32,6 +44,14 @@ export class MindMapTool {
             this.ui.loadScene(this.groupList[this.groupList.length - 1]);
         } else {
             this.ui.onAddNewScene(null);
+        }
+    }
+
+    async loadStroy(group){
+        let asset = await LoadManager.ins().loadRes("table/" + group, cc.JsonAsset);
+        let data = asset.json;
+        for(let key in data){
+            this.storyMap[key] = data[key];
         }
     }
 
@@ -49,7 +69,9 @@ export class MindMapTool {
             GroupId: groupid,
             ID: id,
             Name: "场景" + groupid,
-            isChoose: true
+            Content:"",
+            isChoose: true,
+            isTheme:false,
         }
     }
 
@@ -88,7 +110,7 @@ export class MindMapTool {
             }
         }
         fun(rootBox);
-        ComTool.SetLocalItem("stroy911", this.jsonMap);
+        ComTool.SetLocalItem("story911", this.jsonMap);
         cc.log("保存场景", this.groupMap[this.ui.currentId].Name)
 
     }
@@ -96,6 +118,58 @@ export class MindMapTool {
     download() {
         ComTool.saveForBrowser(JSON.stringify(this.jsonMap), "story911", ".json");
         this.writeExcel();
+    }
+
+    downloadOne(group){
+        let data = {};
+        let rootid = this.groupMap[group].ID;
+        this.getChild(rootid,data,group);
+        if(Object.keys(data).length > 0){
+            ComTool.saveForBrowser(JSON.stringify(data), group, ".json");
+        }
+    }
+
+    async downChoose(){
+        this.saveScene();
+        for (let key in this.groupMap){
+            if(this.groupMap[key].isChoose){
+                this.downloadOne(key)
+                await ComTool.Await(0.2);
+            }
+        }
+    }
+
+    downGroup(){
+        let normal = {};
+        let theme = {};
+        for (let key in this.groupMap){
+            if(!this.groupMap[key].isChoose){
+                continue
+            }
+            this.groupMap[key].isChoose = true;
+            if(this.groupMap[key].isTheme){
+                theme[key] = this.groupMap[key];
+            }else {
+                this.groupMap[key].isTheme = false;
+                normal[key] = this.groupMap[key];
+            }
+        }
+        let data = {normal:normal,theme:theme};
+        ComTool.saveForBrowser(JSON.stringify(data), "911group", ".json");
+
+    }
+
+    getChild(id,data,group){
+        if(this.storyMap[id]){
+            data[id] = this.storyMap[id];
+            let child = this.storyMap[id].ChildIdList;
+            for (let i = 0; i < child.length; i++) {
+                this.getChild(child[i],data,group);
+            }
+        }else {
+            cc.error("组id",group,"剧情id:",id,"不存在");
+        }
+
     }
 
     writeExcel(){
@@ -112,6 +186,25 @@ export class MindMapTool {
             txt += t;
         }
         ComTool.saveForBrowser(txt,"story911",".xlsx");
+
+        // GroupId: groupid,
+        //     ID: id,
+        //     Name: "场景" + groupid,
+        //     Content:"",
+        //     isChoose: true
+        let txt1 = "int\tint\tstring\tstring\tBool\r\n";
+        txt1 += "GroupId\tID\tName\tContent\tisChoose\r\n";
+        txt1 += "组ID\t剧情id\t剧情名\t剧情内容\t是否开启这个剧情\r\n";
+        txt1 += "组ID\t剧情id\t剧情名\t剧情内容\t是否开启这个剧情\r\n";
+        for (let key in this.groupMap){
+            let val = this.groupMap[key] as TableMindMapGroup;
+            let list = [
+                val.GroupId,val.ID,val.Content ? val.Content : "",val.isChoose
+            ]
+            let t = list.join("\t") + "\r\n";
+            txt1 += t;
+        }
+        ComTool.saveForBrowser(txt1,"story911group",".xlsx");
     }
 
 

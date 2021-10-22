@@ -48,7 +48,8 @@ export class MindLine {
     }
 
     changColor(color:cc.Color = LineCOLOR1){
-        this.node.color = color;
+        if(this.node)
+            this.node.color = color;
     }
 
     onTouchMove(){

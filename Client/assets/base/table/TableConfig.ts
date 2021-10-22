@@ -2,7 +2,7 @@ enum EnumTableType {
 	json = 1,
 	txt = 2,
 }
-var xlsxList = ["qichexinxi", "SpringOutingConfig"];
+var xlsxList = [];
 var tableType = EnumTableType.json;
 
 

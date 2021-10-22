@@ -21,7 +21,8 @@ function checkPath(path){
     let folder = Editor.url("db://assets") + "\\" + path;
     folder = folder.split("\\").join("/")
     if(!Fs.existsSync(folder)){
-        Editor.log("创建文件夹",folder)
+        Editor.log("创建文件夹,需刷新编辑器",folder)
+        Editor.error("文件路径不存在",path)
         Fs.mkdirSync(folder)
     }
 }

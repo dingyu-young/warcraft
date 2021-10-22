@@ -52,7 +52,7 @@ async function autoCreate(uuid,path) {
     //编辑器刷新后node会被销毁,需重新找节点;
     let timeout = setInterval(async ()=>{
         let node1 = cc.engine.getInstanceById(uuid);
-        if(node){
+        if(node1){
             clearInterval(timeout);
             await WaitMoment();
             Editor.log("开始添加组件");

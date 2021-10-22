@@ -96,8 +96,10 @@ export class TableMindMapGroup {
     GroupId:number;//剧情组id
     ID: number;//剧情对话id
     Name:string;//剧情名称
+    Content:string;
     isChoose:boolean;//是否可以使用
     RewardId:number//奖励id
+    isTheme:boolean;//是否是主题电话
 
     private static _table: { [key: string]: TableMindMapGroup } = null;
 

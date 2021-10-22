@@ -21,8 +21,7 @@ export class MindBox {
     isSubSocre: boolean = false;
 
 
-
-    resetId(){
+    resetId() {
         mindBoxID = 1;
         this.id = this.groupId * 1000 + mindBoxID;
     }
@@ -110,7 +109,7 @@ export class MindBox {
         }
         cc.log("删除节点:", this.id, this.value);
         this.parents = null;
-        this.children = null;
+        this.children = [];
         this.lines = [];
         this.node.active = false;
         this.node = null;
@@ -137,10 +136,16 @@ export class MindBox {
     }
 
     getLineTopPos(): cc.Vec2 {
+        if(!this.node){
+            return cc.v2(0,0);
+        }
         return this.node.convertToWorldSpaceAR(cc.v2(0, this.node.height / 2))
     }
 
     getLineDownPos(): cc.Vec2 {
+        if(!this.node){
+            return cc.v2(0,0);
+        }
         return this.node.convertToWorldSpaceAR(cc.v2(0, -this.node.height / 2))
     }
 
@@ -220,7 +225,7 @@ export class MindBox {
         }
 
         if (this.cpt.isDelete) {
-            if(this.cpt.rootBoxList[this.cpt.currentId] == this){
+            if (this.cpt.rootBoxList[this.cpt.currentId] == this) {
                 this.cpt.showTip("不能删除根节点");
                 return
             }
@@ -232,9 +237,9 @@ export class MindBox {
         let isquickclick = false;
         if (!this.clicktime) {
             this.clicktime = now;
-        }else {
+        } else {
             isquickclick = now - this.clicktime < 300;
-            if(!isquickclick){
+            if (!isquickclick) {
                 this.clicktime = now;
             }
         }
@@ -306,6 +311,9 @@ export class MindBox {
 
     checkLoop(box: MindBox) {
         cc.log("检测是否循环....");
+        if(!box.children){
+            return false;
+        }
         for (let i = 0; i < box.children.length; i++) {
             let ch1 = box.children[i];
             if (ch1 == this) {

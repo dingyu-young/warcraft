@@ -69,7 +69,7 @@ export class MindMap extends cc.Component {
     mindBoxIdList = [];
 
     getBoxId() {
-        let id = this.mindBoxIdList[this.currentId] | this.currentId * 1000;
+        let id = this.mindBoxIdList[this.currentId] || this.currentId * 1000;
         id += 1;
         this.mindBoxIdList[this.currentId] = id;
         return id
@@ -141,24 +141,39 @@ export class MindMap extends cc.Component {
     UpdateItem(item: cc.Node, list_id: number) {
         let id = this.tool.groupList[list_id];
         let data = this.tool.getGroupInfo(id);
-        item.getChildByName("name").getComponent(cc.Label).string = (list_id + 1) + ":  " + data.Name;
+        item.getChildByName("name").getComponent(cc.Label).string = (list_id) + ":  " + data.Name;
         let toggle = item.getChildByName("toggle").getComponent(cc.Toggle);
+        let toggle2 = item.getChildByName("toggle2").getComponent(cc.Toggle);
         let edit = item.getChildByName("edit");
+        let edit1 = item.getChildByName("edit2");
         let reward = item.getChildByName("reward").getComponent(cc.EditBox);
+        let content = item.getChildByName("content").getComponent(cc.Label);
+        content.string = data.Content ? data.Content : "";
         reward.string = data.RewardId ? data.RewardId + "" : '';
         toggle.isChecked = data.isChoose;
+        toggle2.isChecked = data.isTheme;
         toggle.node.targetOff(this);
+        toggle2.node.targetOff(this);
         edit.targetOff(this);
+        edit1.targetOff(this);
         reward.node.targetOff(this);
         edit.on("click",()=>{
             this.view.active = false;
             this.loadScene(id);
         },this)
+        edit1.on("click",()=>{
+            this.edit.node.active = true;
+            this.edit.string = content.string;
+            this.edit["contents"] = content;
+            this.edit["group"] = id;
+        },this)
         toggle.node.on("click", () => {
             this.tool.groupMap[id].isChoose = toggle.isChecked;
         }, this)
+        toggle2.node.on("click", () => {
+            this.tool.groupMap[id].isTheme = toggle.isChecked;
+        }, this)
         reward.node.on("editing-did-ended",()=>{
-            cc.log("111")
             this.tool.groupMap[id].RewardId = reward.string;
         },this)
     }
@@ -222,6 +237,7 @@ export class MindMap extends cc.Component {
     editBox: MindBox = null;
 
     onEdit(box: MindBox) {
+        this.onHideEdit();
         this.editBox = box;
         this.edit.node.setPosition(this.node.convertToNodeSpaceAR(box.node.convertToWorldSpaceAR(cc.Vec2.ZERO)));
         this.edit.node.active = true;
@@ -230,8 +246,8 @@ export class MindMap extends cc.Component {
 
     //输入结束
     onHideEdit() {
-        this.view.active = false;
         this.introduce.active = false;
+        this.view.active = !!this.edit["contents"];
         if (this.editBox) {
             this.edit.string && this.editBox.resetWidthHeight(this.getStringWidthHeight(this.edit.string));
             this.editBox.setVale(this.edit.string);
@@ -242,6 +258,14 @@ export class MindMap extends cc.Component {
             this.tool.groupMap[this.currentId].Name = this.edit.string;
             this.edit.string = "";
             this.edit["scene"] = null;
+        } else if (this.edit["contents"]){
+            let label = this.edit["contents"];
+            label.string = this.edit.string;
+            let id = this.edit["group"];
+            this.tool.groupMap[id].Content = this.edit.string;
+            this.edit.string = "";
+            this.edit["contents"] = null;
+            this.edit["group"] = null;
         }
         this.edit.node.active = false;
         this.editBox = null;
@@ -334,6 +358,7 @@ export class MindMap extends cc.Component {
                 break;
             case cc.macro.KEY.alt:
                 this.isAlt = true;
+                break;
             case cc.macro.KEY.z:
                 if (this.isCtrl) {
                     this.mgr.preStep();
@@ -391,9 +416,9 @@ export class MindMap extends cc.Component {
                 this.autoLabel.overflow = cc.Label.Overflow.RESIZE_HEIGHT;
                 this.autoLabel.node.width = 200;
                 this.autoLabel["_forceUpdateRenderData"]();
-                if (this.autoLabel.node.height > 150) {
-                    return cc.v2(200, 150);
-                }
+                // if (this.autoLabel.node.height > 150) {
+                //     return cc.v2(200, 150);
+                // }
                 return cc.v2(200, this.autoLabel.node.height);
             }
             return cc.v2(this.autoLabel.node.width, 25);
@@ -416,8 +441,21 @@ export class MindMap extends cc.Component {
         this.tool.download()
     }
 
+    onDownloadOne(){
+        this.tool.saveScene();
+        this.tool.downloadOne(this.currentId);
+    }
 
-    loadScene(groupId) {
+    onDownloadChoose(){
+        this.tool.downChoose()
+    }
+
+    onDownGroup(){
+        this.tool.downGroup();
+    }
+
+
+    async loadScene(groupId) {
         if (Number(groupId) == this.currentId) {
             return;
         }
@@ -440,6 +478,15 @@ export class MindMap extends cc.Component {
         let boxmap = {};
         let id = groupInfo.ID;
         let config = this.tool.getStoryInfo(id);
+        if(!config){
+            await this.tool.loadStroy(groupId);
+            config = this.tool.getStoryInfo(id);
+            if(!config){
+                cc.error("组id: "+groupId+" 未找到剧情文件");
+                this.showTip("组id: "+groupId+" 未找到剧情文件");
+                return;
+            }
+        }
         let box = new MindBox(this, null);
         box.id = config.ID;
         this.mindBoxIdList[this.currentId] = box.id;
