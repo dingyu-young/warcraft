@@ -21,7 +21,7 @@ export class MindMapTool {
     async init() {
         let data = ComTool.GetLocalItem("story911", 0);
         if (!data) {
-            // let asset = await LoadManager.ins().loadRes("table/911group", cc.JsonAsset);
+            // let asset = await LoadManager.ins().loadRes("table/story911", cc.JsonAsset);
             // data = asset.json;
             // this.jsonMap = data;
             let asset = await LoadManager.ins().loadRes("table/911group", cc.JsonAsset);
