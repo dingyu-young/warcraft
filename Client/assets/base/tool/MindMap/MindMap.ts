@@ -171,7 +171,7 @@ export class MindMap extends cc.Component {
             this.tool.groupMap[id].isChoose = toggle.isChecked;
         }, this)
         toggle2.node.on("click", () => {
-            this.tool.groupMap[id].isTheme = toggle.isChecked;
+            this.tool.groupMap[id].isTheme = toggle2.isChecked;
         }, this)
         reward.node.on("editing-did-ended",()=>{
             this.tool.groupMap[id].RewardId = reward.string;
