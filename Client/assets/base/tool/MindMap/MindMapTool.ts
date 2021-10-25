@@ -50,6 +50,7 @@ export class MindMapTool {
     async loadStroy(group){
         let asset = await LoadManager.ins().loadRes("table/" + group, cc.JsonAsset);
         let data = asset.json;
+        cc.log(`剧情组${group}有`,Object.keys(data).length)
         for(let key in data){
             this.storyMap[key] = data[key];
         }
