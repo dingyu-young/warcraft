@@ -115,7 +115,13 @@ export class MindMapTool {
 
     }
 
-    download() {
+    async download() {
+        for (let key in this.groupMap){
+            let id = this.groupMap[key].ID;
+            if(!this.storyMap[id]){
+                await this.loadStroy(key);
+            }
+        }
         ComTool.saveForBrowser(JSON.stringify(this.jsonMap), "story911", ".json");
         this.writeExcel();
     }
@@ -199,7 +205,7 @@ export class MindMapTool {
         for (let key in this.groupMap){
             let val = this.groupMap[key] as TableMindMapGroup;
             let list = [
-                val.GroupId,val.ID,val.Content ? val.Content : "",val.isChoose
+                val.GroupId,val.ID,val.Name,val.Content ? val.Content : "",val.isChoose
             ]
             let t = list.join("\t") + "\r\n";
             txt1 += t;

@@ -1387,7 +1387,7 @@ export default class List extends cc.Component {
 
     _onTouchCancelled(ev, captureListeners) {
         let t = this;
-        if (t._scrollView['_hasNestedViewGroup'](ev, captureListeners) || ev.simulate)
+        if ((t._scrollView['_hasNestedViewGroup'] && t._scrollView['_hasNestedViewGroup'](ev, captureListeners)) || ev.simulate)
             return;
 
         t._scrollPos = null;
