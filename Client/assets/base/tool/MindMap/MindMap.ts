@@ -304,6 +304,8 @@ export class MindMap extends cc.Component {
         this.chooseBox = box;
     }
 
+
+
     lineBox: MindBox = null;
 
     //连接两个box
@@ -469,6 +471,17 @@ export class MindMap extends cc.Component {
             // }
         }
         func(box)
+    }
+
+    onReloadScene(){
+        let group = this.currentId;
+        this.currentId = -1;
+        let id = this.tool.getGroupInfo(group).ID;
+        this.tool.storyMap[id] = null;
+        let scene = this.sceneNodeDict[group];
+        scene.destroy();
+        this.sceneNodeDict[group] = null;
+        this.loadScene(group + "");
     }
 
     async loadScene(groupId) {

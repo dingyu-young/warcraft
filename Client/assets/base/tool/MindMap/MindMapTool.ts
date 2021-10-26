@@ -52,6 +52,10 @@ export class MindMapTool {
         let data = asset.json;
         cc.log(`剧情组${group}有`,Object.keys(data).length)
         for(let key in data){
+            data[key].Text = data[key].Text.replace("警察","治安员");
+            data[key].Text = data[key].Text.replace("救护车","医护");
+            data[key].Text = data[key].Text.replace("医疗","医护");
+            data[key].Text = data[key].Text.replace("消防员","工程员");
             this.storyMap[key] = data[key];
         }
     }
