@@ -146,6 +146,8 @@ export class MindMap extends cc.Component {
     onAddLine() {
         cc.sys.localStorage.clear();
         this.showTip("缓存清理完成");
+        ComTool.SetLocalItem("writPath", this.tool.wirtPath);
+
     }
 
 
