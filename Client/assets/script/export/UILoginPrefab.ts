@@ -1,8 +1,9 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 
-import {UIPrefab} from "../../base/game/UIBase";
+import {EnumUILayer, UIPrefab} from "../../framework/ui/UIBase";
 
+import List from "../component/list/List";
 @ccclass
 export class UILoginPrefab extends UIPrefab{
 
@@ -21,11 +22,17 @@ export class UILoginPrefab extends UIPrefab{
 	@property(cc.EditBox)
 	edit_pwd:cc.EditBox = null;
 
+	@property(cc.Sprite)
+	sp_list:cc.Sprite = null;
+
+	@property(List)
+	List_list:List = null;
+
 	public static get uiPath(){return "ui/UILogin";}
 
 	public get isDestroy(){return false;}
 
-	public get uiLayer(){return 3;}
+	public get uiLayer(){return EnumUILayer.eSecond;}
 
 	protected onLoad(): void {
 		this.btn_connect.node.on("click",this.ClickEvent,this);
@@ -34,9 +41,9 @@ export class UILoginPrefab extends UIPrefab{
 	}
 
 	public OnClick(btnName:string,btnNode:cc.Node){
-		if(btnName == "btn_connect"){
-		}else if(btnName == "btn_login"){
-		}else if(btnName == "btn_register"){
+		if(btnName == "Btn_connect"){
+		}else if(btnName == "Btn_login"){
+		}else if(btnName == "Btn_register"){
 		}
 	}
 }

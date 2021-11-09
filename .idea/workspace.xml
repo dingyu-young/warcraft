@@ -2,11 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b08522-52f5-438a-802f-d15cc56163fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/packages/dy-autocode/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/BaseClass.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/base/BaseClass.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/ComTool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/util/ComTool.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Singleton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/base/Singleton.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Socket/ClientConnector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/Socket/ClientConnector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Socket/MsgData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/Socket/MsgData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Socket/NetWaitingMananger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/Socket/NetWaitingMananger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Socket/RoomNetManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/Socket/RoomNetManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/Socket/Session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/Socket/Session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/basecomponent/MySprite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/component/MySprite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/game/EnumType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/game/EnumType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/game/GameData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/game/GameData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/game/UIBase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/ui/UIBase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/base64.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/base64.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/crypto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/crypto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/gzip/crc32.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/gzip/crc32.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/gzip/deflate-js.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/gzip/deflate-js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/gzip/gzip-js.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/gzip/gzip-js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/gzip/rawdeflate.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/gzip/rawdeflate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/lib/gzip/rawinflate.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/lib/gzip/rawinflate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/manager/ConfigManager.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/manager/EventManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/event/EventManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/manager/LoadManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/load/LoadManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/net/NetTool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/NetTool.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/net/ReadByteArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/ReadByteArray.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/net/WebNet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/WebNet.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/net/WriteByteArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/framework/net/WriteByteArray.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/table/TableConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/table/TableConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/BMFontTool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/BmFont/BMFontTool.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindBox.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/MindMap/MindBox.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindLine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/MindMap/MindLine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/MindMap/MindManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/MindMap/MindMap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/tool/MindMap/MindMapTool.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/10.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/11.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/12.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/12.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/13.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/14.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/15.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/16.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/17.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/18.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/18.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/19.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/19.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/20.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/21.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/22.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/23.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/24.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/24.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/25.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/26.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/27.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/27.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/28.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/28.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/29.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/29.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/3.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/30.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/31.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/31.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/32.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/32.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/33.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/33.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/34.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/34.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/35.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/35.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/36.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/36.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/37.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/37.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/38.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/38.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/39.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/39.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/4.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/40.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/40.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/41.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/41.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/42.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/42.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/43.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/43.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/44.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/44.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/45.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/45.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/46.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/47.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/48.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/48.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/49.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/49.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/5.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/50.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/50.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/6.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/7.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/8.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/9.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/table/911group.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/table/911group.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/resources/ui/UILogin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/resources/ui/UILogin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/scene/main.fire" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/scene/main.fire" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/export/UILoginPrefab.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/export/UILoginPrefab.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/export/UIMainPrefab.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/export/UIMainPrefab.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/list/List.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/component/list/List.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/list/ListItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/component/list/ListItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/assets/script/login/UILogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/assets/script/login/UILogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/packages/dy-autocode/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/packages/dy-autocode/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/packages/dy-autocode/panel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/packages/dy-autocode/panel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/packages/dy-autocode/path.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/packages/dy-autocode/scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/packages/dy-autocode/scene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/packages/dy-psdtool/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Client/packages/dy-psdtool/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/settings/builder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/settings/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/settings/project.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,32 +114,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="159" column="30" lean-forward="true" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts">
+        <entry file="file://$PROJECT_DIR$/Client/assets/framework/event/EventManager.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="400">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -69,8 +146,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1928" />
+    <option name="y" value="1" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -79,7 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,35 +175,11 @@
               <item name="Client" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="warcraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warcraft" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warcraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warcraft" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="warcraft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warcraft" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="MindMap" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,17 +218,17 @@
       <updated>1634608095055</updated>
       <workItem from="1634608097633" duration="997000" />
       <workItem from="1634624555482" duration="952000" />
+      <workItem from="1636164557903" duration="748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1949000" />
+    <option name="totallyTimeSpent" value="2697000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1928" y="1" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -211,34 +264,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/assets/base/ComTool.ts">
+    <entry file="file://$PROJECT_DIR$/Client/assets/base/ComTool.ts" />
+    <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts" />
+    <entry file="file://$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts" />
+    <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts" />
+    <entry file="file://$PROJECT_DIR$/Client/assets/framework/event/EventManager.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="948" column="18" lean-forward="true" selection-start-line="948" selection-start-column="18" selection-end-line="948" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMap.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="159" column="30" lean-forward="true" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/assets/base/manager/TableManager.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/assets/base/tool/MindMap/MindMapTool.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

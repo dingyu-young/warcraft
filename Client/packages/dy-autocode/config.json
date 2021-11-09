@@ -1,0 +1,68 @@
+{
+    "config": {
+        "uiBasePath": "../../framework/ui/UIBase",
+        "codePath": "script/export/"
+    },
+    "exportKey": {
+        "Auto": {
+            "cc.Node": true,
+            "cc.Sprite": true,
+            "cc.Label": true,
+            "cc.RichText": true,
+            "cc.Button": true,
+            "cc.Layout": false,
+            "cc.PageView": false,
+            "cc.PageViewIndicator": false,
+            "cc.ProgressBar": false,
+            "cc.ScrollView": false,
+            "cc.ScrollBar": false,
+            "cc.ScrollBarView": false,
+            "cc.Slider": false,
+            "cc.Toggle": false,
+            "cc.ToggleContainer": false,
+            "cc.ToggleGroup": false,
+            "cc.VideoPlayer": false,
+            "cc.WebView": false,
+            "cc.EditBox": false,
+            "cc.Animation": false,
+            "sp.Skeleton": false
+        },
+        "Btn": {"cc.Button": true},
+        "Node": {"cc.Node": true},
+        "Spr": {"cc.Sprite": true},
+        "Layout": {"cc.Layout": true},
+        "Edit": {"cc.EditBox": true},
+        "Label": {"cc.Label": true},
+        "Rich": {"cc.RichText": true},
+        "Anim": {"cc.Animation": true},
+        "Pgr": {"cc.ProgressBar": true}
+    },
+    "exportName": {
+        "cc.Node": "nd_",
+        "cc.Sprite": "sp_",
+        "cc.Label": "lb_",
+        "cc.RichText": "rich_",
+        "cc.Button": "btn_",
+        "cc.Layout": "layout_",
+        "cc.PageView": "pg_",
+        "cc.PageViewIndicator": "pgv_",
+        "cc.ProgressBar": "pgr_",
+        "cc.ScrollView": "scr_",
+        "cc.ScrollBar": "scro",
+        "cc.Slider": "slider_",
+        "cc.Toggle": "tgl_",
+        "cc.ToggleGroup": "tgl_",
+        "cc.WebView": "webview_",
+        "cc.EditBox": "edit_",
+        "cc.Animation": "anim_",
+        "sp.Skeleton": "sp_"
+    },
+    "uiLayer": {
+        "0": "eFirst",
+        "1": "eFirst",
+        "2": "eSecond",
+        "3": "eThird",
+        "4": "eTop",
+        "5": "eEffect"
+    }
+}

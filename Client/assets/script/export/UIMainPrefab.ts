@@ -1,7 +1,7 @@
 import ccclass = cc._decorator.ccclass;
 import property = cc._decorator.property;
 
-import {UIPrefab} from "../../base/game/UIBase";
+import {UIPrefab} from "../../framework/ui/UIBase";
 
 @ccclass
 export class UIMainPrefabPrefab extends UIPrefab{

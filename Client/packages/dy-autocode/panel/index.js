@@ -1,6 +1,7 @@
 
 const Fs = require('fs');
 const Path = require('path');
+const config = require("../config");
 // panel/index.js
 
 Editor.Panel.extend({
@@ -30,7 +31,15 @@ Editor.Panel.extend({
     <hr />
     <div class="layout horizontal center-justified">
     <span>界面层级: </span>
-    <ui-input id="uiLayer" placeholder="界面层级"></ui-input>
+    <ui-secect id="uiLayer">
+        <select tabindex="2">
+        <option value="0">eFirst</option>
+        <option value="1">eSecond</option>
+        <option value="2">eThird</option>
+        <option value="3">eTop</option>
+        <option value="4">eEffect</option>
+        </select>
+    </ui-secect>
     </div>
     <hr />
     <div class="layout horizontal center-justified">
@@ -47,16 +56,13 @@ Editor.Panel.extend({
     },
 
     ready() {
-        this.$exportPath.value = "../../base/game/UIBase";
-        this.$codePath.value = "script/export/";
-        this.$uiLayer.value = 3;
+        this.$exportPath.value = config.config.uiBasePath;
+        this.$codePath.value = config.config.codePath;
+        this.$uiLayer.value = "2";
         this.$isDestroy.value = 0;
         this.$btn.addEventListener('confirm', () => {
             Editor.Ipc.sendToMain("dy-createcode:startCreate")
         });
-        // this.$prefabPath.addEventListener('blur',() =>{
-        //     this.$codePath.value = this.$prefabPath.value;
-        // })
     },
 
     messages: {

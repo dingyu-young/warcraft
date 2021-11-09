@@ -1,15 +1,19 @@
 {
   "title": "warcraft",
   "packageName": "org.cocos2d.demo",
-  "startScene": "2891a31b-081c-4309-9e5d-dd6a4222d418",
-  "excludeScenes": [],
+  "startScene": "5ee2e341-6ea0-4919-aff1-118e8c8ae2dc",
+  "excludeScenes": [
+    "48676886-4f28-49da-9d32-c1a6572423f3",
+    "2891a31b-081c-4309-9e5d-dd6a4222d418",
+    "5af70308-bf58-4839-8d80-1bc64ba84fe2"
+  ],
   "orientation": {
     "landscapeLeft": true,
     "landscapeRight": true,
     "portrait": false,
     "upsideDown": false
   },
-  "webOrientation": "auto",
+  "webOrientation": "landscape",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "mainCompressionType": "default",
@@ -27,7 +31,8 @@
   },
   "ios": {
     "REMOTE_SERVER_ROOT": "",
-    "packageName": "org.cocos2d.demo"
+    "packageName": "org.cocos2d.demo",
+    "ios_enable_jit": true
   },
   "mac": {
     "REMOTE_SERVER_ROOT": "",
@@ -49,5 +54,6 @@
     "scheme": "https",
     "skipRecord": false
   },
-  "appBundle": false
+  "appBundle": false,
+  "agreements": {}
 }

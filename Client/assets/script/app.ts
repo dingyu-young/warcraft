@@ -5,52 +5,48 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import {EventManager} from "../base/manager/EventManager";
-import {GameData} from "../base/game/GameData";
+import {GameData} from "./game/GameData";
 import {UILogin} from "./login/UILogin";
-import {TableManager} from "../base/manager/TableManager";
-import {SpringPoolsConfig, TableTool} from "../base/table/TableConfig";
+import {TableTool} from "./table/TableConfig";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class app extends cc.Component {
     @property(cc.Node)
-    uiRoot:cc.Node = null;
+    uiRoot: cc.Node = null;
 
     @property(cc.Node)
-    uiScene:cc.Node = null;
-
-    @property(cc.Node)
-    nd_tool:cc.Node = null;
+    uiScene: cc.Node = null;
 
 
-    private static _instance:app = null;
-    public static instance(){
+    private static _instance: app = null;
+
+    public static ins() {
         return this._instance;
     }
 
     // LIFE-CYCLE CALLBACKS:
 
-    async onLoad () {
+    onLoad() {
+
+    }
+
+    start() {
+        this.init();
+    }
+
+    private async init() {
         app._instance = this;
-        EventManager.ins().regEvent("test1",this.show,this);
         GameData.uiRoot = this.uiRoot;
         GameData.uiScene = this.uiScene;
-        TableManager.Init()
         await TableTool.initTable();
-        cc.log(SpringPoolsConfig.getConfig(1))
+
+        this.enterGame();
     }
 
-    start () {
-        if(!this.nd_tool.active){
-            UILogin.ins().show();
-        }
-
-
+    private enterGame() {
+        UILogin.ins().Show();
     }
 
-    show(){
-    }
-    // update (dt) {}
 }

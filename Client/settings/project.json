@@ -2,7 +2,7 @@
   "migrate-history": [
     "cloud-function"
   ],
-  "last-module-event-record-time": 1632484582486,
+  "last-module-event-record-time": 1636084103019,
   "group-list": [
     "default",
     ""
@@ -61,5 +61,6 @@
     "live": {
       "enable": false
     }
-  }
+  },
+  "start-scene": "5ee2e341-6ea0-4919-aff1-118e8c8ae2dc"
 }
