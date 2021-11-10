@@ -517,6 +517,45 @@ export class MindMap extends cc.Component {
 
     }
 
+    onDownloadImg(){
+        if(!this.sceneNode){
+            return
+        }
+        this.currentScene.scale = 1;
+        let root = this.rootBoxList[this.currentId];
+
+        let maxX = -9999;
+        let minX = 0;
+        let maxY = -9999;
+        let minY = 0;
+
+        let fun = (node:MindBox)=>{
+            if(node.node.x > maxX){
+                maxX = node.node.x;
+            }
+            if(node.node.x < minX){
+                minX = node.node.x;
+            }
+
+            if(node.node.y > maxY){
+                maxY = node.node.y;
+            }
+            if(node.node.y < minY){
+                minY = node.node.y;
+            }
+            for (let i = 0; i < node.children.length; i++) {
+                fun(node.children[i]);
+            }
+        }
+        fun(root);
+        let width = Math.max(Math.abs(minX),Math.abs(maxX));
+        let height =Math.max( Math.abs(minY),Math.abs(maxY));
+        this.currentScene.width = width * 2 + 400;
+        this.currentScene.height = height * 2 + 400;
+
+        this.tool.ScreenShot(this.currentScene,this.currentId.toString());
+    }
+
     async onDownloadChoose() {
         await this.tool.downChoose();
         this.showTip("下载成功")

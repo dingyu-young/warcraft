@@ -895,7 +895,6 @@ export class ComTool {
             shotNode.removeComponent(cc.Camera);
         }
         if (!cc.sys.isNative) {
-            App.instance().ErrLog("ShareScreen not native");
             call("", texture);
             return;
         }
@@ -903,7 +902,6 @@ export class ComTool {
         //如果有存在这个路径,则删除路径,再创建路径
         if (!jsb.fileUtils.isDirectoryExist(sharePath)) {
             if (!jsb.fileUtils.createDirectory(sharePath)) {
-                App.instance().ErrLog("InitShareFile createDirectory(%s) fail", sharePath);
                 return;
             }
         }
@@ -915,7 +913,6 @@ export class ComTool {
                 call(savePath, texture);
             }
         } else {
-            App.instance().ErrLog("截图失败")
         }
     }
 

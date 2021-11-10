@@ -315,4 +315,90 @@ export class MindMapTool {
         })
     }
 
+    //截图并保存或下载图片
+    ScreenShot(shotNode: cc.Node = null, name:string,call: Function = null) {
+        let width = 0;
+        let height = 0;
+        let camera = cc.Camera.main;
+        if (!shotNode) {
+            let size = cc.winSize;
+            width = size.width;
+            height = size.height;
+        } else {
+            camera = shotNode.getComponent(cc.Camera);
+            if (!camera)
+                camera = shotNode.addComponent(cc.Camera);
+            width = shotNode.width || 2000;
+            height = shotNode.height || 2000;
+        }
+        let texture = new cc.RenderTexture();
+        let gl = cc.game["_renderContext"];
+        texture.initWithSize(width, height, gl.STENCIL_INDEX8);
+        camera.zoomRatio = cc.winSize.height / height;
+        camera.targetTexture = texture;
+        if (shotNode) {
+            shotNode.scaleY *= -1;
+        } else {
+            cc.Canvas.instance.node.scaleY *= -1;
+        }
+        camera.render(shotNode);
+        if (shotNode) {
+            shotNode.scaleY *= -1;
+        } else {
+            cc.Canvas.instance.node.scaleY *= -1
+        }
+        camera.targetTexture = null;
+
+        let picData: Uint8Array = texture.readPixels();
+        //截图完成后 删除照相机组件
+        if (shotNode) {
+            shotNode.removeComponent(cc.Camera);
+        }
+        //浏览器,直接调用下载
+        if (cc.sys.isBrowser) {
+            let canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            let context = canvas.getContext('2d');
+            let imageData = context.createImageData(width || cc.winSize.width, height || cc.winSize.height);
+            imageData.data.set(picData);
+            context.putImageData(imageData, 0, 0);
+            const base64 = canvas.toDataURL();
+            const href = base64.replace(/^data:image[^;]*/, "data:image/octet-stream");
+            // document.location.href = href;/
+            //创建一个下载标签
+            let link: HTMLElement = document.createElement('a');
+            link.setAttribute("href", href);
+            link.setAttribute("download", `${name}.png`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            //下载
+            link.click();
+            document.body.removeChild(link);
+            cc.log("截图保存成功");
+            return;
+        }
+        let sharePath = this.wirtPath + "\\" + name + ".png";
+        cc.log("图片保存路径:", sharePath);
+        //如果有存在这个路径,则删除路径,再创建路径
+        if (!jsb.fileUtils.isDirectoryExist(sharePath)) {
+            if (!jsb.fileUtils.createDirectory(sharePath)) {
+                cc.log("InitShareFile createDirectory(%s) fail", sharePath);
+                return;
+            }
+        }
+
+        let savePath = sharePath + "/" + name + '.png';
+        cc.log("截图保存成功", savePath);
+        let success = jsb.fileUtils.writeDataToFile(picData, savePath);
+        if (success) {
+            if (call) {
+                call(savePath, texture);
+            }
+        } else {
+            cc.log("截图失败")
+        }
+    }
+
+
 }
