@@ -378,19 +378,17 @@ export class MindMapTool {
             cc.log("截图保存成功");
             return;
         }
-        let sharePath = this.wirtPath + "\\" + name + ".png";
-        cc.log("图片保存路径:", sharePath);
-        //如果有存在这个路径,则删除路径,再创建路径
-        if (!jsb.fileUtils.isDirectoryExist(sharePath)) {
-            if (!jsb.fileUtils.createDirectory(sharePath)) {
-                cc.log("InitShareFile createDirectory(%s) fail", sharePath);
-                return;
-            }
-        }
+        // //如果有存在这个路径,则删除路径,再创建路径
+        // if (!jsb.fileUtils.isDirectoryExist(sharePath)) {
+        //     if (!jsb.fileUtils.createDirectory(sharePath)) {
+        //         cc.log("InitShareFile createDirectory(%s) fail", sharePath);
+        //         return;
+        //     }
+        // }
 
-        let savePath = sharePath + "/" + name + '.png';
+        let savePath = this.wirtPath + "\\" + name + '.png';
         cc.log("截图保存成功", savePath);
-        let success = jsb.fileUtils.writeDataToFile(picData, savePath);
+        let success = jsb.saveImageData(picData, width,height,savePath);
         if (success) {
             if (call) {
                 call(savePath, texture);
