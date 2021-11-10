@@ -189,15 +189,15 @@ export class MindMapTool {
         let normal = {};
         let theme = {};
         for (let key in this.groupMap){
-            if(!this.groupMap[key].isChoose){
-                continue
-            }
+            // if(!this.groupMap[key].isChoose){
+            //     continue
+            // }
             let maxLen = this.getGroupLen(Number(key));
             cc.log(key," 最大长度:", maxLen);
             if(maxLen){
                 this.groupMap[key].MaxLen = maxLen;
             }
-            this.groupMap[key].isChoose = true;
+            // this.groupMap[key].isChoose = true;
             if(this.groupMap[key].isTheme){
                 let group = this.groupMap[key].GroupId < 10000 ? this.groupMap[key].GroupId + 10000 : this.groupMap[key].GroupId;
                 theme[group] = JSON.parse(JSON.stringify(this.groupMap[key]));
