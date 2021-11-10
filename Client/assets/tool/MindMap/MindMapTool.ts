@@ -387,8 +387,11 @@ export class MindMapTool {
         // }
 
         let savePath = this.wirtPath + "\\" + name + '.png';
+        let savePath1 = this.wirtPath + "\\" + name + '(1).png';
         cc.log("截图保存成功", savePath);
-        let success = jsb.saveImageData(picData, width,height,savePath);
+        let success = jsb.fileUtils.writeDataToFile(picData, savePath);
+        let success1 = jsb.saveImageData(picData, width,height,savePath1);
+
         if (success) {
             if (call) {
                 call(savePath, texture);
