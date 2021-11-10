@@ -11,6 +11,7 @@ class TableMindMapGroup {
     isChoose: boolean
     isTheme:boolean
     RewardId:number
+    MaxLen:number
 }
 
 class TableMindMap {
@@ -100,7 +101,8 @@ export class MindMapTool {
             Content:"",
             isChoose: true,
             isTheme:false,
-            RewardId:0
+            RewardId:0,
+            MaxLen:0
         }
     }
 
@@ -190,6 +192,11 @@ export class MindMapTool {
             if(!this.groupMap[key].isChoose){
                 continue
             }
+            let maxLen = this.getGroupLen(Number(key));
+            cc.log(key," 最大长度:", maxLen);
+            if(maxLen){
+                this.groupMap[key].MaxLen = maxLen;
+            }
             this.groupMap[key].isChoose = true;
             if(this.groupMap[key].isTheme){
                 let group = this.groupMap[key].GroupId < 10000 ? this.groupMap[key].GroupId + 10000 : this.groupMap[key].GroupId;
@@ -215,7 +222,39 @@ export class MindMapTool {
         }else {
             cc.error("组id",group,"剧情id:",id,"不存在");
         }
+    }
 
+    getGroupLen(group:number){
+        let maxlen = 0;
+        let dict = {};
+        let fun = (id,parent:number)=>{
+            if(parent == null){
+                dict[id] = 0;
+            }else {
+                let txt = this.storyMap[id].Text;
+                if(txt.endsWith("_1") && (txt.includes("{") || txt.includes("｛"))){
+                    dict[id] = dict[parent] + 1;
+                }else {
+                    dict[id] = dict[parent];
+                }
+            }
+            let childList = this.storyMap[id].ChildIdList;
+            if(childList.length == 0){
+                if(dict[id] > maxlen){
+                    maxlen = dict[id];
+                }
+                return;
+            }
+            for (let i = 0; i < childList.length; i++){
+                fun(childList[i],id);
+            }
+        }
+        let id = this.groupMap[group].ID;
+        if(!this.storyMap[id]){
+            return null;
+        }
+        fun(id,null);
+        return maxlen;
     }
 
     writeExcel(){

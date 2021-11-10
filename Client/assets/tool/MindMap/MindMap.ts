@@ -46,7 +46,7 @@ export class MindMap extends cc.Component {
     view: cc.Node = null;
 
     @property(cc.Node)
-    introduce:cc.Node = null;
+    introduce: cc.Node = null;
 
     @property(cc.EditBox)
     writPathEditBox: cc.EditBox = null;
@@ -106,7 +106,7 @@ export class MindMap extends cc.Component {
 
 
     protected start(): void {
-        let path = ComTool.GetLocalItem("writPath","");
+        let path = ComTool.GetLocalItem("writPath", "");
         if (path) {
             this.tool.wirtPath = path;
         }
@@ -152,6 +152,7 @@ export class MindMap extends cc.Component {
 
 
     secenegrouplist = [];
+
     OnOpenScene() {
         this.listView.node.active = !this.listView.node.active;
         if (this.listView.node.active) {
@@ -160,10 +161,10 @@ export class MindMap extends cc.Component {
     }
 
     //普通事件
-    onScece_noraml(){
+    onScece_noraml() {
         let list = []
-        for (let key in this.tool.groupMap){
-            if(this.tool.groupMap[key].isTheme){
+        for (let key in this.tool.groupMap) {
+            if (this.tool.groupMap[key].isTheme) {
                 continue;
             }
             list.push(key);
@@ -174,10 +175,10 @@ export class MindMap extends cc.Component {
     }
 
     //主题事件
-    onScene_zhuti(){
+    onScene_zhuti() {
         let list = []
-        for (let key in this.tool.groupMap){
-            if(this.tool.groupMap[key].isTheme){
+        for (let key in this.tool.groupMap) {
+            if (this.tool.groupMap[key].isTheme) {
                 list.push(key);
             }
         }
@@ -207,31 +208,31 @@ export class MindMap extends cc.Component {
         edit2.targetOff(this);
         edit3.targetOff(this);
         reward.node.targetOff(this);
-        edit.on("click",()=>{
+        edit.on("click", () => {
             this.view.active = false;
             this.loadScene(id);
-        },this)
-        edit2.on("click",()=>{
+        }, this)
+        edit2.on("click", () => {
             this.edit.node.active = true;
             this.edit.string = content.string;
             this.edit["contents"] = content;
             this.edit["group"] = id;
-        },this)
-        edit3.on("click",()=>{
+        }, this)
+        edit3.on("click", () => {
             this.edit.node.active = true;
             this.edit.string = lb_name.string;
             this.edit["name_contents"] = lb_name;
             this.edit["group"] = id;
-        },this)
+        }, this)
         toggle.node.on("click", () => {
             this.tool.groupMap[id].isChoose = toggle.isChecked;
         }, this)
         toggle2.node.on("click", () => {
             this.tool.groupMap[id].isTheme = toggle2.isChecked;
         }, this)
-        reward.node.on("editing-did-ended",()=>{
+        reward.node.on("editing-did-ended", () => {
             this.tool.groupMap[id].RewardId = Number(reward.string);
-        },this)
+        }, this)
     }
 
     //创建新场景
@@ -314,7 +315,7 @@ export class MindMap extends cc.Component {
             this.tool.groupMap[this.currentId].Name = this.edit.string;
             this.edit.string = "";
             this.edit["scene"] = null;
-        } else if (this.edit["contents"]){
+        } else if (this.edit["contents"]) {
             let label = this.edit["contents"];
             label.string = this.edit.string;
             let id = this.edit["group"];
@@ -322,7 +323,7 @@ export class MindMap extends cc.Component {
             this.edit.string = "";
             this.edit["contents"] = null;
             this.edit["group"] = null;
-        }else if (this.edit["name_contents"]){
+        } else if (this.edit["name_contents"]) {
             let label = this.edit["name_contents"];
             label.string = this.edit.string;
             let id = this.edit["group"];
@@ -344,9 +345,10 @@ export class MindMap extends cc.Component {
         }
     }
 
-    onShowIntroduce(){
+    onShowIntroduce() {
         this.introduce.active = !this.introduce.active;
     }
+
     //场景放大
     onBig() {
         this.currentScene.scale += 0.1;
@@ -367,8 +369,6 @@ export class MindMap extends cc.Component {
         box.setColor(this.color[ColorEnum.BlueColor2]);
         this.chooseBox = box;
     }
-
-
 
 
     lineBox: MindBox = null;
@@ -506,24 +506,31 @@ export class MindMap extends cc.Component {
 
     onDownload() {
         this.tool.download()
+        this.showTip("下载成功")
+
     }
 
-    onDownloadOne(){
+    onDownloadOne() {
         this.tool.saveScene();
         this.tool.downloadOne(this.currentId);
+        this.showTip("下载成功")
+
     }
 
-    onDownloadChoose(){
-        this.tool.downChoose()
+    async onDownloadChoose() {
+        await this.tool.downChoose();
+        this.showTip("下载成功")
     }
 
-    onDownGroup(){
+    async onDownGroup() {
         this.tool.downGroup();
+        await ComTool.Await(0.5);
+        this.showTip("下载成功")
     }
 
-    onResetPos(){
+    onResetPos() {
         let box = this.rootBoxList[this.currentId];
-        let func = (box:MindBox)=>{
+        let func = (box: MindBox) => {
             let children = box.children;
             for (let i = 0; i < children.length; i++) {
                 let pos = box.getChildCurrentPos(i);
@@ -538,7 +545,7 @@ export class MindMap extends cc.Component {
         func(box)
     }
 
-    onReloadScene(){
+    onReloadScene() {
         let group = this.currentId;
         this.currentId = -1;
         let id = this.tool.getGroupInfo(group).ID;
@@ -572,12 +579,12 @@ export class MindMap extends cc.Component {
         let boxmap = {};
         let id = groupInfo.ID;
         let config = this.tool.getStoryInfo(id);
-        if(!config){
+        if (!config) {
             await this.tool.loadStroy(groupId);
             config = this.tool.getStoryInfo(id);
-            if(!config){
-                cc.error("组id: "+groupId+" 未找到剧情文件");
-                this.showTip("组id: "+groupId+" 未找到剧情文件");
+            if (!config) {
+                cc.error("组id: " + groupId + " 未找到剧情文件");
+                this.showTip("组id: " + groupId + " 未找到剧情文件");
                 return;
             }
         }
@@ -596,12 +603,12 @@ export class MindMap extends cc.Component {
             box.node.setPosition(config.PosX, config.PosY);
         }
         boxmap[config.ID] = box;
-        this.createSceneBox(box, children, boxmap);
+        await this.createSceneBox(box, children, boxmap);
         box.setColor(this.color[ColorEnum.BlueColor1]);
 
     }
 
-    createSceneBox(box: MindBox, children: number[], boxmap) {
+    async createSceneBox(box: MindBox, children: number[], boxmap) {
         if (children.length > 0) {
             for (let i = 0; i < children.length; i++) {
                 let config = this.tool.getStoryInfo(children[i]);
@@ -612,7 +619,7 @@ export class MindMap extends cc.Component {
                     newbox = new MindBox(this, null)
                 }
                 newbox.id = config.ID;
-                if(newbox.id > this.mindBoxIdList[this.currentId]){
+                if (newbox.id > this.mindBoxIdList[this.currentId]) {
                     this.mindBoxIdList[this.currentId] = newbox.id;
                 }
                 newbox.groupId = config.GroupId;
@@ -634,7 +641,7 @@ export class MindMap extends cc.Component {
                 let newChildren = config.ChildIdList;
                 boxmap[config.ID] = newbox;
                 newbox.resetWidthHeight(this.getStringWidthHeight(text));
-
+                await ComTool.Await(0);
                 this.createSceneBox(newbox, newChildren, boxmap);
             }
         }
