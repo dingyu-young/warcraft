@@ -102,6 +102,7 @@ export class MindMap extends cc.Component {
         this.listView.node.active = false;
         this.introduce.zIndex = 99;
         this.introduce.active = false;
+        window["MindMap"] = this;
     }
 
 
@@ -140,6 +141,8 @@ export class MindMap extends cc.Component {
             let newline = new MindLine(this, this.chooseBox, newBox);
             this.chooseBox.addLine(newline);
             this.mgr.addBox(newBox);
+            this.tool.saveScene();
+
         }
     }
 
@@ -239,7 +242,7 @@ export class MindMap extends cc.Component {
     onAddNewScene(event, id = null) {
         let isNew = false;
         if (!id) {
-            id = this.tool.groupList.length;
+            id = this.tool.groupList.length + 1;
             isNew = true;
         }
         let node = new cc.Node("scene" + id);
@@ -309,6 +312,7 @@ export class MindMap extends cc.Component {
             this.edit.string && this.editBox.resetWidthHeight(this.getStringWidthHeight(this.edit.string));
             this.editBox.setVale(this.edit.string);
             this.edit.string = "";
+
         } else if (this.edit["scene"]) {
             let scene: cc.Label = this.edit["scene"];
             scene.string = this.edit.string;
@@ -500,7 +504,7 @@ export class MindMap extends cc.Component {
     //存储和读取
     //保存
     onSave() {
-        this.tool.saveScene()
+        this.tool.saveScene();
         this.showTip("保存成功")
     }
 

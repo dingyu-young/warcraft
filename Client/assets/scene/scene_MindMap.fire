@@ -9415,27 +9415,27 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 246,
-      "b": 15,
+      "r": 5,
+      "g": 0,
+      "b": 246,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 400,
+      "width": 380,
       "height": 25.2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0.5
+      "y": 1
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
         50.85,
-        -17.065,
+        -8.831,
         0,
         0,
         0,
@@ -9479,8 +9479,10 @@
     "_fontSize": 20,
     "_lineHeight": 20,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "9189a7e5-3223-4362-bf92-85539c8042e9"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_batchAsBitmap": false,
     "_styleFlags": 0,
