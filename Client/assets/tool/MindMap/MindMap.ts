@@ -579,6 +579,8 @@ export class MindMap extends cc.Component {
 
     onLook(){
         let groupInfo = this.tool.groupMap[this.currentId];
+        let len = this.tool.getGroupLen(this.currentId);
+        groupInfo.MaxLen = len;
         let data = {};
         this.tool.getChild(groupInfo.ID,data,groupInfo.GroupId);
         ShowView.ins().Show(groupInfo,data);
