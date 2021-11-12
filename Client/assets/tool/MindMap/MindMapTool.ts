@@ -257,6 +257,22 @@ export class MindMapTool {
         return maxlen;
     }
 
+    async CheckText(){
+        for (let key in this.groupMap){
+            let id = this.groupMap[key].ID;
+            if(!this.storyMap[id]){
+                await this.loadStroy(key);
+            }
+        }
+        for (let key in this.storyMap){
+            let data = this.storyMap[key];
+            let text = data.Text;
+            if(!text.startsWith("0|") && ! text.startsWith("1|")){
+                cc.error(`组:${data.GroupId}, id:${data.ID}, 内容:${data.Text}`);
+            }
+        }
+    }
+
     writeExcel(){
         let txt = "Int\tInt\tArray\tInt\tBool\tString\tString\tInt\tInt\r\n"
         txt += "ID\tGroupId\tChildIdList\tEventID\tIsSubSocre\tText\tSound\tPosX\tPosY\r\n"
@@ -389,10 +405,10 @@ export class MindMapTool {
         let savePath = this.wirtPath + "\\" + name + '.png';
         let savePath1 = this.wirtPath + "\\" + name + '(1).png';
         cc.log("截图保存成功", savePath);
-        let success = jsb.fileUtils.writeDataToFile(picData, savePath);
+        // let success = jsb.fileUtils.writeDataToFile(picData, savePath);
         let success1 = jsb.saveImageData(picData, width,height,savePath1);
 
-        if (success) {
+        if (success1) {
             if (call) {
                 call(savePath, texture);
             }

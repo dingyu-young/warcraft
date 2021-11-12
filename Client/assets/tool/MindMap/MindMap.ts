@@ -102,7 +102,7 @@ export class MindMap extends cc.Component {
         this.listView.node.active = false;
         this.introduce.zIndex = 99;
         this.introduce.active = false;
-        window["MindMap"] = this;
+        // window["MindMap"] = this;
     }
 
 
@@ -111,6 +111,8 @@ export class MindMap extends cc.Component {
         if (path) {
             this.tool.wirtPath = path;
         }
+
+
         cc.log("===========ComTool.wirtPath: ", this.tool.wirtPath);
         this.writPathEditBox.string = this.tool.wirtPath;
         this.tool.init();
@@ -465,6 +467,9 @@ export class MindMap extends cc.Component {
             case cc.macro.KEY.ctrl:
                 this.isCtrl = false;
                 break;
+            case cc.macro.KEY.t:
+                this.tool.CheckText();
+                break;
         }
     }
 
@@ -571,15 +576,41 @@ export class MindMap extends cc.Component {
         this.showTip("下载成功")
     }
 
+    onLook(){
+        let groupInfo = this.tool.groupMap[this.currentId];
+        let data = {};
+        this.tool.getChild(groupInfo.ID,data,groupInfo.GroupId);
+        
+    }
+
     onResetPos() {
         let box = this.rootBoxList[this.currentId];
+        let posList = [];
+        let idList = [];
         let func = (box: MindBox) => {
             let children = box.children;
             for (let i = 0; i < children.length; i++) {
+                if(idList.includes(children[i].id)){
+                    continue;
+                }
                 let pos = box.getChildCurrentPos(i);
+                pos.x = pos.x << 0;
+                pos.y = pos.y << 0;
+                let j = i+1;
+                while(posList.includes(pos.x + "_" + pos.y)){
+                    pos = box.getChildCurrentPos(j);
+                    pos.x = pos.x << 0;
+                    pos.y = pos.y << 0;
+                    j++;
+                }
+                posList.push(pos.x + "_" + pos.y);
                 children[i].setPos(pos);
+                idList.push(children[i].id);
+            }
+            for (let i = 0; i < children.length; i++) {
                 func(children[i])
             }
+
             box.resetLine();
             // for (let i = 0; i < box.lines.length; i++) {
             //     box.lines[i].resetPos();
