@@ -84,12 +84,13 @@ export abstract class AbsUI<T extends UIPrefab> extends Singleton {
 
     public Close() {
         this.onClose();
-        if (this.isDestroy) {
+        if (this.ui?.isDestroy) {
             this.node.destroy();
             this.node = null;
         } else {
             this.node.active = false;
         }
+        this.isShow = false;
     }
 
 
