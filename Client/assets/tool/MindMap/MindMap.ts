@@ -6,6 +6,7 @@ import {MindManager} from "./MindManager";
 import List from "../../script/component/list/List";
 import {MindMapTool} from "./MindMapTool";
 import {ComTool} from "../../framework/util/ComTool";
+import ShowView from "./storyTool";
 
 export enum ColorEnum {
     BlueColor1 = 0,
