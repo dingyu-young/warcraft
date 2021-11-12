@@ -3,7 +3,7 @@ import {ComTool} from "../../framework/util/ComTool";
 import {MindBox} from "./MindBox";
 
 
-class TableMindMapGroup {
+export class TableMindMapGroup {
     GroupId: number
     ID: number
     Name: string
@@ -14,7 +14,7 @@ class TableMindMapGroup {
     MaxLen:number
 }
 
-class TableMindMap {
+export class TableMindMap {
     ID: number;
     GroupId: number;
     ChildIdList: number[];
