@@ -46,7 +46,7 @@ export default class app extends cc.Component {
     }
 
     private enterGame() {
-        UILogin.ins().Show();
+        UILogin.ins().Show(1,2,3);
     }
 
 }

@@ -30,7 +30,8 @@ export class UILogin extends AbsUI<UILoginPrefab> {
     }
 
 
-    protected onShow() {
+    protected onShow(n,b,v) {
+        cc.log(n,b,v)
         // this.hardtest();
     }
 

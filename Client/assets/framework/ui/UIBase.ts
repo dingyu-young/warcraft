@@ -49,19 +49,19 @@ export abstract class AbsUI<T extends UIPrefab> extends Singleton {
 
     //需要重写的方法
     protected abstract get uiPath(): string;//资源路径
-    protected abstract onShow();//界面显示后调用
+    protected abstract onShow(...arg);//界面显示后调用
     protected abstract initUI();//初始化界面
     protected abstract OnClick(btnName: string, btnNode: cc.Node);//点击事件回调
     public get isDestroy(): boolean { return true;}
 
-    public Show() {
+    public Show(...arg) {
         if (this.isShow) {
             return;
         }
 
         if (this.ui && this.node != null) {
             this.node.active = true;
-            this.onShow();
+            this.onShow.apply(this,arg);
             return;
         }
 
@@ -78,7 +78,7 @@ export abstract class AbsUI<T extends UIPrefab> extends Singleton {
                 this.OnClick(btnName, btnNode);
             }
             this.initUI();
-            this.onShow();
+            this.onShow.apply(this,arg);
         })
     }
 
