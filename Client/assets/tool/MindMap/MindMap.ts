@@ -580,10 +580,12 @@ export class MindMap extends cc.Component {
     onLook(){
         let groupInfo = this.tool.groupMap[this.currentId];
         let len = this.tool.getGroupLen(this.currentId);
+        let list = this.tool.getAllPath(this.currentId);
+        cc.log(list);
         groupInfo.MaxLen = len;
         let data = {};
         this.tool.getChild(groupInfo.ID,data,groupInfo.GroupId);
-        ShowView.ins().Show(groupInfo,data);
+        ShowView.ins().Show(groupInfo,data,list);
     }
 
     onResetPos() {

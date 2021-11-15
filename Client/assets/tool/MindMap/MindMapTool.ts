@@ -257,6 +257,34 @@ export class MindMapTool {
         return maxlen;
     }
 
+    getAllPath(group:number):number[][]{
+        let alllist = [];
+        let list = [];
+        let dict = {};
+        let fun = (id,parent:number)=>{
+            if(parent == null){
+                dict[id] = 0;
+            }else {
+                dict[id] = dict[parent] + 1;
+            }
+            list[dict[id]] = id;
+            let childList = this.storyMap[id].ChildIdList;
+            if(childList.length == 0){
+                alllist.push(list.slice(0,dict[id] + 1));
+                return;
+            }
+            for (let i = 0; i < childList.length; i++){
+                fun(childList[i],id);
+            }
+        }
+        let id = this.groupMap[group].ID;
+        if(!this.storyMap[id]){
+            return null;
+        }
+        fun(id,null);
+        return alllist
+    }
+
     async CheckText(){
         for (let key in this.groupMap){
             let id = this.groupMap[key].ID;
